@@ -21,6 +21,8 @@ search: true
 
 Welcome to the Kittn API! This page was created with [Slate](https://github.com/lord/slate) and edited for [Omneo](https://omneo.com.au) *this is an update* **This is an extra update to test deployment**
 
+# Drew is a dropkick
+
 # Authentication
 
 > To authorize, use this code:
