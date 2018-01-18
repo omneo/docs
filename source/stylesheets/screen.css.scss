@@ -451,6 +451,16 @@ html, body {
   table {
     margin-bottom: 1em;
     overflow: auto;
+
+    thead,tbody{
+      display: table;
+      width: 100%;
+    }
+
+    tr{
+      width: 100%;
+    }
+
     th,td {
       text-align: left;
       vertical-align: top;
@@ -535,6 +545,9 @@ html, body {
     background-color: rgba(0,0,0,0.05);
     background-color: #272b2d;
     padding: 20px;
+    position: relative;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 
   aside {

@@ -1,15 +1,12 @@
 ---
-title: API Referencexxxx   
+title: Omneo Loyalty API
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - shell
-  - ruby
-  - python
   - javascript
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
+  - Get In touch <a href='mailto:support@omneo.io'>support@omneo.io</a>
+  - <a href='https://omneo.io'>Omneo.io</a>
 
 includes:
   - errors
@@ -17,80 +14,93 @@ includes:
 search: true
 ---
 
-# Introduction
+# Omneo Loyalty Engine
+Welcome to the Omneo API documentation - here you can learn about all API calls and methods, what they are for, and how they are used.
 
-Welcome to the Kittn API! This page was created with [Slate](https://github.com/lord/slate) and edited for [Omneo](https://omneo.com.au) *this is an update* **This is an extra update to test deployment**
+## Media Types
+Where applicable this API uses the [JSON](json.md) media-type to represent resources states and affordances.
 
-# Drew is a dropkick
+Requests with a message-body are using plain JSON to set or update resource states.
+
+## Error States
+The common [HTTP Response Status Codes](https://github.com/for-GET/know-your-http-well/blob/master/status-codes.md) are used.
+
+## Support
+
+If you have any questions about this API specification, please contact Omneo Support by sending an email to [support@omneo.io](mailto:support@omneo.io?subject=Omneo+Loyalty+API+V2+Support)
 
 # Authentication
-
-> To authorize, use this code:
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
-
 ```javascript
-const kittn = require('kittn');
+const omneo = require('omneo');
 
-let api = kittn.authorize('meowmeowmeow');
+let api = omneo.authorize('meowmeowmeow');
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+**Omneo Loyalty Engine** uses OAuth Authorization using the client credentials grant type. Tokens are created by Omneo and provided to third parties. After you have acquired your token you can use it to access other resources within token's scope.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+Information about obtaining an access token can be found in the **Authorization** endpoint documentation.
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+Omneo expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
-`Authorization: meowmeowmeow`
+`Authorization: Bearer meowmeowmeow`
 
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 
-# Kittens
+## Scopes
+Each endpoint has been scoped to allow granular access control to each resource. 
 
-## Get All Kittens
+| Resource                | Scope                         | Action |
+|-------------------------|-------------------------------|--------|
+| Achievements            | read-achievements             | Read   |
+| Achievements            | write-achievements            | Write  |
+| Achievement Definitions | read-achievement_definitions  | Read   |
+| Achievement Definitions | write-achievement_definitions | Write  |
+| Benefits                | read-benefits                 | Read   |
+| Benefits                | write-benefits                | Write  |
+| Benefit Definitions     | read-benefit_definitions      | Read   |
+| Benefit Definitions     | write-benefit_definitions     | Write  |
+| Benefit Redemptions     | write-benefit_redemptions     | Write  |
+| Cards                   | read-cards                    | Read   |
+| Cards                   | write-cards                   | Write  |
+| Currencies              | read-currencies               | Read   |
+| Currencies              | write-currencies              | Write  |
+| Members                 | read-members                  | Read   |
+| Members                 | write-members                 | Write  |
+| Member Tiers            | read-member-tiers             | Read   |
+| Member Tiers            | write-member-tiers            | Write  |
+| Points                  | read-points                   | Read   |
+| Points                  | write-points                  | Write  |
+| Points Balance          | read-points                   | Read   |
+| Points Definitions      | read-points_definitions       | Read   |
+| Points Definitions      | write-points_definitions      | Write  |
+| Points Types            | read-points_types             | Read   |
+| Points Types            | write-points_types            | Write  |
+| Products                | read-products                 | Read   |
+| Products                | write-products                | Write  |
+| Redeem                  | write-reward_redemptions      | Write  |
+| Redemptions             | read-reward_redemptions       | Read   |
+| Rewards                 | read-reward                   | Read   |
+| Rewards                 | write-reward                  | Read   |
+| Staff                   | read-staff                    | Read   |
+| Staff                   | write-staff                   | Write  |
+| Stores                  | read-store                    | Read   |
+| Stores                  | write-store                   | Write  |
+| Transactions            | read-transactions             | Read   |
+| Transactions            | write-transactions            | Write  |
 
-```ruby
-require 'kittn'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
 
-```python
-import kittn
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
 
-```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
+# Achievements
+
+## Get achievement definitions
 
 ```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
+import Omneo from 'Omneo';
+let achievementDefinitions = Omneo.getAchievementDefinitions('achievementDefinitions');
 ```
 
 > The above command returns JSON structured like this:
@@ -134,16 +144,16 @@ Remember — a happy kitten is an authenticated kitten!
 ## Get a Specific Kitten
 
 ```ruby
-require 'kittn'
+require 'omneo'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = omneo::APIClient.authorize!('meowmeowmeow')
 api.kittens.get(2)
 ```
 
 ```python
-import kittn
+import omneo
 
-api = kittn.authorize('meowmeowmeow')
+api = omneo.authorize('meowmeowmeow')
 api.kittens.get(2)
 ```
 
@@ -153,9 +163,9 @@ curl "http://example.com/api/kittens/2"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const omneo = require('omneo');
 
-let api = kittn.authorize('meowmeowmeow');
+let api = omneo.authorize('meowmeowmeow');
 let max = api.kittens.get(2);
 ```
 
@@ -188,16 +198,16 @@ ID | The ID of the kitten to retrieve
 ## Delete a Specific Kitten
 
 ```ruby
-require 'kittn'
+require 'omneo'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = omneo::APIClient.authorize!('meowmeowmeow')
 api.kittens.delete(2)
 ```
 
 ```python
-import kittn
+import omneo
 
-api = kittn.authorize('meowmeowmeow')
+api = omneo.authorize('meowmeowmeow')
 api.kittens.delete(2)
 ```
 
@@ -208,9 +218,9 @@ curl "http://example.com/api/kittens/2"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const omneo = require('omneo');
 
-let api = kittn.authorize('meowmeowmeow');
+let api = omneo.authorize('meowmeowmeow');
 let max = api.kittens.delete(2);
 ```
 
