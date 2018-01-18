@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Referencexxxx</title>
+    <title>Omneo Loyalty API</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;javascript&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,9 +211,6 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
               <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
@@ -222,19 +219,32 @@
         <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
-          </li>
-          <li>
-            <a href="#drew-is-a-dropkick" class="toc-h1 toc-link" data-title="Drew is a dropkick">Drew is a dropkick</a>
+            <a href="#omneo-loyalty-engine" class="toc-h1 toc-link" data-title="Omneo Loyalty Engine">Omneo Loyalty Engine</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#media-types" class="toc-h2 toc-link" data-title="Media Types">Media Types</a>
+                  </li>
+                  <li>
+                    <a href="#error-states" class="toc-h2 toc-link" data-title="Error States">Error States</a>
+                  </li>
+                  <li>
+                    <a href="#support" class="toc-h2 toc-link" data-title="Support">Support</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#scopes" class="toc-h2 toc-link" data-title="Scopes">Scopes</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#achievements" class="toc-h1 toc-link" data-title="Achievements">Achievements</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-achievement-definitions" class="toc-h2 toc-link" data-title="Get achievement definitions">Get achievement definitions</a>
                   </li>
                   <li>
                     <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
@@ -249,59 +259,231 @@
           </li>
       </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+            <li>Get In touch <a href='mailto:support@omneo.io'>support@omneo.io</a></li>
+            <li><a href='https://omneo.io'>Omneo.io</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! This page was created with <a href="https://github.com/lord/slate">Slate</a> and edited for <a href="https://omneo.com.au">Omneo</a> <em>this is an update</em> <strong>This is an extra update to test deployment</strong></p>
-<h1 id='drew-is-a-dropkick'>Drew is a dropkick</h1><h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+        <h1 id='omneo-loyalty-engine'>Omneo Loyalty Engine</h1>
+<p>Welcome to the Omneo API documentation - here you can learn about all API calls and methods, what they are for, and how they are used.</p>
+<h2 id='media-types'>Media Types</h2>
+<p>Where applicable this API uses the <a href="json.md">JSON</a> media-type to represent resources states and affordances.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>Requests with a message-body are using plain JSON to set or update resource states.</p>
+<h2 id='error-states'>Error States</h2>
+<p>The common <a href="https://github.com/for-GET/know-your-http-well/blob/master/status-codes.md">HTTP Response Status Codes</a> are used.</p>
+<h2 id='support'>Support</h2>
+<p>If you have any questions about this API specification, please contact Omneo Support by sending an email to <a href="mailto:support@omneo.io?subject=Omneo+Loyalty+API+V2+Support">support@omneo.io</a></p>
+<h1 id='authentication'>Authentication</h1><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">omneo</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'omneo'</span><span class="p">);</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">omneo</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
 </code></pre>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
+<p><strong>Omneo Loyalty Engine</strong> uses OAuth Authorization using the client credentials grant type. Tokens are created by Omneo and provided to third parties. After you have acquired your token you can use it to access other resources within token&#39;s scope.</p>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<p>Information about obtaining an access token can be found in the <strong>Authorization</strong> endpoint documentation.</p>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p>Omneo expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
 
-<p><code>Authorization: meowmeowmeow</code></p>
+<p><code>Authorization: Bearer meowmeowmeow</code></p>
 
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h2 id='scopes'>Scopes</h2>
+<p>Each endpoint has been scoped to allow granular access control to each resource. </p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+<table><thead>
+<tr>
+<th>Resource</th>
+<th>Scope</th>
+<th>Action</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Achievements</td>
+<td>read-achievements</td>
+<td>Read</td>
+</tr>
+<tr>
+<td>Achievements</td>
+<td>write-achievements</td>
+<td>Write</td>
+</tr>
+<tr>
+<td>Achievement Definitions</td>
+<td>read-achievement_definitions</td>
+<td>Read</td>
+</tr>
+<tr>
+<td>Achievement Definitions</td>
+<td>write-achievement_definitions</td>
+<td>Write</td>
+</tr>
+<tr>
+<td>Benefits</td>
+<td>read-benefits</td>
+<td>Read</td>
+</tr>
+<tr>
+<td>Benefits</td>
+<td>write-benefits</td>
+<td>Write</td>
+</tr>
+<tr>
+<td>Benefit Definitions</td>
+<td>read-benefit_definitions</td>
+<td>Read</td>
+</tr>
+<tr>
+<td>Benefit Definitions</td>
+<td>write-benefit_definitions</td>
+<td>Write</td>
+</tr>
+<tr>
+<td>Benefit Redemptions</td>
+<td>write-benefit_redemptions</td>
+<td>Write</td>
+</tr>
+<tr>
+<td>Cards</td>
+<td>read-cards</td>
+<td>Read</td>
+</tr>
+<tr>
+<td>Cards</td>
+<td>write-cards</td>
+<td>Write</td>
+</tr>
+<tr>
+<td>Currencies</td>
+<td>read-currencies</td>
+<td>Read</td>
+</tr>
+<tr>
+<td>Currencies</td>
+<td>write-currencies</td>
+<td>Write</td>
+</tr>
+<tr>
+<td>Members</td>
+<td>read-members</td>
+<td>Read</td>
+</tr>
+<tr>
+<td>Members</td>
+<td>write-members</td>
+<td>Write</td>
+</tr>
+<tr>
+<td>Member Tiers</td>
+<td>read-member-tiers</td>
+<td>Read</td>
+</tr>
+<tr>
+<td>Member Tiers</td>
+<td>write-member-tiers</td>
+<td>Write</td>
+</tr>
+<tr>
+<td>Points</td>
+<td>read-points</td>
+<td>Read</td>
+</tr>
+<tr>
+<td>Points</td>
+<td>write-points</td>
+<td>Write</td>
+</tr>
+<tr>
+<td>Points Balance</td>
+<td>read-points</td>
+<td>Read</td>
+</tr>
+<tr>
+<td>Points Definitions</td>
+<td>read-points_definitions</td>
+<td>Read</td>
+</tr>
+<tr>
+<td>Points Definitions</td>
+<td>write-points_definitions</td>
+<td>Write</td>
+</tr>
+<tr>
+<td>Points Types</td>
+<td>read-points_types</td>
+<td>Read</td>
+</tr>
+<tr>
+<td>Points Types</td>
+<td>write-points_types</td>
+<td>Write</td>
+</tr>
+<tr>
+<td>Products</td>
+<td>read-products</td>
+<td>Read</td>
+</tr>
+<tr>
+<td>Products</td>
+<td>write-products</td>
+<td>Write</td>
+</tr>
+<tr>
+<td>Redeem</td>
+<td>write-reward_redemptions</td>
+<td>Write</td>
+</tr>
+<tr>
+<td>Redemptions</td>
+<td>read-reward_redemptions</td>
+<td>Read</td>
+</tr>
+<tr>
+<td>Rewards</td>
+<td>read-reward</td>
+<td>Read</td>
+</tr>
+<tr>
+<td>Rewards</td>
+<td>write-reward</td>
+<td>Read</td>
+</tr>
+<tr>
+<td>Staff</td>
+<td>read-staff</td>
+<td>Read</td>
+</tr>
+<tr>
+<td>Staff</td>
+<td>write-staff</td>
+<td>Write</td>
+</tr>
+<tr>
+<td>Stores</td>
+<td>read-store</td>
+<td>Read</td>
+</tr>
+<tr>
+<td>Stores</td>
+<td>write-store</td>
+<td>Write</td>
+</tr>
+<tr>
+<td>Transactions</td>
+<td>read-transactions</td>
+<td>Read</td>
+</tr>
+<tr>
+<td>Transactions</td>
+<td>write-transactions</td>
+<td>Write</td>
+</tr>
+</tbody></table>
+<h1 id='achievements'>Achievements</h1><h2 id='get-achievement-definitions'>Get achievement definitions</h2><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="nx">Omneo</span> <span class="nx">from</span> <span class="s1">'Omneo'</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">achievementDefinitions</span> <span class="o">=</span> <span class="nx">Omneo</span><span class="p">.</span><span class="nx">getAchievementDefinitions</span><span class="p">(</span><span class="s1">'achievementDefinitions'</span><span class="p">);</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -349,19 +531,19 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 <aside class="success">
 Remember — a happy kitten is an authenticated kitten!
 </aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'omneo'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">omneo</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
 <span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">omneo</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">omneo</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
 <span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
   -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">omneo</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'omneo'</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">omneo</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
 <span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 </code></pre>
 <blockquote>
@@ -392,20 +574,20 @@ Remember — a happy kitten is an authenticated kitten!
 <td>The ID of the kitten to retrieve</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'omneo'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">omneo</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
 <span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">omneo</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">omneo</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
 <span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
   -X DELETE
   -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">omneo</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'omneo'</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">omneo</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
 <span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 </code></pre>
 <blockquote>
@@ -491,9 +673,6 @@ Remember — a happy kitten is an authenticated kitten!
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
                 <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
