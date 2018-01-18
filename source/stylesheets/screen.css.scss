@@ -452,15 +452,6 @@ html, body {
     margin-bottom: 1em;
     overflow: auto;
 
-    thead,tbody{
-      display: table;
-      width: 100%;
-    }
-
-    tr{
-      width: 100%;
-    }
-
     th,td {
       text-align: left;
       vertical-align: top;
@@ -705,6 +696,15 @@ html, body {
 
   .page-wrapper{
     .content{
+      table{
+        padding: 0;
+        margin-left: 28px;
+        margin-right: 28px;
+        width: calc(100% - 56px);
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+      }
+
       pre{
         >code{
           padding: 14px;
