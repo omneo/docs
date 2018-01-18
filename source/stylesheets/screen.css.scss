@@ -121,12 +121,12 @@ html, body {
 
   &>.search {
     position: relative;
+    padding: $nav-v-padding 10px;
 
     input {
       background: #e7edf1;
       padding: 8px 15px;
       box-sizing: border-box;
-      margin: $nav-v-padding 10px;
       width: $nav-width - 30;
       outline: none;
       color: $nav-text;
@@ -151,8 +151,8 @@ html, body {
     margin-top: 0;
     box-sizing: border-box;
     height: 0;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
     transition-property: height, margin;
     transition-duration: 180ms;
     transition-timing-function: ease-in-out;    
