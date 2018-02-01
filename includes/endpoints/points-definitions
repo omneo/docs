@@ -1,6 +1,6 @@
-<h1 id='example'>Example</h1>
-<p>This API allows you to create, read, update and delete examples.</p>
-<h2 id='example-attributes'>Example Attributes</h2>
+<h1 id='point-definitions'>Point Definitions</h1>
+<p>This API allows you to create, read, update and delete point definitions.</p>
+<h2 id='point-definition-attributes'>Point Definition Attributes</h2>
 <table><thead>
 <tr>
 <th>Attribute</th>
@@ -9,39 +9,62 @@
 </thead><tbody>
 <tr>
 <td>id</td>
-<td>The ID of the example</td>
+<td>The ID of the point definition</td>
 </tr>
 <tr>
 <td>name</td>
-<td>The name of the example</td>
+<td>The name of the point definition</td>
 </tr>
 <tr>
 <td>handle</td>
-<td>The unique example handle</td>
+<td>The unique point definition handle</td>
 </tr>
 <tr>
 <td>description</td>
-<td>The example description</td>
+<td>The point definition description</td>
+</tr>
+<tr>
+<td>notes</td>
+<td>The point definition notes</td>
+</tr>
+<tr>
+<td>is_reassignable</td>
+<td>Whether or not points can be reassignable</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>Tags attached to the definition</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>The created date</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>The updated date</td>
 </tr>
 </tbody></table>
-<h2 id='create-an-example'>Create an example</h2>
+<h2 id='create-a-point-definition'>Create a point definition</h2>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Example"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-example"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Point Definition"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-point-definition"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_reassignable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
         </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 04:58:41"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 03:52:31"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This API allows you to create examples.</p>
+<p>This API allows you to create point definitions.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>POST /api/v1/examples</code></p>
+<p><code>POST /api/v1/points/definitions</code></p>
 <h3 id='request-attributes'>Request Attributes</h3>
 <table><thead>
 <tr>
@@ -61,8 +84,16 @@
 <td>description</td>
 <td><code>string</code> <code>nullable</code></td>
 </tr>
+<tr>
+<td>notes</td>
+<td><code>string</code> <code>nullable</code></td>
+</tr>
+<tr>
+<td>is_reassignable</td>
+<td><code>boolean</code> <code>nullable</code></td>
+</tr>
 </tbody></table>
-<h2 id='list-all-examples'>List all examples</h2>
+<h2 id='list-all-point-definitions'>List all point definitions</h2>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -70,62 +101,74 @@
     </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Examples"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-example"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Point Definition"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-point-definition"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"is_reassignable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
             </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 04:58:41"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 03:52:31"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
             </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Second Example"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-second-example"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Second Point Definition"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-second-point-definition"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"is_reassignable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
             </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 02:58:41"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 03:32:31"</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This API lets you list all examples.</p>
+<p>This API lets you list all point definitions.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET /api/v1/examples</code></p>
-<h2 id='retrieve-an-example'>Retrieve an example</h2>
+<p><code>GET /api/v1/points/definitions</code></p>
+<h2 id='retrieve-a-point-definition'>Retrieve a point definition</h2>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Example"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-example"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Point Definition"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-point-definition"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_reassignable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
         </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 04:58:41"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 03:52:31"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This API lets you retrieve a single example.</p>
+<p>This API lets you retrieve a single point definition.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET /api/v1/examples/{example}</code></p>
-<h2 id='update-an-example'>Update an example</h2>
+<p><code>GET /api/v1/points/definitions/{definition}</code></p>
+<h2 id='update-a-point-definition'>Update a point definition</h2>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Example"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-example"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Point Definition"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-point-definition"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_reassignable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
         </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 04:58:41"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 06:52:31"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This API allows you to update examples.</p>
+<p>This API allows you to update point definitions.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>PUT /api/v1/examples/{example}</code></p>
+<p><code>PUT /api/v1/points/definitions/{definition}</code></p>
 <h3 id='request-attributes-2'>Request Attributes</h3>
 <table><thead>
 <tr>
@@ -145,8 +188,16 @@
 <td>description</td>
 <td><code>sometimes</code> <code>string</code> <code>nullable</code></td>
 </tr>
+<tr>
+<td>notes</td>
+<td><code>sometimes</code> <code>string</code> <code>nullable</code></td>
+</tr>
+<tr>
+<td>is_reassignable</td>
+<td><code>sometimes</code> <code>boolean</code> <code>nullable</code></td>
+</tr>
 </tbody></table>
-<h2 id='delete-an-example'>Delete an example</h2>
-<p>This API allows you to delete examples.</p>
+<h2 id='delete-a-point-definition'>Delete a point definition</h2>
+<p>This API allows you to delete point definitions.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>DELETE /api/v1/examples/{example}</code></p>
+<p><code>DELETE /api/v1/points/definitions/{definition}</code></p>
