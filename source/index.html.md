@@ -11,6 +11,8 @@ toc_footers:
 includes:
   - endpoints/example
   - endpoints/redeem
+  - endpoints/points-definitions
+  - endpoints/points
 
 search: true
 ---
