@@ -1,6 +1,23 @@
 <h1 id='example'>Example</h1>
 <p>This is an example documentation for a fake endpoint.</p>
 <h2 id='create-an-example'>Create an example</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"example"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Example"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 <p>This API lets you list examples.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>POST /api/v1/examples</code></p>
@@ -34,24 +51,26 @@
 <td>The example tags</td>
 </tr>
 </tbody></table>
-
+<h2 id='list-all-examples'>List all examples</h2>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"example"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Example"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"example"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Example"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='list-all-examples'>List all examples</h2>
+</span></code></pre>
 <p>This API lets you list all examples.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET /api/v1/examples</code></p>
@@ -71,26 +90,24 @@
 <td>The example tags</td>
 </tr>
 </tbody></table>
-
+<h2 id='retrieve-an-example'>Retrieve an example</h2>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"example"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Example"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
-                </span><span class="p">},</span><span class="w">
-                </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
-                </span><span class="p">}</span><span class="w">
-            </span><span class="p">]</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"example"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Example"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='retrieve-an-example'>Retrieve an example</h2>
+</span></code></pre>
 <p>This API lets you retrieve a single example.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET /api/v1/examples/{example}</code></p>
@@ -112,7 +129,7 @@
 <td>The example tags</td>
 </tr>
 </tbody></table>
-
+<h2 id='update-an-example'>Update an example</h2>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -129,7 +146,7 @@
         </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='update-an-example'>Update an example</h2>
+</span></code></pre>
 <p>This API lets you update an example.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>PUT /api/v1/examples/{example}</code></p>
@@ -163,24 +180,7 @@
 <td>The example tags</td>
 </tr>
 </tbody></table>
-
-<blockquote>
-<p>JSON Response Example:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"example"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Example"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='delete-an-example'>Delete an example</h2>
+<h2 id='delete-an-example'>Delete an example</h2>
 <p>This API lets you delete an example.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
 <p><code>DELETE /api/v1/examples/{example}</code></p>
