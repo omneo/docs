@@ -4,6 +4,22 @@ This API lets you redeem **points** and or **rewards**.
 
 ## Request a redemption
 
+> JSON Response Example:
+                
+```json
+{
+    "data": [
+        {
+            "redemption_total": 100,
+            "profile": {
+                "reward_balance": 10,
+                "point_balance": 0
+            }
+        }
+    ]
+}
+```
+
 Request a redemption against a profile and transaction.
 
 ### Available Strategies
@@ -38,19 +54,3 @@ There are four different redeem strategies:
 | redemption_total        | The total amount redeemed      |
 | profile.reward_balance  | The new profile reward balance |
 | profile.point_balance   | The new profile point balance  |
-
-> JSON Response Example:
-                
-```json
-{
-    "data": [
-        {
-            "redemption_total": 100,
-            "profile": {
-                "reward_balance": 10,
-                "point_balance": 0
-            }
-        }
-    ]
-}
-```
