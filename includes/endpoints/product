@@ -1,0 +1,554 @@
+<h1 id='product'>Product</h1>
+<p>This is the api endpoint to query products.</p>
+<h2 id='create-a-product'>Create a product</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hat"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fashion-hat-22"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"systems"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"channels"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mimco"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rundown"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Special design"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"variants"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Default Variant"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"price_discounted"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"price_comparison"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"price_cost"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"available_quantity"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 08:12:19"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 08:12:19"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 08:12:19"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 08:12:19"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you create a product.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST /api/v1/products</code></p>
+<h3 id='request-attributes'>Request Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Rules</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>title</td>
+<td>Title of the product.</td>
+<td>Required. Must be a string.</td>
+</tr>
+<tr>
+<td>handle</td>
+<td>Unique handle for the product.</td>
+<td>Required. Must be a unique string.</td>
+</tr>
+<tr>
+<td>external_id</td>
+<td>External link.</td>
+<td>Nullable. Must be a string.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>The status of the product.</td>
+<td>Nullable. Must be a string. Must be one of &quot;new,active,rundown,discontinued,ranged,deleted&quot;</td>
+</tr>
+<tr>
+<td>brand</td>
+<td>Product&#39;s brand.</td>
+<td>Required. Must be a string.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Product&#39;s description.</td>
+<td>Nullable. Must be a string.</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>The currency of product&#39;s price.</td>
+<td>Nullable. Must be a string.</td>
+</tr>
+<tr>
+<td>position</td>
+<td>The position of the product.</td>
+<td>Default to 1. Must be an integer.</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>Tags attaching to this products.</td>
+<td>Nullable. Must be an array.</td>
+</tr>
+<tr>
+<td>options</td>
+<td>Options belong to this products.</td>
+<td>Nullable. Must be an array.</td>
+</tr>
+<tr>
+<td>channels</td>
+<td>Channels this product has.</td>
+<td>Nullable. Must be an array. Must exists on channel table.</td>
+</tr>
+<tr>
+<td>systems</td>
+<td>Systems this product belongs to.</td>
+<td>Nullable. Must be an array. Must exists on systems table.</td>
+</tr>
+</tbody></table>
+<h3 id='response-attributes'>Response Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>title</td>
+<td>Title of the product.</td>
+</tr>
+<tr>
+<td>handle</td>
+<td>Unique handle for the product.</td>
+</tr>
+<tr>
+<td>external_id</td>
+<td>External link.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>The status of the product.</td>
+</tr>
+<tr>
+<td>brand</td>
+<td>Product&#39;s brand.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Product&#39;s description.</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>The currency of product&#39;s price.</td>
+</tr>
+<tr>
+<td>position</td>
+<td>The position of the product.</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>Tags attaching to this products.</td>
+</tr>
+<tr>
+<td>options</td>
+<td>Options belong to this products.</td>
+</tr>
+<tr>
+<td>channels</td>
+<td>Channels this product has.</td>
+</tr>
+<tr>
+<td>systems</td>
+<td>Systems this product belongs to.</td>
+</tr>
+</tbody></table>
+<h2 id='list-all-products'>List all Products</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"87f50fcc-5ed6-3125-9f7a-a30c5c82c98f"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Labore omnis nobis dolorum eius."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ea-velit-quod-occaecati-suscipit"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"systems"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="s2">"channels"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Roberts, Ernser and Jacobi"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ranged"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;html&gt;&lt;head&gt;&lt;title&gt;Rerum doloremque ut.&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;form action=</span><span class="se">\"</span><span class="s2">example.org</span><span class="se">\"</span><span class="s2"> method=</span><span class="se">\"</span><span class="s2">POST</span><span class="se">\"</span><span class="s2">&gt;&lt;label for=</span><span class="se">\"</span><span class="s2">username</span><span class="se">\"</span><span class="s2">&gt;nostrum&lt;/label&gt;&lt;input type=</span><span class="se">\"</span><span class="s2">text</span><span class="se">\"</span><span class="s2"> id=</span><span class="se">\"</span><span class="s2">username</span><span class="se">\"</span><span class="s2">&gt;&lt;label for=</span><span class="se">\"</span><span class="s2">password</span><span class="se">\"</span><span class="s2">&gt;nisi&lt;/label&gt;&lt;input type=</span><span class="se">\"</span><span class="s2">password</span><span class="se">\"</span><span class="s2"> id=</span><span class="se">\"</span><span class="s2">password</span><span class="se">\"</span><span class="s2">&gt;&lt;/form&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">86231</span><span class="se">\"</span><span class="s2">&gt;&lt;ul&gt;&lt;li&gt;Assumenda.&lt;/li&gt;&lt;li&gt;Iure repudiandae.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AUD"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="s2">"variants"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 01:47:01"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 01:47:01"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"22739e91-7695-316b-9e51-8d6daf27a25a"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"In quia molestiae."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"non-dolores-at-blanditiis"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"systems"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="s2">"channels"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Murphy-Harvey"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ranged"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;html&gt;&lt;head&gt;&lt;title&gt;Blanditiis eaque quas numquam ipsa itaque nemo cum.&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;form action=</span><span class="se">\"</span><span class="s2">example.net</span><span class="se">\"</span><span class="s2"> method=</span><span class="se">\"</span><span class="s2">POST</span><span class="se">\"</span><span class="s2">&gt;&lt;label for=</span><span class="se">\"</span><span class="s2">username</span><span class="se">\"</span><span class="s2">&gt;quasi&lt;/label&gt;&lt;input type=</span><span class="se">\"</span><span class="s2">text</span><span class="se">\"</span><span class="s2"> id=</span><span class="se">\"</span><span class="s2">username</span><span class="se">\"</span><span class="s2">&gt;&lt;label for=</span><span class="se">\"</span><span class="s2">password</span><span class="se">\"</span><span class="s2">&gt;sed&lt;/label&gt;&lt;input type=</span><span class="se">\"</span><span class="s2">password</span><span class="se">\"</span><span class="s2"> id=</span><span class="se">\"</span><span class="s2">password</span><span class="se">\"</span><span class="s2">&gt;&lt;/form&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">72005</span><span class="se">\"</span><span class="s2">&gt;&lt;div class=</span><span class="se">\"</span><span class="s2">est</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">69875</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">20314</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;div class=</span><span class="se">\"</span><span class="s2">facere</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">55062</span><span class="se">\"</span><span class="s2">&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">43572</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">42659</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=</span><span class="se">\"</span><span class="s2">debitis</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AUD"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="s2">"variants"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Animi ullam a."</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;html&gt;&lt;head&gt;&lt;title&gt;Aliquam aut aut corporis.&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;form action=</span><span class="se">\"</span><span class="s2">example.com</span><span class="se">\"</span><span class="s2"> method=</span><span class="se">\"</span><span class="s2">POST</span><span class="se">\"</span><span class="s2">&gt;&lt;label for=</span><span class="se">\"</span><span class="s2">username</span><span class="se">\"</span><span class="s2">&gt;perferendis&lt;/label&gt;&lt;input type=</span><span class="se">\"</span><span class="s2">text</span><span class="se">\"</span><span class="s2"> id=</span><span class="se">\"</span><span class="s2">username</span><span class="se">\"</span><span class="s2">&gt;&lt;label for=</span><span class="se">\"</span><span class="s2">password</span><span class="se">\"</span><span class="s2">&gt;quisquam&lt;/label&gt;&lt;input type=</span><span class="se">\"</span><span class="s2">password</span><span class="se">\"</span><span class="s2"> id=</span><span class="se">\"</span><span class="s2">password</span><span class="se">\"</span><span class="s2">&gt;&lt;/form&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">11373</span><span class="se">\"</span><span class="s2">&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">88436</span><span class="se">\"</span><span class="s2">&gt;&lt;i&gt;Cumque distinctio.&lt;/i&gt;&lt;a href=</span><span class="se">\"</span><span class="s2">example.org</span><span class="se">\"</span><span class="s2">&gt;Qui commodi quia dolores.&lt;/a&gt;&lt;/div&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">50741</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;div class=</span><span class="se">\"</span><span class="s2">ducimus</span><span class="se">\"</span><span class="s2">&gt;Est amet non sit perferendis consequatur est dignissimos.&lt;/div&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">5308</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">47976</span><span class="se">\"</span><span class="s2">&gt;&lt;ul&gt;&lt;li&gt;Blanditiis amet nulla sed esse.&lt;/li&gt;&lt;li&gt;Aut qui.&lt;/li&gt;&lt;/ul&gt;Ducimus nisi nemo distinctio.&lt;/div&gt;&lt;div class=</span><span class="se">\"</span><span class="s2">praesentium</span><span class="se">\"</span><span class="s2">&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">46595</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">67601</span><span class="se">\"</span><span class="s2">&gt;Architecto aut et.&lt;a href=</span><span class="se">\"</span><span class="s2">example.net</span><span class="se">\"</span><span class="s2">&gt;Qui fuga debitis odio sed illum molestiae iste in.&lt;/a&gt;&lt;ul&gt;&lt;li&gt;Vitae dolores.&lt;/li&gt;&lt;li&gt;Corporis amet et.&lt;/li&gt;&lt;li&gt;Et nisi.&lt;/li&gt;&lt;li&gt;Omnis.&lt;/li&gt;&lt;li&gt;A voluptas.&lt;/li&gt;&lt;li&gt;Corporis molestias ut officia libero.&lt;/li&gt;&lt;li&gt;Voluptatem sed.&lt;/li&gt;&lt;li&gt;Laudantium nostrum facilis.&lt;/li&gt;&lt;li&gt;Ut est accusantium.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=</span><span class="se">\"</span><span class="s2">molestiae</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">32617</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">52.67</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"price_discounted"</span><span class="p">:</span><span class="w"> </span><span class="mf">79.53</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"price_comparison"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.54</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"price_cost"</span><span class="p">:</span><span class="w"> </span><span class="mf">78.07</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"available_quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+          </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+          </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"first"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://omneo-api.dev/api/v1/products?page=1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://omneo-api.dev/api/v1/products?page=1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"prev"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://omneo-api.dev/api/v1/products"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"per_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"to"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you list all products.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET /api/v1/products</code></p>
+<h3 id='request-attributes-2'>Request Attributes</h3>
+<p>None</p>
+<h3 id='response-attributes-2'>Response Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>title</td>
+<td>Title of the product.</td>
+</tr>
+<tr>
+<td>handle</td>
+<td>Unique handle for the product.</td>
+</tr>
+<tr>
+<td>external_id</td>
+<td>External link.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>The status of the product.</td>
+</tr>
+<tr>
+<td>brand</td>
+<td>Product&#39;s brand.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Product&#39;s description.</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>The currency of product&#39;s price.</td>
+</tr>
+<tr>
+<td>position</td>
+<td>The position of the product.</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>Tags attaching to this products.</td>
+</tr>
+<tr>
+<td>options</td>
+<td>Options belong to this products.</td>
+</tr>
+<tr>
+<td>channels</td>
+<td>Channels this product has.</td>
+</tr>
+<tr>
+<td>systems</td>
+<td>Systems this product belongs to.</td>
+</tr>
+</tbody></table>
+<h2 id='retrieve-a-product'>Retrieve a product</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"22739e91-7695-316b-9e51-8d6daf27a25a"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"In quia molestiae."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"non-dolores-at-blanditiis"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"systems"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"channels"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Murphy-Harvey"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ranged"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;html&gt;&lt;head&gt;&lt;title&gt;Blanditiis eaque quas numquam ipsa itaque nemo cum.&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;form action=</span><span class="se">\"</span><span class="s2">example.net</span><span class="se">\"</span><span class="s2"> method=</span><span class="se">\"</span><span class="s2">POST</span><span class="se">\"</span><span class="s2">&gt;&lt;label for=</span><span class="se">\"</span><span class="s2">username</span><span class="se">\"</span><span class="s2">&gt;quasi&lt;/label&gt;&lt;input type=</span><span class="se">\"</span><span class="s2">text</span><span class="se">\"</span><span class="s2"> id=</span><span class="se">\"</span><span class="s2">username</span><span class="se">\"</span><span class="s2">&gt;&lt;label for=</span><span class="se">\"</span><span class="s2">password</span><span class="se">\"</span><span class="s2">&gt;sed&lt;/label&gt;&lt;input type=</span><span class="se">\"</span><span class="s2">password</span><span class="se">\"</span><span class="s2"> id=</span><span class="se">\"</span><span class="s2">password</span><span class="se">\"</span><span class="s2">&gt;&lt;/form&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">72005</span><span class="se">\"</span><span class="s2">&gt;&lt;div class=</span><span class="se">\"</span><span class="s2">est</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">69875</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">20314</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;div class=</span><span class="se">\"</span><span class="s2">facere</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">55062</span><span class="se">\"</span><span class="s2">&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">43572</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">42659</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=</span><span class="se">\"</span><span class="s2">debitis</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AUD"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"variants"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Animi ullam a."</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;html&gt;&lt;head&gt;&lt;title&gt;Aliquam aut aut corporis.&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;form action=</span><span class="se">\"</span><span class="s2">example.com</span><span class="se">\"</span><span class="s2"> method=</span><span class="se">\"</span><span class="s2">POST</span><span class="se">\"</span><span class="s2">&gt;&lt;label for=</span><span class="se">\"</span><span class="s2">username</span><span class="se">\"</span><span class="s2">&gt;perferendis&lt;/label&gt;&lt;input type=</span><span class="se">\"</span><span class="s2">text</span><span class="se">\"</span><span class="s2"> id=</span><span class="se">\"</span><span class="s2">username</span><span class="se">\"</span><span class="s2">&gt;&lt;label for=</span><span class="se">\"</span><span class="s2">password</span><span class="se">\"</span><span class="s2">&gt;quisquam&lt;/label&gt;&lt;input type=</span><span class="se">\"</span><span class="s2">password</span><span class="se">\"</span><span class="s2"> id=</span><span class="se">\"</span><span class="s2">password</span><span class="se">\"</span><span class="s2">&gt;&lt;/form&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">11373</span><span class="se">\"</span><span class="s2">&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">88436</span><span class="se">\"</span><span class="s2">&gt;&lt;i&gt;Cumque distinctio.&lt;/i&gt;&lt;a href=</span><span class="se">\"</span><span class="s2">example.org</span><span class="se">\"</span><span class="s2">&gt;Qui commodi quia dolores.&lt;/a&gt;&lt;/div&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">50741</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;div class=</span><span class="se">\"</span><span class="s2">ducimus</span><span class="se">\"</span><span class="s2">&gt;Est amet non sit perferendis consequatur est dignissimos.&lt;/div&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">5308</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">47976</span><span class="se">\"</span><span class="s2">&gt;&lt;ul&gt;&lt;li&gt;Blanditiis amet nulla sed esse.&lt;/li&gt;&lt;li&gt;Aut qui.&lt;/li&gt;&lt;/ul&gt;Ducimus nisi nemo distinctio.&lt;/div&gt;&lt;div class=</span><span class="se">\"</span><span class="s2">praesentium</span><span class="se">\"</span><span class="s2">&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">46595</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">67601</span><span class="se">\"</span><span class="s2">&gt;Architecto aut et.&lt;a href=</span><span class="se">\"</span><span class="s2">example.net</span><span class="se">\"</span><span class="s2">&gt;Qui fuga debitis odio sed illum molestiae iste in.&lt;/a&gt;&lt;ul&gt;&lt;li&gt;Vitae dolores.&lt;/li&gt;&lt;li&gt;Corporis amet et.&lt;/li&gt;&lt;li&gt;Et nisi.&lt;/li&gt;&lt;li&gt;Omnis.&lt;/li&gt;&lt;li&gt;A voluptas.&lt;/li&gt;&lt;li&gt;Corporis molestias ut officia libero.&lt;/li&gt;&lt;li&gt;Voluptatem sed.&lt;/li&gt;&lt;li&gt;Laudantium nostrum facilis.&lt;/li&gt;&lt;li&gt;Ut est accusantium.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div class=</span><span class="se">\"</span><span class="s2">molestiae</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=</span><span class="se">\"</span><span class="s2">32617</span><span class="se">\"</span><span class="s2">&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">52.67</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"price_discounted"</span><span class="p">:</span><span class="w"> </span><span class="mf">79.53</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"price_comparison"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.54</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"price_cost"</span><span class="p">:</span><span class="w"> </span><span class="mf">78.07</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"available_quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you retrieve a single profile.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET /api/v1/products/{product}</code></p>
+<h3 id='request-attributes-3'>Request Attributes</h3>
+<p>None</p>
+<h3 id='response-attributes-3'>Response Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>title</td>
+<td>Title of the product.</td>
+</tr>
+<tr>
+<td>handle</td>
+<td>Unique handle for the product.</td>
+</tr>
+<tr>
+<td>external_id</td>
+<td>External link.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>The status of the product.</td>
+</tr>
+<tr>
+<td>brand</td>
+<td>Product&#39;s brand.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Product&#39;s description.</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>The currency of product&#39;s price.</td>
+</tr>
+<tr>
+<td>position</td>
+<td>The position of the product.</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>Tags attaching to this products.</td>
+</tr>
+<tr>
+<td>options</td>
+<td>Options belong to this products.</td>
+</tr>
+<tr>
+<td>channels</td>
+<td>Channels this product has.</td>
+</tr>
+<tr>
+<td>systems</td>
+<td>Systems this product belongs to.</td>
+</tr>
+</tbody></table>
+<h2 id='update-a-product'>Update a product</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hat Red"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you update a profile.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>PUT /api/v1/products/{products}</code></p>
+<h3 id='request-attributes-4'>Request Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Rules</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>title</td>
+<td>Title of the product.</td>
+<td>Required. Must be a string.</td>
+</tr>
+<tr>
+<td>handle</td>
+<td>Unique handle for the product.</td>
+<td>Required. Must be a unique string.</td>
+</tr>
+<tr>
+<td>external_id</td>
+<td>External link.</td>
+<td>Nullable. Must be a string.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>The status of the product.</td>
+<td>Nullable. Must be a string. Must be one of &quot;new,active,rundown,discontinued,ranged,deleted&quot;</td>
+</tr>
+<tr>
+<td>brand</td>
+<td>Product&#39;s brand.</td>
+<td>Required. Must be a string.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Product&#39;s description.</td>
+<td>Nullable. Must be a string.</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>The currency of product&#39;s price.</td>
+<td>Nullable. Must be a string.</td>
+</tr>
+<tr>
+<td>position</td>
+<td>The position of the product.</td>
+<td>Default to 1. Must be an integer.</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>Tags attaching to this products.</td>
+<td>Nullable. Must be an array.</td>
+</tr>
+<tr>
+<td>options</td>
+<td>Options belong to this products.</td>
+<td>Nullable. Must be an array.</td>
+</tr>
+<tr>
+<td>channels</td>
+<td>Channels this product has.</td>
+<td>Nullable. Must be an array. Must exists on channel table.</td>
+</tr>
+<tr>
+<td>systems</td>
+<td>Systems this product belongs to.</td>
+<td>Nullable. Must be an array. Must exists on systems table.</td>
+</tr>
+</tbody></table>
+<h3 id='response-attributes-4'>Response Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>title</td>
+<td>Title of the product.</td>
+</tr>
+<tr>
+<td>handle</td>
+<td>Unique handle for the product.</td>
+</tr>
+<tr>
+<td>external_id</td>
+<td>External link.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>The status of the product.</td>
+</tr>
+<tr>
+<td>brand</td>
+<td>Product&#39;s brand.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Product&#39;s description.</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>The currency of product&#39;s price.</td>
+</tr>
+<tr>
+<td>position</td>
+<td>The position of the product.</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>Tags attaching to this products.</td>
+</tr>
+<tr>
+<td>options</td>
+<td>Options belong to this products.</td>
+</tr>
+<tr>
+<td>channels</td>
+<td>Channels this product has.</td>
+</tr>
+<tr>
+<td>systems</td>
+<td>Systems this product belongs to.</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-product'>Delete a product</h2>
+<p>This API lets you delete a product.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>DELETE /api/v1/products/{product}</code></p>
+<h3 id='request-attributes-5'>Request Attributes</h3>
+<p>None</p>
+<h3 id='response-attributes-5'>Response Attributes</h3>
+<p>None</p>
