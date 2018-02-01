@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;json&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,7 +211,7 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="json">json</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -219,43 +219,35 @@
         <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#omneo-loyalty-engine" class="toc-h1 toc-link" data-title="Omneo Loyalty Engine">Omneo Loyalty Engine</a>
+            <a href="#omneo-documentation" class="toc-h1 toc-link" data-title="Omneo Documentation">Omneo Documentation</a>
+          </li>
+          <li>
+            <a href="#example" class="toc-h1 toc-link" data-title="Example">Example</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#media-types" class="toc-h2 toc-link" data-title="Media Types">Media Types</a>
+                    <a href="#create-an-example" class="toc-h2 toc-link" data-title="Create an example">Create an example</a>
                   </li>
                   <li>
-                    <a href="#error-states" class="toc-h2 toc-link" data-title="Error States">Error States</a>
+                    <a href="#list-all-examples" class="toc-h2 toc-link" data-title="List all examples">List all examples</a>
                   </li>
                   <li>
-                    <a href="#support" class="toc-h2 toc-link" data-title="Support">Support</a>
+                    <a href="#retrieve-an-example" class="toc-h2 toc-link" data-title="Retrieve an example">Retrieve an example</a>
+                  </li>
+                  <li>
+                    <a href="#update-an-example" class="toc-h2 toc-link" data-title="Update an example">Update an example</a>
+                  </li>
+                  <li>
+                    <a href="#delete-an-example" class="toc-h2 toc-link" data-title="Delete an example">Delete an example</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+            <a href="#redeem" class="toc-h1 toc-link" data-title="Redeem">Redeem</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#scopes" class="toc-h2 toc-link" data-title="Scopes">Scopes</a>
+                    <a href="#request-a-redemption" class="toc-h2 toc-link" data-title="Request a redemption">Request a redemption</a>
                   </li>
               </ul>
-          </li>
-          <li>
-            <a href="#achievements" class="toc-h1 toc-link" data-title="Achievements">Achievements</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-achievement-definitions" class="toc-h2 toc-link" data-title="Get achievement definitions">Get achievement definitions</a>
-                  </li>
-                  <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </div>
         <ul class="toc-footer">
@@ -266,414 +258,290 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='omneo-loyalty-engine'>Omneo Loyalty Engine</h1>
-<p>Welcome to the Omneo API documentation - here you can learn about all API calls and methods, what they are for, and how they are used.</p>
-<h2 id='media-types'>Media Types</h2>
-<p>Where applicable this API uses the <a href="json.md">JSON</a> media-type to represent resources states and affordances.</p>
-
-<p>Requests with a message-body are using plain JSON to set or update resource states.</p>
-<h2 id='error-states'>Error States</h2>
-<p>The common <a href="https://github.com/for-GET/know-your-http-well/blob/master/status-codes.md">HTTP Response Status Codes</a> are used.</p>
-<h2 id='support'>Support</h2>
-<p>If you have any questions about this API specification, please contact Omneo Support by sending an email to <a href="mailto:support@omneo.io?subject=Omneo+Loyalty+API+V2+Support">support@omneo.io</a></p>
-<h1 id='authentication'>Authentication</h1><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">omneo</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'omneo'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">omneo</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-</code></pre>
-<p><strong>Omneo Loyalty Engine</strong> uses OAuth Authorization using the client credentials grant type. Tokens are created by Omneo and provided to third parties. After you have acquired your token you can use it to access other resources within token&#39;s scope.</p>
-
-<p>Information about obtaining an access token can be found in the <strong>Authorization</strong> endpoint documentation.</p>
-
-<p>Omneo expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: Bearer meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h2 id='scopes'>Scopes</h2>
-<p>Each endpoint has been scoped to allow granular access control to each resource. </p>
-
-<table><thead>
-<tr>
-<th>Resource</th>
-<th>Scope</th>
-<th>Action</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Achievements</td>
-<td>read-achievements</td>
-<td>Read</td>
-</tr>
-<tr>
-<td>Achievements</td>
-<td>write-achievements</td>
-<td>Write</td>
-</tr>
-<tr>
-<td>Achievement Definitions</td>
-<td>read-achievement_definitions</td>
-<td>Read</td>
-</tr>
-<tr>
-<td>Achievement Definitions</td>
-<td>write-achievement_definitions</td>
-<td>Write</td>
-</tr>
-<tr>
-<td>Benefits</td>
-<td>read-benefits</td>
-<td>Read</td>
-</tr>
-<tr>
-<td>Benefits</td>
-<td>write-benefits</td>
-<td>Write</td>
-</tr>
-<tr>
-<td>Benefit Definitions</td>
-<td>read-benefit_definitions</td>
-<td>Read</td>
-</tr>
-<tr>
-<td>Benefit Definitions</td>
-<td>write-benefit_definitions</td>
-<td>Write</td>
-</tr>
-<tr>
-<td>Benefit Redemptions</td>
-<td>write-benefit_redemptions</td>
-<td>Write</td>
-</tr>
-<tr>
-<td>Cards</td>
-<td>read-cards</td>
-<td>Read</td>
-</tr>
-<tr>
-<td>Cards</td>
-<td>write-cards</td>
-<td>Write</td>
-</tr>
-<tr>
-<td>Currencies</td>
-<td>read-currencies</td>
-<td>Read</td>
-</tr>
-<tr>
-<td>Currencies</td>
-<td>write-currencies</td>
-<td>Write</td>
-</tr>
-<tr>
-<td>Members</td>
-<td>read-members</td>
-<td>Read</td>
-</tr>
-<tr>
-<td>Members</td>
-<td>write-members</td>
-<td>Write</td>
-</tr>
-<tr>
-<td>Member Tiers</td>
-<td>read-member-tiers</td>
-<td>Read</td>
-</tr>
-<tr>
-<td>Member Tiers</td>
-<td>write-member-tiers</td>
-<td>Write</td>
-</tr>
-<tr>
-<td>Points</td>
-<td>read-points</td>
-<td>Read</td>
-</tr>
-<tr>
-<td>Points</td>
-<td>write-points</td>
-<td>Write</td>
-</tr>
-<tr>
-<td>Points Balance</td>
-<td>read-points</td>
-<td>Read</td>
-</tr>
-<tr>
-<td>Points Definitions</td>
-<td>read-points_definitions</td>
-<td>Read</td>
-</tr>
-<tr>
-<td>Points Definitions</td>
-<td>write-points_definitions</td>
-<td>Write</td>
-</tr>
-<tr>
-<td>Points Types</td>
-<td>read-points_types</td>
-<td>Read</td>
-</tr>
-<tr>
-<td>Points Types</td>
-<td>write-points_types</td>
-<td>Write</td>
-</tr>
-<tr>
-<td>Products</td>
-<td>read-products</td>
-<td>Read</td>
-</tr>
-<tr>
-<td>Products</td>
-<td>write-products</td>
-<td>Write</td>
-</tr>
-<tr>
-<td>Redeem</td>
-<td>write-reward_redemptions</td>
-<td>Write</td>
-</tr>
-<tr>
-<td>Redemptions</td>
-<td>read-reward_redemptions</td>
-<td>Read</td>
-</tr>
-<tr>
-<td>Rewards</td>
-<td>read-reward</td>
-<td>Read</td>
-</tr>
-<tr>
-<td>Rewards</td>
-<td>write-reward</td>
-<td>Read</td>
-</tr>
-<tr>
-<td>Staff</td>
-<td>read-staff</td>
-<td>Read</td>
-</tr>
-<tr>
-<td>Staff</td>
-<td>write-staff</td>
-<td>Write</td>
-</tr>
-<tr>
-<td>Stores</td>
-<td>read-store</td>
-<td>Read</td>
-</tr>
-<tr>
-<td>Stores</td>
-<td>write-store</td>
-<td>Write</td>
-</tr>
-<tr>
-<td>Transactions</td>
-<td>read-transactions</td>
-<td>Read</td>
-</tr>
-<tr>
-<td>Transactions</td>
-<td>write-transactions</td>
-<td>Write</td>
-</tr>
-</tbody></table>
-<h1 id='achievements'>Achievements</h1><h2 id='get-achievement-definitions'>Get achievement definitions</h2><pre class="highlight javascript tab-javascript"><code><span class="kr">import</span> <span class="nx">Omneo</span> <span class="nx">from</span> <span class="s1">'Omneo'</span><span class="p">;</span>
-<span class="kd">let</span> <span class="nx">achievementDefinitions</span> <span class="o">=</span> <span class="nx">Omneo</span><span class="p">.</span><span class="nx">getAchievementDefinitions</span><span class="p">(</span><span class="s1">'achievementDefinitions'</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
+        <h1 id='omneo-documentation'>Omneo Documentation</h1><h1 id='example'>Example</h1>
+<p>This is an example documentation for a fake endpoint.</p>
+<h2 id='create-an-example'>Create an example</h2>
+<p>This API lets you list examples.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+<p><code>POST /api/v1/examples</code></p>
+<h3 id='request-attributes'>Request Attributes</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default</th>
+<th>Attribute</th>
+<th>Description</th>
+<th>Rules</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>example_id</td>
+<td>The example ID</td>
+<td>Must exist</td>
+</tr>
+</tbody></table>
+<h3 id='response-attributes'>Response Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td>example</td>
+<td>The example</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>tags</td>
+<td>The example tags</td>
 </tr>
 </tbody></table>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'omneo'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">omneo</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">omneo</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">omneo</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">omneo</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'omneo'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">omneo</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>JSON Response Example:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"example"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Example"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+</span></code></pre><h2 id='list-all-examples'>List all examples</h2>
+<p>This API lets you list all examples.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+<p><code>GET /api/v1/examples</code></p>
+<h3 id='response-attributes-2'>Response Attributes</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Attribute</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>example</td>
+<td>The example</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>The example tags</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'omneo'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">omneo</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">omneo</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">omneo</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">omneo</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'omneo'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">omneo</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>JSON Response Example:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"example"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Example"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
+</span></code></pre><h2 id='retrieve-an-example'>Retrieve an example</h2>
+<p>This API lets you retrieve a single example.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<p><code>GET /api/v1/examples/{example}</code></p>
+<h3 id='request-attributes-2'>Request Attributes</h3>
+<p>None</p>
+<h3 id='response-attributes-3'>Response Attributes</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Attribute</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>example</td>
+<td>The example</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>The example tags</td>
 </tr>
 </tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
 
-<p>The Kittn API uses the following error codes:</p>
-
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"example"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Example"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='update-an-example'>Update an example</h2>
+<p>This API lets you update an example.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>PUT /api/v1/examples/{example}</code></p>
+<h3 id='request-attributes-3'>Request Attributes</h3>
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>Attribute</th>
+<th>Description</th>
+<th>Rules</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request -- Your request sucks.</td>
+<td>example_id</td>
+<td>The example ID</td>
+<td>Must exist</td>
+</tr>
+</tbody></table>
+<h3 id='response-attributes-4'>Response Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>example</td>
+<td>The example</td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td>tags</td>
+<td>The example tags</td>
 </tr>
 </tbody></table>
 
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"example"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Example"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='delete-an-example'>Delete an example</h2>
+<p>This API lets you delete an example.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>DELETE /api/v1/examples/{example}</code></p>
+<h3 id='request-attributes-4'>Request Attributes</h3>
+<p>None</p>
+<h3 id='response-attributes-5'>Response Attributes</h3>
+<p>None</p>
+<h1 id='redeem'>Redeem</h1>
+<p>This API lets you redeem <strong>points</strong> and or <strong>rewards</strong>.</p>
+<h2 id='request-a-redemption'>Request a redemption</h2>
+<p>Request a redemption against a profile and transaction.</p>
+<h3 id='available-strategies'>Available Strategies</h3>
+<p>The redeem endpoint accepts a <strong>strategy</strong> handle which is used to determine the type and order in which
+a profiles benefits are redeemed.</p>
+
+<p>There are four different redeem strategies:</p>
+
+<table><thead>
+<tr>
+<th>Handle</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>rewards</td>
+<td>Redeem only rewards</td>
+</tr>
+<tr>
+<td>points</td>
+<td>Redeem only points</td>
+</tr>
+<tr>
+<td>rewards_points</td>
+<td>Redeem rewards first then points</td>
+</tr>
+<tr>
+<td>points_rewards</td>
+<td>Redeem points first then rewards</td>
+</tr>
+</tbody></table>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST /api/v1/profiles/{profile}/transactions/{transaction}/redeem</code></p>
+<h3 id='request-attributes'>Request Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Rules</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>amount</td>
+<td>The amount to be redeemed</td>
+<td>Must be an integer greater than 0</td>
+</tr>
+<tr>
+<td>strategy</td>
+<td>The strategy to use</td>
+<td>One of: points, rewards, rewards_points, points_rewards</td>
+</tr>
+</tbody></table>
+<h3 id='response-attributes'>Response Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>redemption_total</td>
+<td>The total amount redeemed</td>
+</tr>
+<tr>
+<td>profile.reward_balance</td>
+<td>The new profile reward balance</td>
+</tr>
+<tr>
+<td>profile.point_balance</td>
+<td>The new profile point balance</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"redemption_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"reward_balance"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"point_balance"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="json">json</a>
           </div>
       </div>
     </div>
