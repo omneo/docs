@@ -1,6 +1,27 @@
-# Product
+# Products
 
-This is the api endpoint to query products.
+This API allows you to create, read, update and delete products.
+
+## Product Attributes
+
+| Attribute   | Description                       | 
+|-------------|-----------------------------------|
+| id          | ID of the product.                |
+| title       | Title of the product.             |
+| handle      | Unique handle for the product.    |
+| external_id | External link.                    |
+| status      | The status of the product.        |
+| brand       | Product's brand.                  |
+| description | Product's description.            |
+| currency    | The currency of product's price.  |
+| position    | The position of the product.      |
+| tags        | Tags attaching to this products.  |
+| options     | Options belong to this products.  |
+| channels    | Channels this product has.        |
+| systems     | Systems this product belongs to.  |
+
+
+
 
 
 
@@ -48,44 +69,28 @@ This is the api endpoint to query products.
 ```
 
 
-This API lets you create a product.
+This API allows you to create a product.
 
 ### HTTP Request
 
 `POST /api/v1/products`
 
 ### Request Attributes
-| Attribute   | Description                       | Rules                                                                                       |
-|-------------|-----------------------------------|---------------------------------------------------------------------------------------------|
-| title       | Title of the product.             | Required. Must be a string.                                                                 |
-| handle      | Unique handle for the product.    | Required. Must be a unique string.                                                          |
-| external_id | External link.                    | Nullable. Must be a string.                                                                 |
-| status      | The status of the product.        | Nullable. Must be a string. Must be one of "new,active,rundown,discontinued,ranged,deleted" |
-| brand       | Product's brand.                  | Required. Must be a string.                                                                 |
-| description | Product's description.            | Nullable. Must be a string.                                                                 |
-| currency    | The currency of product's price.  | Nullable. Must be a string.                                                                 |
-| position    | The position of the product.      | Default to 1. Must be an integer.                                                           |
-| tags        | Tags attaching to this products.  | Nullable. Must be an array.                                                                 |
-| options     | Options belong to this products.  | Nullable. Must be an array.                                                                 |
-| channels    | Channels this product has.        | Nullable. Must be an array. Must exists on channel table.                                   |
-| systems     | Systems this product belongs to.  | Nullable. Must be an array. Must exists on systems table.                                   |
+| Attribute   | Type                                                                       |
+|-------------|----------------------------------------------------------------------------|
+| title       | `required`  `string`                                                       |
+| handle      | `required`  `string` `unique`                                              |
+| external_id | `nullable`  `string`                                                       |
+| status      | `nullable`  `string`  `in: new,active,rundown,discontinued,ranged,deleted` |
+| brand       | `required`  `string` Default to "new".                                      |
+| description | `nullable`  `string`                                                       |
+| currency    | `nullable`  `string`                                                       |
+| position    | Default to 1. `integer`                                                    |
+| tags        | `nullable`  Must be an array.                                              |
+| options     | `nullable`  Must be an array.                                              |
+| channels    | `nullable`  Must be an array. Must exists on channel table.                |
+| systems     | `nullable`  Must be an array. Must exists on systems table.                |
 
-
-### Response Attributes
-| Attribute   | Description                       | 
-|-------------|-----------------------------------|
-| title       | Title of the product.             |
-| handle      | Unique handle for the product.    |
-| external_id | External link.                    |
-| status      | The status of the product.        |
-| brand       | Product's brand.                  |
-| description | Product's description.            |
-| currency    | The currency of product's price.  |
-| position    | The position of the product.      |
-| tags        | Tags attaching to this products.  |
-| options     | Options belong to this products.  |
-| channels    | Channels this product has.        |
-| systems     | Systems this product belongs to.  |
 
 
 
@@ -173,26 +178,6 @@ This API lets you list all products.
 
 `GET /api/v1/products`
 
-### Request Attributes
-
-None
-
-### Response Attributes
-| Attribute   | Description                       | 
-|-------------|-----------------------------------|
-| title       | Title of the product.             |
-| handle      | Unique handle for the product.    |
-| external_id | External link.                    |
-| status      | The status of the product.        |
-| brand       | Product's brand.                  |
-| description | Product's description.            |
-| currency    | The currency of product's price.  |
-| position    | The position of the product.      |
-| tags        | Tags attaching to this products.  |
-| options     | Options belong to this products.  |
-| channels    | Channels this product has.        |
-| systems     | Systems this product belongs to.  |
-
 
 
 ## Retrieve a product
@@ -244,25 +229,6 @@ This API lets you retrieve a single profile.
 
 `GET /api/v1/products/{product}`
 
-### Request Attributes
-
-None
-
-### Response Attributes
-| Attribute   | Description                       | 
-|-------------|-----------------------------------|
-| title       | Title of the product.             |
-| handle      | Unique handle for the product.    |
-| external_id | External link.                    |
-| status      | The status of the product.        |
-| brand       | Product's brand.                  |
-| description | Product's description.            |
-| currency    | The currency of product's price.  |
-| position    | The position of the product.      |
-| tags        | Tags attaching to this products.  |
-| options     | Options belong to this products.  |
-| channels    | Channels this product has.        |
-| systems     | Systems this product belongs to.  |
 
 
 ## Update a product
@@ -282,37 +248,23 @@ This API lets you update a profile.
 `PUT /api/v1/products/{products}`
 
 ### Request Attributes
-| Attribute   | Description                       | Rules                                                                                       |
-|-------------|-----------------------------------|---------------------------------------------------------------------------------------------|
-| title       | Title of the product.             | Required. Must be a string.                                                                 |
-| handle      | Unique handle for the product.    | Required. Must be a unique string.                                                          |
-| external_id | External link.                    | Nullable. Must be a string.                                                                 |
-| status      | The status of the product.        | Nullable. Must be a string. Must be one of "new,active,rundown,discontinued,ranged,deleted" |
-| brand       | Product's brand.                  | Required. Must be a string.                                                                 |
-| description | Product's description.            | Nullable. Must be a string.                                                                 |
-| currency    | The currency of product's price.  | Nullable. Must be a string.                                                                 |
-| position    | The position of the product.      | Default to 1. Must be an integer.                                                           |
-| tags        | Tags attaching to this products.  | Nullable. Must be an array.                                                                 |
-| options     | Options belong to this products.  | Nullable. Must be an array.                                                                 |
-| channels    | Channels this product has.        | Nullable. Must be an array. Must exists on channel table.                                   |
-| systems     | Systems this product belongs to.  | Nullable. Must be an array. Must exists on systems table.                                   |
+| Attribute   | Type                                                                       |
+|-------------|----------------------------------------------------------------------------|
+| title       | `required`  `string`                                                       |
+| handle      | `required`  `string` `unique`                                              |
+| external_id | `nullable`  `string`                                                       |
+| status      | `nullable`  `string`  `in: new,active,rundown,discontinued,ranged,deleted` |
+| brand       | `required`  `string`                                                       |
+| description | `nullable`  `string`                                                       |
+| currency    | `nullable`  `string`                                                       |
+| position    | Default to 1. `integer`                                                    |
+| tags        | `nullable`  Must be an array.                                              |
+| options     | `nullable`  Must be an array.                                              |
+| channels    | `nullable`  Must be an array. Must exists on channel table.                |
+| systems     | `nullable`  Must be an array. Must exists on systems table.                |
 
 
-### Response Attributes
-| Attribute   | Description                       | 
-|-------------|-----------------------------------|
-| title       | Title of the product.             |
-| handle      | Unique handle for the product.    |
-| external_id | External link.                    |
-| status      | The status of the product.        |
-| brand       | Product's brand.                  |
-| description | Product's description.            |
-| currency    | The currency of product's price.  |
-| position    | The position of the product.      |
-| tags        | Tags attaching to this products.  |
-| options     | Options belong to this products.  |
-| channels    | Channels this product has.        |
-| systems     | Systems this product belongs to.  |
+
 
 
 ## Delete a product
@@ -323,10 +275,3 @@ This API lets you delete a product.
 
 `DELETE /api/v1/products/{product}`
 
-### Request Attributes
-
-None
-
-### Response Attributes
-
-None

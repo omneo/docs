@@ -41,7 +41,7 @@ This API allows you to create, read, update and delete point definitions.
 }
 ```
 
-This API allows you to create point definitions.
+This API allows you to a create point definition.
 
 ### HTTP Request
 
@@ -172,10 +172,6 @@ This API allows you to update point definitions.
 | description             | `sometimes` `string` `nullable`                 |
 | notes                   | `sometimes` `string` `nullable`                 |
 | is_reassignable         | `sometimes` `boolean` `nullable`                |
-
-
-
-
 
 
 
