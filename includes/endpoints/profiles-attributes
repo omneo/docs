@@ -1,0 +1,130 @@
+<h1 id='profile-39-s-attributes'>Profile&#39;s Attributes</h1>
+<p>This API allows you to read profile&#39;s attributes and update its value.
+Attributes are attached to profiles by default with default value. </p>
+<h3 id='profile-39-s-attributes-2'>Profile&#39;s Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The ID of the attribute</td>
+</tr>
+<tr>
+<td>name</td>
+<td>The display name of the attribute</td>
+</tr>
+<tr>
+<td>namespace</td>
+<td>The category the attribute belongs to</td>
+</tr>
+<tr>
+<td>handle</td>
+<td>The handle of the attribute</td>
+</tr>
+<tr>
+<td>type</td>
+<td>The type of the attribute. Must be from &#39;string&#39;, &#39;boolean&#39;, &#39;integer&#39;, and &#39;float&#39;</td>
+</tr>
+<tr>
+<td>default</td>
+<td>The default value of the attribute</td>
+</tr>
+<tr>
+<td>rules</td>
+<td>The rule to set attribute value</td>
+</tr>
+<tr>
+<td>is_system</td>
+<td>Whether this attribute is set by system</td>
+</tr>
+</tbody></table>
+<h2 id='list-all-profile-39-s-attributes'>List all profile&#39;s attributes</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"fashion-style"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fashion-style"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"email"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="s2">"is_system"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you list all attributes belong to a certain profile.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET /api/v1/profiles/1/attributes</code></p>
+<h2 id='retrieve-a-profile-39-s-attribute'>Retrieve a profile&#39;s attribute</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fashion-style"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"email"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"is_system"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you retrieve a single profile attribute.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET /api/v1/profiles/1/attributes/{namespace}:{handle}</code></p>
+<h2 id='update-a-profile-attribute'>Update a profile attribute</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"name update"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fashion-style"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"email"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"is_system"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 23:21:46"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 23:36:56"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you update a profile attribute.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>PUT /api/v1/profiles/1/attributes/{namespace}:{handle}</code></p>
+<h3 id='request-attributes'>Request Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>value</td>
+<td><code>required</code></td>
+</tr>
+</tbody></table>
+
+<ul>
+<li>The type of the value will be based on the rules set in the attribute. </li>
+</ul>

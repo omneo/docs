@@ -62,7 +62,7 @@
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This API allows you to create point definitions.</p>
+<p>This API allows you to a create point definition.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>POST /api/v1/points/definitions</code></p>
 <h3 id='request-attributes'>Request Attributes</h3>

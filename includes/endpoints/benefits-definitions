@@ -1,0 +1,286 @@
+<h1 id='benefits-definitions'>Benefits Definitions</h1>
+<p>This API allows you to create, read, update and delete benefit definitions.</p>
+<h2 id='benefit-definition-attributes'>Benefit Definition Attributes</h2>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The ID of the benefit definition</td>
+</tr>
+<tr>
+<td>name</td>
+<td>The name of the benefit definition</td>
+</tr>
+<tr>
+<td>description</td>
+<td>The description of the benefit definition</td>
+</tr>
+<tr>
+<td>notes</td>
+<td>The notes of the benefit definition</td>
+</tr>
+<tr>
+<td>period</td>
+<td>The number of days that its benefits can be redeemed</td>
+</tr>
+<tr>
+<td>is_extendable</td>
+<td>Whether its benefits can be extended</td>
+</tr>
+<tr>
+<td>is_reassignable</td>
+<td>Whether its benefits can be re-assigned to someone else</td>
+</tr>
+<tr>
+<td>max_redemptions</td>
+<td>The maximum times its benefits can be redeemed</td>
+</tr>
+<tr>
+<td>handle</td>
+<td>The handle of the benefit definition</td>
+</tr>
+</tbody></table>
+<h2 id='create-a-benefit-definition'>Create a benefit definition</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Birthday"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"birthday"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"period"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xxx"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"max_redemptions"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_extendable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_reassignable"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-02 04:42:33"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-02 04:42:33"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>JSON Request Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Birthday"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"birthday"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"period"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xxx"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"is_extendable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"max_redemptions"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API allows you to create a benefit definition.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST /api/v1/benefits/definitions</code></p>
+<h3 id='request-attributes'>Request Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td><code>required</code> <code>string</code></td>
+</tr>
+<tr>
+<td>description</td>
+<td><code>nullable</code> <code>string</code></td>
+</tr>
+<tr>
+<td>notes</td>
+<td><code>nullable</code> <code>string</code></td>
+</tr>
+<tr>
+<td>period</td>
+<td><code>required</code> <code>integer</code></td>
+</tr>
+<tr>
+<td>is_extendable</td>
+<td><code>nullable</code> <code>boolean</code></td>
+</tr>
+<tr>
+<td>max_redemptions</td>
+<td><code>nullable</code> <code>integer</code></td>
+</tr>
+<tr>
+<td>handle</td>
+<td><code>required</code> <code>alpha_dash</code> <code>unique</code></td>
+</tr>
+<tr>
+<td>tags</td>
+<td><code>sometimes</code> <code>required</code> <code>array</code></td>
+</tr>
+<tr>
+<td>tags.*.id</td>
+<td><code>required</code> <code>exists</code></td>
+</tr>
+</tbody></table>
+<h2 id='list-all-benefit-definitions'>List all benefit definitions</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"minima"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dolorem-veritatis-quo-exercitationem"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"period"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Quos aliquam sunt deserunt nobis blanditiis culpa temporibus. Et quidem non quis voluptatum blanditiis sunt eum laudantium. Maxime alias officiis nihil culpa."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Perspiciatis laborum sed quis aut iure. Ratione libero omnis inventore libero. Quisquam exercitationem exercitationem debitis autem aut."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"max_redemptions"</span><span class="p">:</span><span class="w"> </span><span class="mi">667401</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"is_extendable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"is_reassignable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"architecto"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"earum-sed-doloremque-maxime-minima"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"period"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ab est beatae cumque et soluta harum. Repellat impedit ab ea est in molestias. Rem et corporis quaerat accusamus. Laudantium eligendi saepe sit autem recusandae. Itaque qui est sunt atque reiciendis."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Consequatur qui temporibus cupiditate est quis. Quidem voluptatum soluta autem et enim quibusdam. Pariatur dicta sed occaecati. Est ea non autem maiores ducimus."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"max_redemptions"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"is_extendable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"is_reassignable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"first"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://omneo-api.dev/api/v1/benefits/definitions?page=1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://omneo-api.dev/api/v1/benefits/definitions?page=1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"prev"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://omneo-api.dev/api/v1/benefits/definitions"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"per_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"to"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you list all benefit definitions.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET /api/v1/benefits/definitions</code></p>
+<h2 id='retrieve-a-benefit-definition'>Retrieve a benefit definition</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"minima"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dolorem-veritatis-quo-exercitationem"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"period"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Quos aliquam sunt deserunt nobis blanditiis culpa temporibus. Et quidem non quis voluptatum blanditiis sunt eum laudantium. Maxime alias officiis nihil culpa."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Perspiciatis laborum sed quis aut iure. Ratione libero omnis inventore libero. Quisquam exercitationem exercitationem debitis autem aut."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"max_redemptions"</span><span class="p">:</span><span class="w"> </span><span class="mi">667401</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_extendable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_reassignable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you retrieve a single benefit definition.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET /api/v1/benefits/definitions/{benefitDefinition}</code></p>
+<h2 id='update-a-benefit-definition'>Update a benefit definition</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Birthday benefit"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dolorem-veritatis-quo-exercitationem"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"period"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xxx"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"max_redemptions"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_extendable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_reassignable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-02 04:45:55"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>JSON Request Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Birthday benefit"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"period"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xxx"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"is_extendable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"max_redemptions"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you update a benefit definition.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>PUT /api/v1/benefits/definitions/{benefitDefinition}</code></p>
+<h3 id='request-attributes-2'>Request Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td><code>sometimes</code> <code>required</code> <code>string</code></td>
+</tr>
+<tr>
+<td>description</td>
+<td><code>sometimes</code> <code>nullable</code> <code>string</code></td>
+</tr>
+<tr>
+<td>notes</td>
+<td><code>sometimes</code> <code>nullable</code> <code>string</code></td>
+</tr>
+<tr>
+<td>period</td>
+<td><code>sometimes</code> <code>required</code> <code>integer</code></td>
+</tr>
+<tr>
+<td>is_extendable</td>
+<td><code>sometimes</code> <code>nullable</code> <code>boolean</code></td>
+</tr>
+<tr>
+<td>max_redemptions</td>
+<td><code>sometimes</code> <code>nullable</code> <code>integer</code></td>
+</tr>
+<tr>
+<td>tags</td>
+<td><code>sometimes</code> <code>required</code> <code>array</code></td>
+</tr>
+<tr>
+<td>tags.*.id</td>
+<td><code>required</code> <code>exists</code></td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-benefit-definition'>Delete a benefit definition</h2>
+<p>This API lets you delete a benefit definition.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>DELETE /api/v1/benefits/definitions/{benefitDefinition}</code></p>

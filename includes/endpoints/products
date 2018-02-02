@@ -1,5 +1,65 @@
-<h1 id='product'>Product</h1>
-<p>This is the api endpoint to query products.</p>
+<h1 id='products'>Products</h1>
+<p>This API allows you to create, read, update and delete products.</p>
+<h2 id='product-attributes'>Product Attributes</h2>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>ID of the product.</td>
+</tr>
+<tr>
+<td>title</td>
+<td>Title of the product.</td>
+</tr>
+<tr>
+<td>handle</td>
+<td>Unique handle for the product.</td>
+</tr>
+<tr>
+<td>external_id</td>
+<td>External link.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>The status of the product.</td>
+</tr>
+<tr>
+<td>brand</td>
+<td>Product&#39;s brand.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Product&#39;s description.</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>The currency of product&#39;s price.</td>
+</tr>
+<tr>
+<td>position</td>
+<td>The position of the product.</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>Tags attaching to this products.</td>
+</tr>
+<tr>
+<td>options</td>
+<td>Options belong to this products.</td>
+</tr>
+<tr>
+<td>channels</td>
+<td>Channels this product has.</td>
+</tr>
+<tr>
+<td>systems</td>
+<td>Systems this product belongs to.</td>
+</tr>
+</tbody></table>
 <h2 id='create-a-product'>Create a product</h2>
 <blockquote>
 <p>JSON Response Example:</p>
@@ -41,132 +101,63 @@
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This API lets you create a product.</p>
+<p>This API allows you to create a product.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>POST /api/v1/products</code></p>
 <h3 id='request-attributes'>Request Attributes</h3>
 <table><thead>
 <tr>
 <th>Attribute</th>
-<th>Description</th>
-<th>Rules</th>
+<th>Type</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>title</td>
-<td>Title of the product.</td>
-<td>Required. Must be a string.</td>
+<td><code>required</code>  <code>string</code></td>
 </tr>
 <tr>
 <td>handle</td>
-<td>Unique handle for the product.</td>
-<td>Required. Must be a unique string.</td>
+<td><code>required</code>  <code>string</code> <code>unique</code></td>
 </tr>
 <tr>
 <td>external_id</td>
-<td>External link.</td>
-<td>Nullable. Must be a string.</td>
+<td><code>nullable</code>  <code>string</code></td>
 </tr>
 <tr>
 <td>status</td>
-<td>The status of the product.</td>
-<td>Nullable. Must be a string. Must be one of &quot;new,active,rundown,discontinued,ranged,deleted&quot;</td>
+<td><code>nullable</code>  <code>string</code>  <code>in: new,active,rundown,discontinued,ranged,deleted</code></td>
 </tr>
 <tr>
 <td>brand</td>
-<td>Product&#39;s brand.</td>
-<td>Required. Must be a string.</td>
+<td><code>required</code>  <code>string</code> Default to &quot;new&quot;.</td>
 </tr>
 <tr>
 <td>description</td>
-<td>Product&#39;s description.</td>
-<td>Nullable. Must be a string.</td>
+<td><code>nullable</code>  <code>string</code></td>
 </tr>
 <tr>
 <td>currency</td>
-<td>The currency of product&#39;s price.</td>
-<td>Nullable. Must be a string.</td>
+<td><code>nullable</code>  <code>string</code></td>
 </tr>
 <tr>
 <td>position</td>
-<td>The position of the product.</td>
-<td>Default to 1. Must be an integer.</td>
+<td>Default to 1. <code>integer</code></td>
 </tr>
 <tr>
 <td>tags</td>
-<td>Tags attaching to this products.</td>
-<td>Nullable. Must be an array.</td>
+<td><code>nullable</code>  Must be an array.</td>
 </tr>
 <tr>
 <td>options</td>
-<td>Options belong to this products.</td>
-<td>Nullable. Must be an array.</td>
+<td><code>nullable</code>  Must be an array.</td>
 </tr>
 <tr>
 <td>channels</td>
-<td>Channels this product has.</td>
-<td>Nullable. Must be an array. Must exists on channel table.</td>
+<td><code>nullable</code>  Must be an array. Must exists on channel table.</td>
 </tr>
 <tr>
 <td>systems</td>
-<td>Systems this product belongs to.</td>
-<td>Nullable. Must be an array. Must exists on systems table.</td>
-</tr>
-</tbody></table>
-<h3 id='response-attributes'>Response Attributes</h3>
-<table><thead>
-<tr>
-<th>Attribute</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>title</td>
-<td>Title of the product.</td>
-</tr>
-<tr>
-<td>handle</td>
-<td>Unique handle for the product.</td>
-</tr>
-<tr>
-<td>external_id</td>
-<td>External link.</td>
-</tr>
-<tr>
-<td>status</td>
-<td>The status of the product.</td>
-</tr>
-<tr>
-<td>brand</td>
-<td>Product&#39;s brand.</td>
-</tr>
-<tr>
-<td>description</td>
-<td>Product&#39;s description.</td>
-</tr>
-<tr>
-<td>currency</td>
-<td>The currency of product&#39;s price.</td>
-</tr>
-<tr>
-<td>position</td>
-<td>The position of the product.</td>
-</tr>
-<tr>
-<td>tags</td>
-<td>Tags attaching to this products.</td>
-</tr>
-<tr>
-<td>options</td>
-<td>Options belong to this products.</td>
-</tr>
-<tr>
-<td>channels</td>
-<td>Channels this product has.</td>
-</tr>
-<tr>
-<td>systems</td>
-<td>Systems this product belongs to.</td>
+<td><code>nullable</code>  Must be an array. Must exists on systems table.</td>
 </tr>
 </tbody></table>
 <h2 id='list-all-products'>List all Products</h2>
@@ -248,64 +239,6 @@
 <p>This API lets you list all products.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET /api/v1/products</code></p>
-<h3 id='request-attributes-2'>Request Attributes</h3>
-<p>None</p>
-<h3 id='response-attributes-2'>Response Attributes</h3>
-<table><thead>
-<tr>
-<th>Attribute</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>title</td>
-<td>Title of the product.</td>
-</tr>
-<tr>
-<td>handle</td>
-<td>Unique handle for the product.</td>
-</tr>
-<tr>
-<td>external_id</td>
-<td>External link.</td>
-</tr>
-<tr>
-<td>status</td>
-<td>The status of the product.</td>
-</tr>
-<tr>
-<td>brand</td>
-<td>Product&#39;s brand.</td>
-</tr>
-<tr>
-<td>description</td>
-<td>Product&#39;s description.</td>
-</tr>
-<tr>
-<td>currency</td>
-<td>The currency of product&#39;s price.</td>
-</tr>
-<tr>
-<td>position</td>
-<td>The position of the product.</td>
-</tr>
-<tr>
-<td>tags</td>
-<td>Tags attaching to this products.</td>
-</tr>
-<tr>
-<td>options</td>
-<td>Options belong to this products.</td>
-</tr>
-<tr>
-<td>channels</td>
-<td>Channels this product has.</td>
-</tr>
-<tr>
-<td>systems</td>
-<td>Systems this product belongs to.</td>
-</tr>
-</tbody></table>
 <h2 id='retrieve-a-product'>Retrieve a product</h2>
 <blockquote>
 <p>JSON Response Example:</p>
@@ -350,64 +283,6 @@
 <p>This API lets you retrieve a single profile.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET /api/v1/products/{product}</code></p>
-<h3 id='request-attributes-3'>Request Attributes</h3>
-<p>None</p>
-<h3 id='response-attributes-3'>Response Attributes</h3>
-<table><thead>
-<tr>
-<th>Attribute</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>title</td>
-<td>Title of the product.</td>
-</tr>
-<tr>
-<td>handle</td>
-<td>Unique handle for the product.</td>
-</tr>
-<tr>
-<td>external_id</td>
-<td>External link.</td>
-</tr>
-<tr>
-<td>status</td>
-<td>The status of the product.</td>
-</tr>
-<tr>
-<td>brand</td>
-<td>Product&#39;s brand.</td>
-</tr>
-<tr>
-<td>description</td>
-<td>Product&#39;s description.</td>
-</tr>
-<tr>
-<td>currency</td>
-<td>The currency of product&#39;s price.</td>
-</tr>
-<tr>
-<td>position</td>
-<td>The position of the product.</td>
-</tr>
-<tr>
-<td>tags</td>
-<td>Tags attaching to this products.</td>
-</tr>
-<tr>
-<td>options</td>
-<td>Options belong to this products.</td>
-</tr>
-<tr>
-<td>channels</td>
-<td>Channels this product has.</td>
-</tr>
-<tr>
-<td>systems</td>
-<td>Systems this product belongs to.</td>
-</tr>
-</tbody></table>
 <h2 id='update-a-product'>Update a product</h2>
 <blockquote>
 <p>JSON Response Example:</p>
@@ -419,136 +294,63 @@
 <p>This API lets you update a profile.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>PUT /api/v1/products/{products}</code></p>
-<h3 id='request-attributes-4'>Request Attributes</h3>
+<h3 id='request-attributes-2'>Request Attributes</h3>
 <table><thead>
 <tr>
 <th>Attribute</th>
-<th>Description</th>
-<th>Rules</th>
+<th>Type</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>title</td>
-<td>Title of the product.</td>
-<td>Required. Must be a string.</td>
+<td><code>required</code>  <code>string</code></td>
 </tr>
 <tr>
 <td>handle</td>
-<td>Unique handle for the product.</td>
-<td>Required. Must be a unique string.</td>
+<td><code>required</code>  <code>string</code> <code>unique</code></td>
 </tr>
 <tr>
 <td>external_id</td>
-<td>External link.</td>
-<td>Nullable. Must be a string.</td>
+<td><code>nullable</code>  <code>string</code></td>
 </tr>
 <tr>
 <td>status</td>
-<td>The status of the product.</td>
-<td>Nullable. Must be a string. Must be one of &quot;new,active,rundown,discontinued,ranged,deleted&quot;</td>
+<td><code>nullable</code>  <code>string</code>  <code>in: new,active,rundown,discontinued,ranged,deleted</code></td>
 </tr>
 <tr>
 <td>brand</td>
-<td>Product&#39;s brand.</td>
-<td>Required. Must be a string.</td>
+<td><code>required</code>  <code>string</code></td>
 </tr>
 <tr>
 <td>description</td>
-<td>Product&#39;s description.</td>
-<td>Nullable. Must be a string.</td>
+<td><code>nullable</code>  <code>string</code></td>
 </tr>
 <tr>
 <td>currency</td>
-<td>The currency of product&#39;s price.</td>
-<td>Nullable. Must be a string.</td>
+<td><code>nullable</code>  <code>string</code></td>
 </tr>
 <tr>
 <td>position</td>
-<td>The position of the product.</td>
-<td>Default to 1. Must be an integer.</td>
+<td>Default to 1. <code>integer</code></td>
 </tr>
 <tr>
 <td>tags</td>
-<td>Tags attaching to this products.</td>
-<td>Nullable. Must be an array.</td>
+<td><code>nullable</code>  Must be an array.</td>
 </tr>
 <tr>
 <td>options</td>
-<td>Options belong to this products.</td>
-<td>Nullable. Must be an array.</td>
+<td><code>nullable</code>  Must be an array.</td>
 </tr>
 <tr>
 <td>channels</td>
-<td>Channels this product has.</td>
-<td>Nullable. Must be an array. Must exists on channel table.</td>
+<td><code>nullable</code>  Must be an array. Must exists on channel table.</td>
 </tr>
 <tr>
 <td>systems</td>
-<td>Systems this product belongs to.</td>
-<td>Nullable. Must be an array. Must exists on systems table.</td>
-</tr>
-</tbody></table>
-<h3 id='response-attributes-4'>Response Attributes</h3>
-<table><thead>
-<tr>
-<th>Attribute</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>title</td>
-<td>Title of the product.</td>
-</tr>
-<tr>
-<td>handle</td>
-<td>Unique handle for the product.</td>
-</tr>
-<tr>
-<td>external_id</td>
-<td>External link.</td>
-</tr>
-<tr>
-<td>status</td>
-<td>The status of the product.</td>
-</tr>
-<tr>
-<td>brand</td>
-<td>Product&#39;s brand.</td>
-</tr>
-<tr>
-<td>description</td>
-<td>Product&#39;s description.</td>
-</tr>
-<tr>
-<td>currency</td>
-<td>The currency of product&#39;s price.</td>
-</tr>
-<tr>
-<td>position</td>
-<td>The position of the product.</td>
-</tr>
-<tr>
-<td>tags</td>
-<td>Tags attaching to this products.</td>
-</tr>
-<tr>
-<td>options</td>
-<td>Options belong to this products.</td>
-</tr>
-<tr>
-<td>channels</td>
-<td>Channels this product has.</td>
-</tr>
-<tr>
-<td>systems</td>
-<td>Systems this product belongs to.</td>
+<td><code>nullable</code>  Must be an array. Must exists on systems table.</td>
 </tr>
 </tbody></table>
 <h2 id='delete-a-product'>Delete a product</h2>
 <p>This API lets you delete a product.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
 <p><code>DELETE /api/v1/products/{product}</code></p>
-<h3 id='request-attributes-5'>Request Attributes</h3>
-<p>None</p>
-<h3 id='response-attributes-5'>Response Attributes</h3>
-<p>None</p>

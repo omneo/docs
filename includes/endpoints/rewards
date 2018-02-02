@@ -1,0 +1,125 @@
+<h1 id='rewards'>Rewards</h1>
+<p>This API allows you to read rewards.</p>
+<h2 id='reward-attributes'>Reward Attributes</h2>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>The ID of the reward</td>
+</tr>
+<tr>
+<td>value_initial</td>
+<td>The initial value of the reward</td>
+</tr>
+<tr>
+<td>value_remaining</td>
+<td>Current remaining value of the reward</td>
+</tr>
+<tr>
+<td>expires_at</td>
+<td>The expiry date of the reward</td>
+</tr>
+<tr>
+<td>issue_at</td>
+<td>The date the reward was created</td>
+</tr>
+<tr>
+<td>reward_definition_id</td>
+<td>The reward definition associated with this reward</td>
+</tr>
+<tr>
+<td>profile_id</td>
+<td>The profile associated with this reward</td>
+</tr>
+</tbody></table>
+<h2 id='list-all-rewards'>List all Rewards</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value_initial"</span><span class="p">:</span><span class="w"> </span><span class="mf">2578.18</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value_remaining"</span><span class="p">:</span><span class="w"> </span><span class="mf">2578.18</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"expires_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2004-01-22 09:11:49"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"issued_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2004-01-09 09:11:49"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"is_expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"definition"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dolores"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"exercitationem-et-explicabo-repudiandae-laboriosam-qui"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"period"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Maxime quae voluptas placeat mollitia dolorem quis. Recusandae debitis non rerum. Sunt et nihil reiciendis sunt maiores adipisci ex excepturi."</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">2578.18</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"max_redemptions"</span><span class="p">:</span><span class="w"> </span><span class="mi">221</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"is_extendable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"is_reassignable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"first"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://omneo-api.dev/api/v1/profiles/4/rewards?page=1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://omneo-api.dev/api/v1/profiles/4/rewards?page=1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"prev"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://omneo-api.dev/api/v1/profiles/4/rewards"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"per_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"to"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you list all rewards associated with a certain profile.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET /api/v1/profiles/{profile}/rewards</code></p>
+<h2 id='retrieve-a-reward'>Retrieve a reward</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"value_initial"</span><span class="p">:</span><span class="w"> </span><span class="mf">2578.18</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"value_remaining"</span><span class="p">:</span><span class="w"> </span><span class="mf">2578.18</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"expires_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2004-01-22 09:11:49"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"issued_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2004-01-09 09:11:49"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"definition"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dolores"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"exercitationem-et-explicabo-repudiandae-laboriosam-qui"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"period"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Maxime quae voluptas placeat mollitia dolorem quis. Recusandae debitis non rerum. Sunt et nihil reiciendis sunt maiores adipisci ex excepturi."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">2578.18</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"max_redemptions"</span><span class="p">:</span><span class="w"> </span><span class="mi">221</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"is_extendable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"is_reassignable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-31 00:41:16"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you retrieve a single reward.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET /api/v1/profiles/{profile}/rewards/{reward}</code></p>
