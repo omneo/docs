@@ -251,6 +251,15 @@
                     <a href="#profile-attribute-properties" class="toc-h2 toc-link" data-title="Profile Attribute Properties">Profile Attribute Properties</a>
                   </li>
                   <li>
+                    <a href="#available-types" class="toc-h2 toc-link" data-title="Available Types">Available Types</a>
+                  </li>
+                  <li>
+                    <a href="#rule-examples" class="toc-h2 toc-link" data-title="Rule Examples">Rule Examples</a>
+                  </li>
+                  <li>
+                    <a href="#rule-type-examples" class="toc-h2 toc-link" data-title="Rule / Type Examples">Rule / Type Examples</a>
+                  </li>
+                  <li>
                     <a href="#create-a-profile-attribute" class="toc-h2 toc-link" data-title="Create a profile attribute">Create a profile attribute</a>
                   </li>
                   <li>
@@ -301,6 +310,9 @@
               <ul class="toc-list-h2">
                   <li>
                     <a href="#custom-field-properties" class="toc-h2 toc-link" data-title="Custom Field Properties">Custom Field Properties</a>
+                  </li>
+                  <li>
+                    <a href="#available-types" class="toc-h2 toc-link" data-title="Available Types">Available Types</a>
                   </li>
                   <li>
                     <a href="#available-resource-endpoints" class="toc-h2 toc-link" data-title="Available Resource Endpoints">Available Resource Endpoints</a>
@@ -1049,6 +1061,101 @@
 <td>Whether or not the attribute is deletable</td>
 </tr>
 </tbody></table>
+<h2 id='available-types'>Available Types</h2>
+<p>Types determine how the attribute value is casted. It&#39;s important to note that types <em>do not
+enforce a specific type on ingress</em>, e.g. if the type is set to <code>string</code> and a <code>float</code> is entered, the float value will be casted as a <code>string</code>.</p>
+
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>&quot;1123-2314-221-4421&quot;</td>
+</tr>
+<tr>
+<td>float</td>
+<td>1.245</td>
+</tr>
+<tr>
+<td>integer</td>
+<td>100</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>true</td>
+</tr>
+</tbody></table>
+<h2 id='rule-examples'>Rule Examples</h2>
+<p>Rules determine how a value is validated on <em>ingress</em>. Rules should be used in conjunction with types to enforce type values.</p>
+
+<table><thead>
+<tr>
+<th>Rule</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Allow only emails</td>
+<td><code>[&quot;email&quot;, &quot;string&quot;, &quot;required&quot;]</code></td>
+</tr>
+<tr>
+<td>Specify a range</td>
+<td><code>[&quot;required&quot;, &quot;between:0,100&quot;]</code></td>
+</tr>
+<tr>
+<td>Allow only boolean values</td>
+<td><code>[&quot;required&quot;, &quot;boolean&quot;]</code></td>
+</tr>
+<tr>
+<td>Allow only numerical values</td>
+<td><code>[&quot;required&quot;, &quot;numeric&quot;]</code></td>
+</tr>
+<tr>
+<td>Allow a specific option</td>
+<td><code>[&quot;required&quot;, &quot;in:one,two,three,four,five&quot;]</code></td>
+</tr>
+<tr>
+<td>Allow a specific regex pattern</td>
+<td><code>[&quot;required&quot;, &quot;regex:pattern&quot;]</code></td>
+</tr>
+<tr>
+<td>Allow only strings</td>
+<td><code>[&quot;required&quot;, &quot;string&quot;]</code></td>
+</tr>
+<tr>
+<td>Allow after date</td>
+<td><code>[&quot;required&quot;, &quot;after_or_equal:date&quot;]</code></td>
+</tr>
+</tbody></table>
+<h2 id='rule-type-examples'>Rule / Type Examples</h2>
+<p>Please see the below table for a common list of rule / type combinations.</p>
+
+<table><thead>
+<tr>
+<th>Example</th>
+<th>Type</th>
+<th>Rule</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Allow strings</td>
+<td><code>string</code></td>
+<td><code>required</code>, <code>string</code></td>
+</tr>
+<tr>
+<td>Allow floats, integers</td>
+<td><code>string</code></td>
+<td><code>required</code>, <code>numeric</code></td>
+</tr>
+<tr>
+<td>Allow booleans</td>
+<td><code>boolean</code></td>
+<td><code>required</code>, <code>boolean</code></td>
+</tr>
+</tbody></table>
 <h2 id='create-a-profile-attribute'>Create a profile attribute</h2>
 <blockquote>
 <p>JSON Response Example:</p>
@@ -1695,6 +1802,30 @@ Profile attributes are automatically grouped by their namespace.
 <tr>
 <td>type</td>
 <td>The custom field type (e.g. string)</td>
+</tr>
+</tbody></table>
+<h2 id='available-types'>Available Types</h2>
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>&quot;1123-2314-221-4421&quot;</td>
+</tr>
+<tr>
+<td>float</td>
+<td>1.245</td>
+</tr>
+<tr>
+<td>integer</td>
+<td>100</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>true</td>
 </tr>
 </tbody></table>
 <h2 id='available-resource-endpoints'>Available Resource Endpoints</h2>

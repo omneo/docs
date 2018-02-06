@@ -28,6 +28,30 @@
 <td>The custom field type (e.g. string)</td>
 </tr>
 </tbody></table>
+<h2 id='available-types'>Available Types</h2>
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>&quot;1123-2314-221-4421&quot;</td>
+</tr>
+<tr>
+<td>float</td>
+<td>1.245</td>
+</tr>
+<tr>
+<td>integer</td>
+<td>100</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>true</td>
+</tr>
+</tbody></table>
 <h2 id='available-resource-endpoints'>Available Resource Endpoints</h2>
 <p>For a list of resources that support custom fields, please see below.</p>
 
