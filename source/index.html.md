@@ -24,6 +24,9 @@ includes:
   - endpoints/redeem
   - endpoints/points-definitions
   - endpoints/points
+  - endpoints/permissions
+  - endpoints/roles
+  - endpoints/users
 
 search: true
 ---
