@@ -3,9 +3,9 @@
 This API allows you to create, read, update and delete transaction items.
 
 
-## Transaction Item Attributes
+## Transaction Item Properties
 
-| Attribute      | Description                               |
+| Property      | Description                               |
 |----------------|-------------------------------------------|
 | id             | The ID of the transaction item            |
 | name           | The name of the transaction item          |
@@ -77,8 +77,9 @@ This API allows you to create a transaction item.
 
 `POST /api/v1/transactions/{transaction}/items`
 
-### Request Attributes
-| Attribute      | Type                          |
+### Request Properties
+
+| Property      | Type                          |
 |----------------|-------------------------------|
 | name           | `required` `string`           |
 | quantity       | `required` `integer`          |
@@ -153,22 +154,7 @@ This API allows you to create a transaction item.
             "created_at": "2018-02-02 01:16:16",
             "updated_at": "2018-02-02 01:17:29"
         }
-    ],
-    "links": {
-        "first": "http://omneo-api.dev/api/v1/transactions/15/items?page=1",
-        "last": "http://omneo-api.dev/api/v1/transactions/15/items?page=1",
-        "prev": null,
-        "next": null
-    },
-    "meta": {
-        "current_page": 1,
-        "from": 1,
-        "last_page": 1,
-        "path": "http://omneo-api.dev/api/v1/transactions/15/items",
-        "per_page": 15,
-        "to": 2,
-        "total": 2
-    }
+    ]
 }
 ```
 
@@ -279,14 +265,16 @@ This API lets you retrieve a single transaction item.
   "product_id" : 2
 }
 ```
+
 This API lets you update a transaction item.
 
 ### HTTP Request
 
 `PUT /api/v1/transactions/{transaction}/items/{item}`
 
-### Request Attributes
-| Attribute      | Type                                      |
+### Request Properties
+
+| Property      | Type                                      |
 |----------------|-------------------------------------------|
 | name           | `sometimes` `required` `string`           |
 | quantity       | `sometimes` `required` `integer`          |

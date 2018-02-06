@@ -40,16 +40,16 @@ There are four different redeem strategies:
 
 `POST /api/v1/profiles/{profile}/transactions/{transaction}/redeem`
 
-### Request Attributes
+### Request Properties
 
-| Attribute               | Description                   | Rules                                                       |
+| Property               | Description                   | Rules                                                       |
 |-------------------------|-------------------------------|-------------------------------------------------------------|
 | amount                  | The amount to be redeemed     | Must be an integer greater than 0                           |
 | strategy                | The strategy to use           | One of: points, rewards, rewards_points, points_rewards     |
 
-### Response Attributes
+### Response Properties
 
-| Attribute               | Description                    |
+| Property               | Description                    |
 |-------------------------|--------------------------------|
 | redemption_total        | The total amount redeemed      |
 | profile.reward_balance  | The new profile reward balance |

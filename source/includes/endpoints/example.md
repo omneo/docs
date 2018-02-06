@@ -2,9 +2,9 @@
 
 This API allows you to create, read, update and delete examples.
 
-## Example Attributes
+## Example Properties
 
-| Attribute               | Description                                 |
+| Property               | Description                                 |
 |-------------------------|---------------------------------------------|
 | id                      | The ID of the example                       |
 | name                    | The name of the example                     |
@@ -39,9 +39,9 @@ This API allows you to create examples.
 
 `POST /api/v1/examples`
 
-### Request Attributes
+### Request Properties
 
-| Attribute               | Type                                            |    
+| Property               | Type                                            |    
 |-------------------------|-------------------------------------------------|
 | name                    | `string`                                        |
 | handle                  | `string`                                        |
@@ -142,9 +142,9 @@ This API allows you to update examples.
 
 `PUT /api/v1/examples/{example}`
 
-### Request Attributes
+### Request Properties
 
-| Attribute               | Type                                            |    
+| Property               | Type                                            |    
 |-------------------------|-------------------------------------------------|
 | name                    | `sometimes` `string`                            |
 | handle                  | `sometimes` `string`                            |
