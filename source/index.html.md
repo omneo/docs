@@ -12,6 +12,7 @@ includes:
   - endpoints/profiles
   - endpoints/profile-attributes
   - endpoints/products
+  - endpoints/custom-fields
   - endpoints/products-variants
   - endpoints/transactions
   - endpoints/transactions-items
