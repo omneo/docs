@@ -9,9 +9,8 @@ toc_footers:
   - <a href='https://omneo.io'>Omneo.io</a>
 
 includes:
-  - endpoints/attributes
   - endpoints/profiles
-  - endpoints/profiles-attributes
+  - endpoints/profile-attributes
   - endpoints/products
   - endpoints/products-variants
   - endpoints/transactions
