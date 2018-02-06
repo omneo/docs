@@ -2,9 +2,9 @@
 
 This API allows you to create, read, update and delete profiles.
 
-### Profile Attributes
+### Profile Properties
 
-| Attribute            | Description                             |
+| Property            | Description                             |
 |----------------------|-----------------------------------------|
 | id                   | The ID of the profile                                     |
 | title                | Title such as Mr. or Miss               |
@@ -74,16 +74,15 @@ This API allows you to create, read, update and delete profiles.
 ```
 
 
-This API allows you to create a profile.
+This API allows you to create new profiles.
 
 ### HTTP Request
 
 `POST /api/v1/profiles`
 
-### Request Attributes
+### Request Properties
 
-
-| Attribute            | Type                                                                                                              |
+| Property            | Type                                                                                                              |
 |----------------------|-------------------------------------------------------------------------------------------------------------------|
 | title                | `nullable` `string`                                                                                               |
 | first_name           | `nullable` `string`                                                                                               |
@@ -142,29 +141,14 @@ This API allows you to create a profile.
       "addresses": [],
       "balance": {
         "rewards": 0,
-        "points": null
+        "points": 0
       },
       "joined_location": null,
       "tags": [],
       "created_at": "2018-01-31 00:41:16",
       "updated_at": "2018-01-31 00:41:16"
     }
-  ],
-  "links": {
-    "first": "http://omneo-api.dev/api/v1/profiles?page=1",
-    "last": "http://omneo-api.dev/api/v1/profiles?page=1",
-    "prev": null,
-    "next": null
-  },
-  "meta": {
-    "current_page": 1,
-    "from": 1,
-    "last_page": 1,
-    "path": "http://omneo-api.dev/api/v1/profiles",
-    "per_page": 15,
-    "to": 11,
-    "total": 11
-  }
+  ]
 }
 ```
 
@@ -270,11 +254,9 @@ This API lets you update a profile.
 
 `PUT /api/v1/profiles/{profile}`
 
-### Request Attributes
+### Request Properties
 
-### Request Attributes
-
-| Attribute            | Type                                                                                                              |
+| Property            | Type                                                                                                              |
 |----------------------|-------------------------------------------------------------------------------------------------------------------|
 | title                | `nullable` `string`                                                                                               |
 | first_name           | `nullable` `string`                                                                                               |

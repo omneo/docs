@@ -2,9 +2,9 @@
 
 This API allows you to create, read, update and delete reward definitions.
 
-## Reward Definition Attributes
+## Reward Definition Properties
 
-| Attribute       | Description                                                    |
+| Property       | Description                                                    |
 |-----------------|----------------------------------------------------------------|
 | id              | The ID of the reward definition                                |
 | name            | The name of the reward definition                              |
@@ -67,8 +67,9 @@ This API allows you to create a reward definition.
 
 `POST /api/v1/rewards/definitions`
 
-### Request Attributes
-| Attribute       | Type                             |
+### Request Properties
+
+| Property       | Type                             |
 |-----------------|----------------------------------|
 | name            | `required` `string`              |
 | description     | `nullable` `string`              |
@@ -122,22 +123,7 @@ This API allows you to create a reward definition.
             "created_at": "2018-01-31 00:41:16",
             "updated_at": "2018-01-31 00:41:16"
         }
-    ],
-    "links": {
-        "first": "http://omneo-api.dev/api/v1/rewards/definitions?page=1",
-        "last": "http://omneo-api.dev/api/v1/rewards/definitions?page=1",
-        "prev": null,
-        "next": null
-    },
-    "meta": {
-        "current_page": 1,
-        "from": 1,
-        "last_page": 1,
-        "path": "http://omneo-api.dev/api/v1/rewards/definitions",
-        "per_page": 15,
-        "to": 3,
-        "total": 3
-    }
+    ]
 }
 ```
 
@@ -177,7 +163,7 @@ This API lets you retrieve a single reward definition.
 
 ### HTTP Request
 
-`GET /api/v1/rewards/definitions/{rewardDefinition}`
+`GET /api/v1/rewards/definitions/{definition}`
 
 
 
@@ -223,10 +209,11 @@ This API lets you update a reward definition.
 
 ### HTTP Request
 
-`PUT /api/v1/rewards/definitions/{rewardDefinition}`
+`PUT /api/v1/rewards/definitions/{definition}`
 
-### Request Attributes
-| Attribute       | Type                             |
+### Request Properties
+
+| Property       | Type                             |
 |-----------------|----------------------------------|
 | name            | `sometimes` `required` `string`  |
 | description     | `sometimes` `nullable` `string`  |
@@ -239,13 +226,11 @@ This API lets you update a reward definition.
 | tags.*.id       | `required` `exists`              |
 
 
-
-
 ## Delete a reward definition
 
 This API lets you delete a reward definition.
 
 ### HTTP Request
 
-`DELETE /api/v1/rewards/definitions/{rewardDefinition}`
+`DELETE /api/v1/rewards/definitions/{definition}`
 

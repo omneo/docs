@@ -2,9 +2,9 @@
 
 This API allows you to create, read, update and delete products.
 
-## Product Attributes
+## Product Properties
 
-| Attribute   | Description                       | 
+| Property   | Description                       | 
 |-------------|-----------------------------------|
 | id          | ID of the product.                |
 | title       | Title of the product.             |
@@ -75,21 +75,22 @@ This API allows you to create a product.
 
 `POST /api/v1/products`
 
-### Request Attributes
-| Attribute   | Type                                                                       |
+### Request Properties
+
+| Property   | Type                                                                       |
 |-------------|----------------------------------------------------------------------------|
 | title       | `required`  `string`                                                       |
 | handle      | `required`  `string` `unique`                                              |
 | external_id | `nullable`  `string`                                                       |
 | status      | `nullable`  `string`  `in: new,active,rundown,discontinued,ranged,deleted` |
-| brand       | `required`  `string` Default to "new".                                      |
+| brand       | `required`  `string`    .                                      |
 | description | `nullable`  `string`                                                       |
 | currency    | `nullable`  `string`                                                       |
-| position    | Default to 1. `integer`                                                    |
-| tags        | `nullable`  Must be an array.                                              |
-| options     | `nullable`  Must be an array.                                              |
-| channels    | `nullable`  Must be an array. Must exists on channel table.                |
-| systems     | `nullable`  Must be an array. Must exists on systems table.                |
+| position    | `sometimes` `integer`                                                    |
+| tags        | `sometimes`  `array`                                              |
+| options     | `sometimes`  `array`                                             |
+| channels    | `sometimes`  `array`               |
+| systems     | `sometimes`  `array`.                |
 
 
 
@@ -247,8 +248,9 @@ This API lets you update a profile.
 
 `PUT /api/v1/products/{products}`
 
-### Request Attributes
-| Attribute   | Type                                                                       |
+### Request Properties
+
+| Property   | Type                                                                       |
 |-------------|----------------------------------------------------------------------------|
 | title       | `required`  `string`                                                       |
 | handle      | `required`  `string` `unique`                                              |

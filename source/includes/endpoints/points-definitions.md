@@ -2,9 +2,9 @@
 
 This API allows you to create, read, update and delete point definitions.
 
-## Point Definition Attributes
+## Point Definition Properties
 
-| Attribute               | Description                                 |
+| Property               | Description                                 |
 |-------------------------|---------------------------------------------|
 | id                      | The ID of the point definition              |
 | name                    | The name of the point definition            |
@@ -47,9 +47,9 @@ This API allows you to a create point definition.
 
 `POST /api/v1/points/definitions`
 
-### Request Attributes
+### Request Properties
 
-| Attribute               | Type                                            |    
+| Property               | Type                                            |    
 |-------------------------|-------------------------------------------------|
 | name                    | `string`                                        |
 | handle                  | `string`                                        |
@@ -163,9 +163,9 @@ This API allows you to update point definitions.
 
 `PUT /api/v1/points/definitions/{definition}`
 
-### Request Attributes
+### Request Properties
 
-| Attribute               | Type                                            |    
+| Property               | Type                                            |    
 |-------------------------|-------------------------------------------------|
 | name                    | `sometimes` `string`                            |
 | handle                  | `sometimes` `string`                            |

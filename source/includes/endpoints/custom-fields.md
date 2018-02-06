@@ -2,7 +2,7 @@
 
 This API allows you to create, read, update and delete custom fields.
 
-## Custom Field Attributes
+## Custom Field Properties
 
 | Attribute               | Description                                 |
 |-------------------------|---------------------------------------------|
@@ -58,9 +58,9 @@ For a list of available resource endpoints, please see the [Available Resource E
 Custom fields are unique to their owning resource ID, namespace and handle.
 </aside>
 
-### Request Attributes
+### Request Properties
 
-| Attribute               | Type                                            |    
+| Property               | Type                                            |    
 |-------------------------|-------------------------------------------------|
 | name                    | `nullable`, `string` |
 | handle                  | `required`, `unique:resourceId, namespace` |
@@ -174,9 +174,9 @@ This API allows you to update a given resources custom field.
 
 `PUT /api/v1/{resource}/{resourceId}/{namespace}:{handle}`
 
-### Request Attributes
+### Request Properties
 
-| Attribute               | Type                                            |    
+| Property               | Type                                            |    
 |-------------------------|-------------------------------------------------|
 | name                    | `sometimes`, `nullable`, `string` |
 | handle                  | `sometimes`, `required`, `unique:resourceId, namespace` |

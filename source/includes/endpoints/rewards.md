@@ -1,8 +1,8 @@
 # Rewards
 
-This API allows you to read rewards.
+This API allows you to view a profiles rewards.
 
-## Reward Attributes
+## Reward Properties
 
 | Attribute            | Description                                       |
 |----------------------|---------------------------------------------------|
@@ -48,26 +48,11 @@ This API allows you to read rewards.
             "created_at": "2018-01-31 00:41:16",
             "updated_at": "2018-01-31 00:41:16"
         }
-    ],
-    "links": {
-        "first": "http://omneo-api.dev/api/v1/profiles/4/rewards?page=1",
-        "last": "http://omneo-api.dev/api/v1/profiles/4/rewards?page=1",
-        "prev": null,
-        "next": null
-    },
-    "meta": {
-        "current_page": 1,
-        "from": 1,
-        "last_page": 1,
-        "path": "http://omneo-api.dev/api/v1/profiles/4/rewards",
-        "per_page": 15,
-        "to": 1,
-        "total": 1
-    }
+    ]
 }
 ```
 
-This API lets you list all rewards associated with a certain profile.
+This API lets you list all rewards associated with a given profile.
 
 ### HTTP Request
 

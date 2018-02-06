@@ -2,9 +2,9 @@
 
 This API allows you to read benefits.
 
-## Benefit Attributes
+## Benefit Properties
 
-| Attribute             | Description                                         |
+| Property             | Description                                         |
 |-----------------------|-----------------------------------------------------|
 | id                    | The ID of the benefit                               |
 | expires_at            | The expiry date of the benefit                      |

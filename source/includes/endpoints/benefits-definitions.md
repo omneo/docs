@@ -2,9 +2,9 @@
 
 This API allows you to create, read, update and delete benefit definitions.
 
-## Benefit Definition Attributes
+## Benefit Definition Properties
 
-| Attribute       | Description                                                     |
+| Property       | Description                                                     |
 |-----------------|-----------------------------------------------------------------|
 | id              | The ID of the benefit definition                                |
 | name            | The name of the benefit definition                              |
@@ -32,7 +32,7 @@ This API allows you to create, read, update and delete benefit definitions.
         "handle": "birthday",
         "period": 30,
         "description": "...",
-        "notes": "xxx",
+        "notes": "Additional notes about the benefit definition.",
         "max_redemptions": 1,
         "is_extendable": false,
         "is_reassignable": null,
@@ -64,8 +64,9 @@ This API allows you to create a benefit definition.
 
 `POST /api/v1/benefits/definitions`
 
-### Request Attributes
-| Attribute       | Type                             |
+### Request Properties
+
+| Property       | Type                             |
 |-----------------|----------------------------------|
 | name            | `required` `string`              |
 | description     | `nullable` `string`              |
@@ -216,8 +217,9 @@ This API lets you update a benefit definition.
 
 `PUT /api/v1/benefits/definitions/{benefitDefinition}`
 
-### Request Attributes
-| Attribute       | Type                             |
+### Request Properties
+
+| Property       | Type                             |
 |-----------------|----------------------------------|
 | name            | `sometimes` `required` `string`  |
 | description     | `sometimes` `nullable` `string`  |

@@ -1,18 +1,18 @@
 # Redemptions
 
-This API allows you to redeem rewards or a benefit .
+This API allows you to view reward, benefit and point redemptions made against a given a profile.
 
-## Redemption Attributes
+## Redemption Properties
 
-| Attribute       | Description                                          |
+| Property       | Description                                          |
 |-----------------|------------------------------------------------------|
 | id              | The ID of the redemption                             |
 | transaction_id  | The transaction associated with the redemption       |
 | profile_id      | The profile associated with the redemption           |
-| redeemable_id   | The benefit or reward associated with the redemption |
-| redeemable_type | Either benefit or reward                             |
+| redeemable_id   | The redemption subject id |
+| redeemable_type | The redemption subject type                             |
 | location_id     | The location associated with the redemption          |
-| value           | The value it redeemed                                |
+| value           | The redeemed value                                |
 
 
 
@@ -63,8 +63,6 @@ This API lets you list all profile redemptions.
 ### HTTP Request
 
 `GET /api/v1/profiles/{profile}/redemptions`
-
-
 
 ## Retrieve a profile redemption
 
@@ -228,7 +226,8 @@ This API allows you to redeem a benefit.
 
 `POST /api/v1/profiles/{profile}/benefits/{benefit}/redeem`
 
-### Request Attributes
+### Request Properties
+
 | Attribute      | Type                                        |
 |----------------|---------------------------------------------|
 | transaction_id | `sometimes` `required` `integer` `exists`   |

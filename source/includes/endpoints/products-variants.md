@@ -2,9 +2,9 @@
 
 This API allows you to create, read, update and delete product variants.
 
-## Product variant Attributes
+## Product Variant Properties
 
-| Attribute            | Description                           | 
+| Property            | Description                           | 
 |----------------------|---------------------------------------|
 | product_id           | Product associated with this variant. |
 | title                | Variant title                         |
@@ -67,15 +67,15 @@ This API allows you to create, read, update and delete product variants.
 }
 ```
 
-
 This API allows you to create a variant for a product.
 
 ### HTTP Request
 
 `POST /api/v1/products/{product}/variants`
 
-### Request Attributes
-| Attribute            | Type                           | 
+### Request Properties
+
+| Property            | Type                           | 
 |----------------------|--------------------------------|
 | title                | `required` `string`            |
 | available_quantity   | `nullable` `integer`           |
@@ -132,7 +132,7 @@ This API allows you to create a variant for a product.
 
 
 
-## List all variants belong to a product
+## List all product variants
 
 > JSON Response Example:
                 
@@ -262,7 +262,7 @@ This API lets you list all products.
 
 ### HTTP Request
 
-`GET /api/v1/products/{product}/varisants`
+`GET /api/v1/products/{product}/variants`
 
 
 
@@ -314,7 +314,7 @@ This API lets you list all products.
 }
 ```
 
-This API lets you retrieve a single variant belong to a certain product.
+This API lets you retrieve a single product variant.
 
 ### HTTP Request
 
@@ -404,11 +404,11 @@ This API lets you update a product variant.
 
 ### HTTP Request
 
-`PUT /api/v1/products/{products}`
+`PUT /api/v1/products/{products}/variants/{variant}`
 
-### Request Attributes
+### Request Properties
 
-| Attribute            | Type                             |   
+| Property            | Type                             |   
 |----------------------|----------------------------------|
 | title                | `sometimes` `required` `string`  |
 | available_quantity   | `sometimes` `nullable` `integer` |
@@ -427,7 +427,7 @@ This API lets you update a product variant.
 
 
 
-## ** Delete a product
+## Delete a product
 
 This API lets you delete a product variant.
 

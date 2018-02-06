@@ -1,10 +1,10 @@
-<h1 id="profile-schema-attributes-heading">Profile Attributes</h1>
+# Profile Attributes
 
 This API allows you to create, read, update and delete profile attributes.
 
-<h2 id="profile-schema-attributes">Profile Schema Attributes</h2>
+## Profile Attribute Properties
 
-| Attribute               | Description                                 |
+| Property               | Description                                 |
 |-------------------------|---------------------------------------------|
 | handle                  | The attribute handle |
 | name                    | The display name of the attribute        |
@@ -55,9 +55,9 @@ Profile attributes are unique to namespace and handle.
 Every profile has every attribute. If a profile does not have an attribute value, the default value is used.
 </aside>
 
-### Request Attributes
+### Request Properties
 
-| Attribute               | Type                                            |    
+| Property               | Type                                            |    
 |-------------------------|-------------------------------------------------|
 | name | `nullable` `string` |
 | namespace | `required` `string` | 
@@ -192,9 +192,9 @@ This API allows you to update a profile attribute.
 
 `PUT /api/v1/{resource}/{resourceId}/{namespace}:{handle}`
 
-### Request Attributes
+### Request Properties
 
-| Attribute               | Type                                            |    
+| Properties               | Type                                            |    
 |-------------------------|-------------------------------------------------|
 | name                    | `sometimes` `nullable` `string` |
 
@@ -306,9 +306,9 @@ This API allows you to update a profile attribute for a given profile.
 
 `PUT /api/v1/profiles/{profile}/attributes/{namespace}:{handle}`
 
-### Request Attributes
+### Request Properties
 
-| Attribute               | Type                                            |    
+| Property               | Type                                            |    
 |-------------------------|-------------------------------------------------|
 | value                   | `sometimes` `in: rules` |
 

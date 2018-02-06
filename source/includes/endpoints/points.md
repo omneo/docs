@@ -2,9 +2,9 @@
 
 This API allows you to view a profiles points.
 
-## Point Attributes
+## Point Properties
 
-| Attribute               | Description                        |
+| Property               | Description                        |
 |-------------------------|------------------------------------|
 | id                      | The ID of the point                |
 | value_initial           | The initial value of the point     |

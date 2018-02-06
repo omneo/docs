@@ -2,9 +2,9 @@
 
 This API allows you to create, read, update and delete transactions.
 
-## Transaction Attributes
+## Transaction Properties
 
-| Attribute     | Description                                  | 
+| Property     | Description                                  | 
 |---------------|----------------------------------------------|
 | id            | ID of the transaction.                       |
 | profile_id    | The profile associate with this transaction  |
@@ -55,7 +55,7 @@ This API allows you to create, read, update and delete transactions.
             "addresses": [],
             "balance": {
                 "rewards": 0,
-                "points": null
+                "points": 0
             },
             "joined_location": null,
             "tags": [],
@@ -178,8 +178,9 @@ This API allows you to create a transaction.
 
 `POST /api/v1/transactions`
 
-### Request Attributes
-| Attribute     | Type                                 |
+### Request Properties
+
+| Property     | Type                                 |
 |---------------|--------------------------------------|
 | profile_id    | `required` `integer` `exists`        |
 | location_id   | `nullable` `integer` `exists`        |
@@ -531,8 +532,9 @@ This API lets you update a transaction.
 
 `PUT /api/v1/transactions/{transaction}`
 
-### Request Attributes
-| Attribute     | Type                                             |
+### Request Properties
+
+| Property     | Type                                             |
 |---------------|--------------------------------------------------|
 | location_id   | `sometimes` `nullable` `integer` `exists`        |
 | currency      | `sometimes` `nullable` `string`                  |
