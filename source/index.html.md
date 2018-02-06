@@ -11,6 +11,7 @@ toc_footers:
 includes:
   - endpoints/profiles
   - endpoints/profile-attributes
+  - endpoints/profile-identities
   - endpoints/products
   - endpoints/custom-fields
   - endpoints/products-variants
