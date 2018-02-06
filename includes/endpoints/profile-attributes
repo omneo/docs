@@ -1,12 +1,9 @@
-<h1 id="profile-schema-attributes-heading">Profile Attributes</h1>
-
+<h1 id='profile-attributes'>Profile Attributes</h1>
 <p>This API allows you to create, read, update and delete profile attributes.</p>
-
-<h2 id="profile-schema-attributes">Profile Schema Attributes</h2>
-
+<h2 id='profile-attribute-properties'>Profile Attribute Properties</h2>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
@@ -75,10 +72,10 @@ Profile attributes are unique to namespace and handle.
 <aside class="notice">
 Every profile has every attribute. If a profile does not have an attribute value, the default value is used.
 </aside>
-<h3 id='request-attributes'>Request Attributes</h3>
+<h3 id='request-properties'>Request Properties</h3>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Type</th>
 </tr>
 </thead><tbody>
@@ -207,10 +204,10 @@ Profile attributes are accessed by their unique `namespace:handle` combination. 
 <p>This API allows you to update a profile attribute.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>PUT /api/v1/{resource}/{resourceId}/{namespace}:{handle}</code></p>
-<h3 id='request-attributes-2'>Request Attributes</h3>
+<h3 id='request-properties-2'>Request Properties</h3>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Properties</th>
 <th>Type</th>
 </tr>
 </thead><tbody>
@@ -293,10 +290,10 @@ Profile attributes are automatically grouped by their namespace.
 <p>This API allows you to update a profile attribute for a given profile.</p>
 <h3 id='http-request-7'>HTTP Request</h3>
 <p><code>PUT /api/v1/profiles/{profile}/attributes/{namespace}:{handle}</code></p>
-<h3 id='request-attributes-3'>Request Attributes</h3>
+<h3 id='request-properties-3'>Request Properties</h3>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Type</th>
 </tr>
 </thead><tbody>

@@ -1,6 +1,6 @@
 <h1 id='custom-fields'>Custom Fields</h1>
 <p>This API allows you to create, read, update and delete custom fields.</p>
-<h2 id='custom-field-attributes'>Custom Field Attributes</h2>
+<h2 id='custom-field-properties'>Custom Field Properties</h2>
 <table><thead>
 <tr>
 <th>Attribute</th>
@@ -81,10 +81,10 @@ For a list of available resource endpoints, please see the [Available Resource E
 <aside class="notice">
 Custom fields are unique to their owning resource ID, namespace and handle.
 </aside>
-<h3 id='request-attributes'>Request Attributes</h3>
+<h3 id='request-properties'>Request Properties</h3>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Type</th>
 </tr>
 </thead><tbody>
@@ -181,10 +181,10 @@ Custom fields are accessed by their unique `namespace:handle` combination. e.g. 
 <p>This API allows you to update a given resources custom field.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>PUT /api/v1/{resource}/{resourceId}/{namespace}:{handle}</code></p>
-<h3 id='request-attributes-2'>Request Attributes</h3>
+<h3 id='request-properties-2'>Request Properties</h3>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Type</th>
 </tr>
 </thead><tbody>

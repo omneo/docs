@@ -1,9 +1,9 @@
 <h1 id='products'>Products</h1>
 <p>This API allows you to create, read, update and delete products.</p>
-<h2 id='product-attributes'>Product Attributes</h2>
+<h2 id='product-properties'>Product Properties</h2>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
@@ -104,10 +104,10 @@
 <p>This API allows you to create a product.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>POST /api/v1/products</code></p>
-<h3 id='request-attributes'>Request Attributes</h3>
+<h3 id='request-properties'>Request Properties</h3>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Type</th>
 </tr>
 </thead><tbody>
@@ -129,7 +129,7 @@
 </tr>
 <tr>
 <td>brand</td>
-<td><code>required</code>  <code>string</code> Default to &quot;new&quot;.</td>
+<td><code>required</code>  <code>string</code>    .</td>
 </tr>
 <tr>
 <td>description</td>
@@ -141,23 +141,23 @@
 </tr>
 <tr>
 <td>position</td>
-<td>Default to 1. <code>integer</code></td>
+<td><code>sometimes</code> <code>integer</code></td>
 </tr>
 <tr>
 <td>tags</td>
-<td><code>nullable</code>  Must be an array.</td>
+<td><code>sometimes</code>  <code>array</code></td>
 </tr>
 <tr>
 <td>options</td>
-<td><code>nullable</code>  Must be an array.</td>
+<td><code>sometimes</code>  <code>array</code></td>
 </tr>
 <tr>
 <td>channels</td>
-<td><code>nullable</code>  Must be an array. Must exists on channel table.</td>
+<td><code>sometimes</code>  <code>array</code></td>
 </tr>
 <tr>
 <td>systems</td>
-<td><code>nullable</code>  Must be an array. Must exists on systems table.</td>
+<td><code>sometimes</code>  <code>array</code>.</td>
 </tr>
 </tbody></table>
 <h2 id='list-all-products'>List all Products</h2>
@@ -294,10 +294,10 @@
 <p>This API lets you update a profile.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>PUT /api/v1/products/{products}</code></p>
-<h3 id='request-attributes-2'>Request Attributes</h3>
+<h3 id='request-properties-2'>Request Properties</h3>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Type</th>
 </tr>
 </thead><tbody>

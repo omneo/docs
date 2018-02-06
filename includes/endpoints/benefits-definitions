@@ -1,9 +1,9 @@
 <h1 id='benefits-definitions'>Benefits Definitions</h1>
 <p>This API allows you to create, read, update and delete benefit definitions.</p>
-<h2 id='benefit-definition-attributes'>Benefit Definition Attributes</h2>
+<h2 id='benefit-definition-properties'>Benefit Definition Properties</h2>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
@@ -55,7 +55,7 @@
         </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"birthday"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"period"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
         </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xxx"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Additional notes about the benefit definition."</span><span class="p">,</span><span class="w">
         </span><span class="s2">"max_redemptions"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_extendable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_reassignable"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -81,10 +81,10 @@
 <p>This API allows you to create a benefit definition.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>POST /api/v1/benefits/definitions</code></p>
-<h3 id='request-attributes'>Request Attributes</h3>
+<h3 id='request-properties'>Request Properties</h3>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Type</th>
 </tr>
 </thead><tbody>
@@ -240,10 +240,10 @@
 <p>This API lets you update a benefit definition.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>PUT /api/v1/benefits/definitions/{benefitDefinition}</code></p>
-<h3 id='request-attributes-2'>Request Attributes</h3>
+<h3 id='request-properties-2'>Request Properties</h3>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Type</th>
 </tr>
 </thead><tbody>

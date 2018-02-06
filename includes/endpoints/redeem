@@ -48,10 +48,10 @@ a profiles benefits are redeemed.</p>
 </tbody></table>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>POST /api/v1/profiles/{profile}/transactions/{transaction}/redeem</code></p>
-<h3 id='request-attributes'>Request Attributes</h3>
+<h3 id='request-properties'>Request Properties</h3>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Description</th>
 <th>Rules</th>
 </tr>
@@ -67,10 +67,10 @@ a profiles benefits are redeemed.</p>
 <td>One of: points, rewards, rewards_points, points_rewards</td>
 </tr>
 </tbody></table>
-<h3 id='response-attributes'>Response Attributes</h3>
+<h3 id='response-properties'>Response Properties</h3>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Description</th>
 </tr>
 </thead><tbody>

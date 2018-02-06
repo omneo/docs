@@ -1,9 +1,9 @@
 <h1 id='example'>Example</h1>
 <p>This API allows you to create, read, update and delete examples.</p>
-<h2 id='example-attributes'>Example Attributes</h2>
+<h2 id='example-properties'>Example Properties</h2>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
@@ -42,10 +42,10 @@
 <p>This API allows you to create examples.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>POST /api/v1/examples</code></p>
-<h3 id='request-attributes'>Request Attributes</h3>
+<h3 id='request-properties'>Request Properties</h3>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Type</th>
 </tr>
 </thead><tbody>
@@ -126,10 +126,10 @@
 <p>This API allows you to update examples.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>PUT /api/v1/examples/{example}</code></p>
-<h3 id='request-attributes-2'>Request Attributes</h3>
+<h3 id='request-properties-2'>Request Properties</h3>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Type</th>
 </tr>
 </thead><tbody>

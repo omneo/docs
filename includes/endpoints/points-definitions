@@ -1,9 +1,9 @@
 <h1 id='point-definitions'>Point Definitions</h1>
 <p>This API allows you to create, read, update and delete point definitions.</p>
-<h2 id='point-definition-attributes'>Point Definition Attributes</h2>
+<h2 id='point-definition-properties'>Point Definition Properties</h2>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
@@ -65,10 +65,10 @@
 <p>This API allows you to a create point definition.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>POST /api/v1/points/definitions</code></p>
-<h3 id='request-attributes'>Request Attributes</h3>
+<h3 id='request-properties'>Request Properties</h3>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Type</th>
 </tr>
 </thead><tbody>
@@ -169,10 +169,10 @@
 <p>This API allows you to update point definitions.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>PUT /api/v1/points/definitions/{definition}</code></p>
-<h3 id='request-attributes-2'>Request Attributes</h3>
+<h3 id='request-properties-2'>Request Properties</h3>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Type</th>
 </tr>
 </thead><tbody>

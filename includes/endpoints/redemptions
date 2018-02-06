@@ -1,9 +1,9 @@
 <h1 id='redemptions'>Redemptions</h1>
-<p>This API allows you to redeem rewards or a benefit .</p>
-<h2 id='redemption-attributes'>Redemption Attributes</h2>
+<p>This API allows you to view reward, benefit and point redemptions made against a given a profile.</p>
+<h2 id='redemption-properties'>Redemption Properties</h2>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
@@ -21,11 +21,11 @@
 </tr>
 <tr>
 <td>redeemable_id</td>
-<td>The benefit or reward associated with the redemption</td>
+<td>The redemption subject id</td>
 </tr>
 <tr>
 <td>redeemable_type</td>
-<td>Either benefit or reward</td>
+<td>The redemption subject type</td>
 </tr>
 <tr>
 <td>location_id</td>
@@ -33,7 +33,7 @@
 </tr>
 <tr>
 <td>value</td>
-<td>The value it redeemed</td>
+<td>The redeemed value</td>
 </tr>
 </tbody></table>
 <h2 id='list-all-profile-redemptions'>List all profile redemptions</h2>
@@ -221,7 +221,7 @@
 <p>This API allows you to redeem a benefit.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>POST /api/v1/profiles/{profile}/benefits/{benefit}/redeem</code></p>
-<h3 id='request-attributes-2'>Request Attributes</h3>
+<h3 id='request-properties'>Request Properties</h3>
 <table><thead>
 <tr>
 <th>Attribute</th>

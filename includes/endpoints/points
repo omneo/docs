@@ -1,9 +1,9 @@
 <h1 id='points'>Points</h1>
 <p>This API allows you to view a profiles points.</p>
-<h2 id='point-attributes'>Point Attributes</h2>
+<h2 id='point-properties'>Point Properties</h2>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Description</th>
 </tr>
 </thead><tbody>

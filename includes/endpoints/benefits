@@ -1,9 +1,9 @@
 <h1 id='benefits'>Benefits</h1>
 <p>This API allows you to read benefits.</p>
-<h2 id='benefit-attributes'>Benefit Attributes</h2>
+<h2 id='benefit-properties'>Benefit Properties</h2>
 <table><thead>
 <tr>
-<th>Attribute</th>
+<th>Property</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
