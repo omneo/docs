@@ -1,0 +1,215 @@
+<h1 id='custom-fields'>Custom Fields</h1>
+<p>This API allows you to create, read, update and delete custom fields.</p>
+<h2 id='custom-field-attributes'>Custom Field Attributes</h2>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>handle</td>
+<td>The custom field handle</td>
+</tr>
+<tr>
+<td>name</td>
+<td>The display name of the custom field</td>
+</tr>
+<tr>
+<td>namespace</td>
+<td>The custom field namespace</td>
+</tr>
+<tr>
+<td>value</td>
+<td>The custom field value</td>
+</tr>
+<tr>
+<td>type</td>
+<td>The custom field type (e.g. string)</td>
+</tr>
+</tbody></table>
+<h2 id='available-resource-endpoints'>Available Resource Endpoints</h2>
+<p>For a list of resources that support custom fields, please see below.</p>
+
+<table><thead>
+<tr>
+<th>Resource</th>
+<th>Endpoint</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>site</td>
+<td><code>api/v1/site/custom-fields</code></td>
+</tr>
+<tr>
+<td>product</td>
+<td><code>api/v1/products/{product}/custom-fields</code></td>
+</tr>
+<tr>
+<td>transaction</td>
+<td><code>api/v1/transactions/{transaction}/custom-fields</code></td>
+</tr>
+<tr>
+<td>profile</td>
+<td><code>api/v1/profiles/{profile}/custom-fields</code></td>
+</tr>
+</tbody></table>
+<h2 id='create-a-custom-field-for-a-resource'>Create a custom field for a resource</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Acme Plugin Last Sync Date"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"last-synced"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acme-plugin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-01-01 11:11:22"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 04:58:41"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 03:52:31"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API allows you to create custom fields.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST /api/v1/{resource}/{resourceId}/custom-fields</code></p>
+
+<aside class="notice">
+For a list of available resource endpoints, please see the [Available Resource Endpoints](#available-resource-endpoints) table.
+</aside>
+
+<aside class="notice">
+Custom fields are unique to their owning resource ID, namespace and handle.
+</aside>
+<h3 id='request-attributes'>Request Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td><code>nullable</code>, <code>string</code></td>
+</tr>
+<tr>
+<td>handle</td>
+<td><code>required</code>, <code>unique:resourceId, namespace</code></td>
+</tr>
+<tr>
+<td>namespace</td>
+<td><code>required</code>, <code>string</code>,</td>
+</tr>
+<tr>
+<td>type</td>
+<td><code>string</code>, <code>in:string,integer,float,boolean</code></td>
+</tr>
+<tr>
+<td>value</td>
+<td><code>nullable</code>, <code>string</code></td>
+</tr>
+</tbody></table>
+<h2 id='list-a-resources-custom-fields'>List a resources custom fields</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ERP Resource ID"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"resource-id"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"erp"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1221-3322-3441-4212"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 04:58:41"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 03:52:31"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ecommerce Last Synced"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"last-synced"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ecommerce"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 03:52:31"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 04:58:41"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 03:52:31"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you list all custom fields for a given resource.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET /api/v1/{resource}/{resourceId}/custom-fields</code></p>
+<h2 id='retrieve-a-resource-custom-field'>Retrieve a resource custom field</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ERP Resource ID"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"resource-id"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"erp"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1221-3322-3441-4212"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 04:58:41"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 03:52:31"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you retrieve a single custom field for a given resource.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET /api/v1/{resource}/{resourceId}/{namespace}:{handle}</code></p>
+
+<aside class="notice">
+Custom fields are accessed by their unique `namespace:handle` combination. e.g. `erp:resource-id`
+</aside>
+<h2 id='update-a-resources-custom-field'>Update a resources custom field</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ERP Resource ID"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"resource-id"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"erp"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1221-3322-3441-1111"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 04:58:41"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-01 06:52:44"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API allows you to update a given resources custom field.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>PUT /api/v1/{resource}/{resourceId}/{namespace}:{handle}</code></p>
+<h3 id='request-attributes-2'>Request Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td><code>sometimes</code>, <code>nullable</code>, <code>string</code></td>
+</tr>
+<tr>
+<td>handle</td>
+<td><code>sometimes</code>, <code>required</code>, <code>unique:resourceId, namespace</code></td>
+</tr>
+<tr>
+<td>namespace</td>
+<td><code>sometimes</code>, <code>required</code>, <code>string</code>,</td>
+</tr>
+<tr>
+<td>type</td>
+<td><code>sometimes</code>, <code>string</code>, <code>in:string,integer,float,boolean</code></td>
+</tr>
+<tr>
+<td>value</td>
+<td><code>nullable</code>, <code>string</code></td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-resources-custom-field'>Delete a resources custom field</h2>
+<p>This API allows you to delete a custom field for a given resource.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>DELETE /api/v1/{resource}/{resourceId}/{namespace}:{handle}</code></p>

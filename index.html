@@ -222,29 +222,6 @@
             <a href="#omneo-documentation" class="toc-h1 toc-link" data-title="Omneo Documentation">Omneo Documentation</a>
           </li>
           <li>
-            <a href="#attributes" class="toc-h1 toc-link" data-title="Attributes">Attributes</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#profile-attributes" class="toc-h2 toc-link" data-title="Profile Attributes">Profile Attributes</a>
-                  </li>
-                  <li>
-                    <a href="#create-a-profile-attribute" class="toc-h2 toc-link" data-title="Create a profile attribute">Create a profile attribute</a>
-                  </li>
-                  <li>
-                    <a href="#list-all-attributes" class="toc-h2 toc-link" data-title="List all attributes">List all attributes</a>
-                  </li>
-                  <li>
-                    <a href="#retrieve-a-profile-attribute" class="toc-h2 toc-link" data-title="Retrieve a profile attribute">Retrieve a profile attribute</a>
-                  </li>
-                  <li>
-                    <a href="#update-a-profile-attribute" class="toc-h2 toc-link" data-title="Update a profile attribute">Update a profile attribute</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-profile-attribute" class="toc-h2 toc-link" data-title="Delete a profile attribute">Delete a profile attribute</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
             <a href="#profiles" class="toc-h1 toc-link" data-title="Profiles">Profiles</a>
               <ul class="toc-list-h2">
                   <li>
@@ -268,19 +245,31 @@
               </ul>
           </li>
           <li>
-            <a href="#profile-39-s-attributes" class="toc-h1 toc-link" data-title="Profile's Attributes">Profile's Attributes</a>
+            <a href="#profile-schema-attributes-heading" class="toc-h1 toc-link" data-title="Profile Attributes">Profile Attributes</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#profile-39-s-attributes-2" class="toc-h2 toc-link" data-title="Profile's Attributes">Profile's Attributes</a>
+                    <a href="#profile-schema-attributes" class="toc-h2 toc-link" data-title="Profile Schema Attributes">Profile Schema Attributes</a>
                   </li>
                   <li>
-                    <a href="#list-all-profile-39-s-attributes" class="toc-h2 toc-link" data-title="List all profile's attributes">List all profile's attributes</a>
+                    <a href="#create-a-profile-attribute" class="toc-h2 toc-link" data-title="Create a profile attribute">Create a profile attribute</a>
                   </li>
                   <li>
-                    <a href="#retrieve-a-profile-39-s-attribute" class="toc-h2 toc-link" data-title="Retrieve a profile's attribute">Retrieve a profile's attribute</a>
+                    <a href="#list-all-profile-attributes" class="toc-h2 toc-link" data-title="List all profile attributes">List all profile attributes</a>
+                  </li>
+                  <li>
+                    <a href="#retrieve-a-profile-attribute" class="toc-h2 toc-link" data-title="Retrieve a profile attribute">Retrieve a profile attribute</a>
                   </li>
                   <li>
                     <a href="#update-a-profile-attribute" class="toc-h2 toc-link" data-title="Update a profile attribute">Update a profile attribute</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-profile-attribute" class="toc-h2 toc-link" data-title="Delete a profile attribute">Delete a profile attribute</a>
+                  </li>
+                  <li>
+                    <a href="#list-all-profile-attributes-for-a-profile" class="toc-h2 toc-link" data-title="List all profile attributes for a profile">List all profile attributes for a profile</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-profile-attribute-for-a-profile" class="toc-h2 toc-link" data-title="Update a profile attribute for a profile">Update a profile attribute for a profile</a>
                   </li>
               </ul>
           </li>
@@ -524,222 +513,7 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='omneo-documentation'>Omneo Documentation</h1><h1 id='attributes'>Attributes</h1>
-<p>This API allows you to create, read, update and delete profile attributes.</p>
-<h3 id='profile-attributes'>Profile Attributes</h3>
-<table><thead>
-<tr>
-<th>Attribute</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>id</td>
-<td>The ID of the attribute</td>
-</tr>
-<tr>
-<td>name</td>
-<td>The display name of the attribute</td>
-</tr>
-<tr>
-<td>namespace</td>
-<td>The category the attribute belongs to</td>
-</tr>
-<tr>
-<td>handle</td>
-<td>The handle of the attribute</td>
-</tr>
-<tr>
-<td>type</td>
-<td>The type of the attribute. Must be from &#39;string&#39;, &#39;boolean&#39;, &#39;integer&#39;, and &#39;float&#39;</td>
-</tr>
-<tr>
-<td>default</td>
-<td>The default value of the attribute</td>
-</tr>
-<tr>
-<td>rules</td>
-<td>The rule to set attribute value</td>
-</tr>
-<tr>
-<td>is_system</td>
-<td>Whether this attribute is set by system</td>
-</tr>
-</tbody></table>
-
-<ul>
-<li>The pair of [namespace, handle] is unique. </li>
-</ul>
-<h2 id='create-a-profile-attribute'>Create a profile attribute</h2>
-<blockquote>
-<p>JSON Response Example:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fashion-style_color"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fashion-style"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="s2">"email"</span><span class="w">
-        </span><span class="p">],</span><span class="w">
-        </span><span class="s2">"is_system"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 23:21:46"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 23:21:46"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This API allows you to create a profile attribute.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>POST /api/v1/profiles/attributes</code></p>
-<h3 id='request-attributes'>Request Attributes</h3>
-<table><thead>
-<tr>
-<th>Attribute</th>
-<th>Type</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name</td>
-<td><code>required</code> <code>string</code></td>
-</tr>
-<tr>
-<td>namespace</td>
-<td><code>required</code> <code>string</code></td>
-</tr>
-<tr>
-<td>handle</td>
-<td><code>required</code> <code>string</code></td>
-</tr>
-<tr>
-<td>type</td>
-<td><code>required</code> <code>in: integer, float, boolean, string</code></td>
-</tr>
-<tr>
-<td>default</td>
-<td><code>sometimes</code> <code>nullable</code></td>
-</tr>
-<tr>
-<td>rules</td>
-<td><code>required</code> <code>array</code></td>
-</tr>
-<tr>
-<td>rules.*</td>
-<td><code>required</code> <code>string</code> <code>in: required, email, boolean, url, numeric, integer</code></td>
-</tr>
-<tr>
-<td>is_system</td>
-<td><code>sometimes</code> <code>boolean</code></td>
-</tr>
-</tbody></table>
-
-<ul>
-<li>The pair of [namespace, handle] should be unique. </li>
-</ul>
-<h2 id='list-all-attributes'>List all attributes</h2>
-<blockquote>
-<p>JSON Response Example:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fashion-style"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                </span><span class="s2">"email"</span><span class="w">
-            </span><span class="p">],</span><span class="w">
-            </span><span class="s2">"is_system"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 23:21:46"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 23:21:46"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"first"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://omneo-api.dev/api/v1/profiles/attributes?page=1"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://omneo-api.dev/api/v1/profiles/attributes?page=1"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"prev"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://omneo-api.dev/api/v1/profiles/attributes"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"per_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"to"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This API lets you list all profile attributes.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET /api/v1/profiles/attributes</code></p>
-<h2 id='retrieve-a-profile-attribute'>Retrieve a profile attribute</h2>
-<blockquote>
-<p>JSON Response Example:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fashion-style"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="s2">"email"</span><span class="w">
-        </span><span class="p">],</span><span class="w">
-        </span><span class="s2">"is_system"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 23:21:46"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 23:21:46"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This API lets you retrieve a single profile attribute.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET /api/v1/profiles/attributes/{namespace}:{handle}</code></p>
-<h2 id='update-a-profile-attribute'>Update a profile attribute</h2>
-<blockquote>
-<p>JSON Response Example:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"name update"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fashion-style"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="s2">"email"</span><span class="w">
-        </span><span class="p">],</span><span class="w">
-        </span><span class="s2">"is_system"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 23:21:46"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 23:36:56"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This API lets you update a profile attribute.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
-<p><code>PUT /api/v1/profiles/attributes/{namespace}:{handle}</code></p>
-<h3 id='request-attributes-2'>Request Attributes</h3>
-<table><thead>
-<tr>
-<th>Attribute</th>
-<th>Type</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name</td>
-<td><code>required</code> <code>string</code></td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-profile-attribute'>Delete a profile attribute</h2>
-<p>This API lets you delete a profile attribute.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
-<p><code>DELETE /api/v1/profiles/attributes/{namespace}:{handle}</code></p>
-<h1 id='profiles'>Profiles</h1>
+        <h1 id='omneo-documentation'>Omneo Documentation</h1><h1 id='profiles'>Profiles</h1>
 <p>This API allows you to create, read, update and delete profiles.</p>
 <h3 id='profile-attributes'>Profile Attributes</h3>
 <table><thead>
@@ -1222,10 +996,12 @@
 <p>This API lets you delete a profile.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
 <p><code>DELETE /api/v1/profiles/{profile}</code></p>
-<h1 id='profile-39-s-attributes'>Profile&#39;s Attributes</h1>
-<p>This API allows you to read profile&#39;s attributes and update its value.
-Attributes are attached to profiles by default with default value. </p>
-<h3 id='profile-39-s-attributes-2'>Profile&#39;s Attributes</h3>
+<h1 id="profile-schema-attributes-heading">Profile Attributes</h1>
+
+<p>This API allows you to create, read, update and delete profile attributes.</p>
+
+<h2 id="profile-schema-attributes">Profile Schema Attributes</h2>
+
 <table><thead>
 <tr>
 <th>Attribute</th>
@@ -1233,8 +1009,8 @@ Attributes are attached to profiles by default with default value. </p>
 </tr>
 </thead><tbody>
 <tr>
-<td>id</td>
-<td>The ID of the attribute</td>
+<td>handle</td>
+<td>The attribute handle</td>
 </tr>
 <tr>
 <td>name</td>
@@ -1242,100 +1018,61 @@ Attributes are attached to profiles by default with default value. </p>
 </tr>
 <tr>
 <td>namespace</td>
-<td>The category the attribute belongs to</td>
+<td>The attribute namespace</td>
 </tr>
 <tr>
-<td>handle</td>
-<td>The handle of the attribute</td>
+<td>value</td>
+<td>The attribute value</td>
 </tr>
 <tr>
 <td>type</td>
-<td>The type of the attribute. Must be from &#39;string&#39;, &#39;boolean&#39;, &#39;integer&#39;, and &#39;float&#39;</td>
+<td>The attribute type (e.g. string)</td>
 </tr>
 <tr>
 <td>default</td>
-<td>The default value of the attribute</td>
+<td>The attribute default value</td>
 </tr>
 <tr>
 <td>rules</td>
-<td>The rule to set attribute value</td>
+<td>The attribute rules (e.g. must be email, url)</td>
 </tr>
 <tr>
 <td>is_system</td>
-<td>Whether this attribute is set by system</td>
+<td>Whether or not the attribute is deletable</td>
 </tr>
 </tbody></table>
-<h2 id='list-all-profile-39-s-attributes'>List all profile&#39;s attributes</h2>
+<h2 id='create-a-profile-attribute'>Create a profile attribute</h2>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"fashion-style"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fashion-style"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-                    </span><span class="s2">"email"</span><span class="w">
-                </span><span class="p">],</span><span class="w">
-                </span><span class="s2">"is_system"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Subscribe to Weekly Email"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subscribe-weekly"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"preferences"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"required"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"boolean"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"is_system"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 04:58:41"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 03:52:31"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This API lets you list all attributes belong to a certain profile.</p>
+<p>This API allows you to create profile attributes.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET /api/v1/profiles/1/attributes</code></p>
-<h2 id='retrieve-a-profile-39-s-attribute'>Retrieve a profile&#39;s attribute</h2>
-<blockquote>
-<p>JSON Response Example:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fashion-style"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="s2">"email"</span><span class="w">
-        </span><span class="p">],</span><span class="w">
-        </span><span class="s2">"is_system"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This API lets you retrieve a single profile attribute.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET /api/v1/profiles/1/attributes/{namespace}:{handle}</code></p>
-<h2 id='update-a-profile-attribute'>Update a profile attribute</h2>
-<blockquote>
-<p>JSON Response Example:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"name update"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fashion-style"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-            </span><span class="s2">"email"</span><span class="w">
-        </span><span class="p">],</span><span class="w">
-        </span><span class="s2">"is_system"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 23:21:46"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 23:36:56"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This API lets you update a profile attribute.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>PUT /api/v1/profiles/1/attributes/{namespace}:{handle}</code></p>
+<p><code>POST /api/v1/profiles/attributes</code></p>
+
+<aside class="notice">
+Profile attributes are unique to namespace and handle.
+</aside>
+
+<aside class="notice">
+Every profile has every attribute. If a profile does not have an attribute value, the default value is used.
+</aside>
 <h3 id='request-attributes'>Request Attributes</h3>
 <table><thead>
 <tr>
@@ -1344,14 +1081,228 @@ Attributes are attached to profiles by default with default value. </p>
 </tr>
 </thead><tbody>
 <tr>
-<td>value</td>
-<td><code>required</code></td>
+<td>name</td>
+<td><code>nullable</code> <code>string</code></td>
+</tr>
+<tr>
+<td>namespace</td>
+<td><code>required</code> <code>string</code></td>
+</tr>
+<tr>
+<td>type</td>
+<td><code>required</code> <code>in: integer, float, boolean, string</code></td>
+</tr>
+<tr>
+<td>rules</td>
+<td><code>required</code> <code>array</code></td>
+</tr>
+<tr>
+<td>rules.*</td>
+<td><code>required</code> <code>in: email, url, required, string, boolean, float, integer</code></td>
+</tr>
+<tr>
+<td>default</td>
+<td><code>sometimes</code> <code>nullable</code> <code>string</code></td>
+</tr>
+<tr>
+<td>is_system</td>
+<td><code>sometimes</code> <code>required</code> <code>boolean</code></td>
+</tr>
+<tr>
+<td>handle</td>
+<td><code>required</code> <code>unique: namespace, handle</code></td>
 </tr>
 </tbody></table>
+<h2 id='list-all-profile-attributes'>List all profile attributes</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Subscribe to Weekly Email"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subscribe-weekly"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"preferences"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"required"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"boolean"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"is_system"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 04:58:41"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 03:52:31"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Subscribe to Push Notifications"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subscribe-push"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"preferences"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"required"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"boolean"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"is_system"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 01:58:41"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 03:52:31"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you list all profile attributes.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET /api/v1/profiles/attributes</code></p>
+<h2 id='retrieve-a-profile-attribute'>Retrieve a profile attribute</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Subscribe to Push Notifications"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subscribe-push"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"preferences"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"required"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"boolean"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"is_system"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 01:58:41"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 03:52:31"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you retrieve a profile attribute.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET /api/v1/profiles/attributes/{namespace:handle}</code></p>
 
-<ul>
-<li>The type of the value will be based on the rules set in the attribute. </li>
-</ul>
+<aside class="notice">
+Profile attributes are accessed by their unique `namespace:handle` combination. e.g. `preferences:subscribe-push`
+</aside>
+<h2 id='update-a-profile-attribute'>Update a profile attribute</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Subscribe to Push Notifications"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subscribe-push"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"preferences"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"required"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"boolean"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"is_system"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 01:58:41"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-01 03:52:31"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API allows you to update a profile attribute.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>PUT /api/v1/{resource}/{resourceId}/{namespace}:{handle}</code></p>
+<h3 id='request-attributes-2'>Request Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td><code>sometimes</code> <code>nullable</code> <code>string</code></td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-profile-attribute'>Delete a profile attribute</h2>
+<p>This API allows you to delete a profile attribute.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>DELETE /api/v1/profiles/attributes/{namespace}:{handle}</code></p>
+<h2 id='list-all-profile-attributes-for-a-profile'>List all profile attributes for a profile</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"preferences"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Subscribe to Push Notifications"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subscribe-push"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"preferences"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"required"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"boolean"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 01:58:41"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-01 03:52:31"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Subscribe to Weekly Email"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subscribe-weekly"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"preferences"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="s2">"required"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"boolean"</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 04:58:41"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 03:52:31"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API allows you to list all profile attributes for a given profile.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>GET /api/v1/profiles/{profile}/attributes</code></p>
+
+<aside class="notice">
+Profile attributes are automatically grouped by their namespace.
+</aside>
+<h2 id='update-a-profile-attribute-for-a-profile'>Update a profile attribute for a profile</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Subscribe to Push Notifications"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subscribe-push"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"preferences"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"required"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"boolean"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 01:58:41"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-01 03:52:31"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API allows you to update a profile attribute for a given profile.</p>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>PUT /api/v1/profiles/{profile}/attributes/{namespace}:{handle}</code></p>
+<h3 id='request-attributes-3'>Request Attributes</h3>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>value</td>
+<td><code>sometimes</code> <code>in: rules</code></td>
+</tr>
+</tbody></table>
 <h1 id='products'>Products</h1>
 <p>This API allows you to create, read, update and delete products.</p>
 <h2 id='product-attributes'>Product Attributes</h2>
