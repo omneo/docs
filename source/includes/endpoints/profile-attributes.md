@@ -15,8 +15,42 @@ This API allows you to create, read, update and delete profile attributes.
 | rules                   | The attribute rules (e.g. must be email, url)        |
 | is_system | Whether or not the attribute is deletable |
 
+## Available Types
 
+Types determine how the attribute value is casted. It's important to note that types *do not
+enforce a specific type on ingress*, e.g. if the type is set to `string` and a `float` is entered, the float value will be casted as a `string`.
 
+| Type               | Example                                 |
+|-------------------------|---------------------------------------------|
+| string | "1123-2314-221-4421" |
+| float | 1.245 |
+| integer | 100 | 
+| boolean | true |
+
+## Rule Examples
+
+Rules determine how a value is validated on *ingress*. Rules should be used in conjunction with types to enforce type values.
+
+| Rule               | Example                                 |
+|-------------------------|---------------------------------------------|
+| Allow only emails | `["email", "string", "required"]` |
+| Specify a range | `["required", "between:0,100"]` |
+| Allow only boolean values | `["required", "boolean"]` |
+| Allow only numerical values | `["required", "numeric"]` |
+| Allow a specific option | `["required", "in:one,two,three,four,five"]` |
+| Allow a specific regex pattern | `["required", "regex:pattern"]` |
+| Allow only strings | `["required", "string"]` |
+| Allow after date | `["required", "after_or_equal:date"]` |
+
+## Rule / Type Examples
+
+Please see the below table for a common list of rule / type combinations.
+
+| Example               | Type             | Rule |
+|-------------------------|--------------------------|------------------|
+| Allow strings | `string` | `required`, `string`
+| Allow floats, integers | `string` | `required`, `numeric`
+| Allow booleans | `boolean` | `required`, `boolean`
 
 ## Create a profile attribute
 

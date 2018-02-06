@@ -12,6 +12,15 @@ This API allows you to create, read, update and delete custom fields.
 | value                   | The custom field value                      |
 | type                    | The custom field type (e.g. string)         |
 
+## Available Types
+
+| Type               | Example                                 |
+|-------------------------|---------------------------------------------|
+| string | "1123-2314-221-4421" |
+| float | 1.245 |
+| integer | 100 | 
+| boolean | true |
+
 ## Available Resource Endpoints
 
 For a list of resources that support custom fields, please see below.
