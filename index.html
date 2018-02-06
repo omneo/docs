@@ -283,6 +283,26 @@
               </ul>
           </li>
           <li>
+            <a href="#profile-identities" class="toc-h1 toc-link" data-title="Profile Identities">Profile Identities</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#profile-identity-properties" class="toc-h2 toc-link" data-title="Profile Identity Properties">Profile Identity Properties</a>
+                  </li>
+                  <li>
+                    <a href="#available-identities" class="toc-h2 toc-link" data-title="Available Identities">Available Identities</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-profile-identity" class="toc-h2 toc-link" data-title="Update a profile identity">Update a profile identity</a>
+                  </li>
+                  <li>
+                    <a href="#list-all-profile-identities" class="toc-h2 toc-link" data-title="List all profile identities">List all profile identities</a>
+                  </li>
+                  <li>
+                    <a href="#retrieve-a-profile-identity" class="toc-h2 toc-link" data-title="Retrieve a profile identity">Retrieve a profile identity</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#products" class="toc-h1 toc-link" data-title="Products">Products</a>
               <ul class="toc-list-h2">
                   <li>
@@ -1418,6 +1438,148 @@ Profile attributes are automatically grouped by their namespace.
 <td><code>sometimes</code> <code>in: rules</code></td>
 </tr>
 </tbody></table>
+<h1 id='profile-identities'>Profile Identities</h1>
+<p>This API allows you to read, update and delete profile identities.</p>
+<h2 id='profile-identity-properties'>Profile Identity Properties</h2>
+<table><thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>handle</td>
+<td>The identity handle</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>The identifier</td>
+</tr>
+<tr>
+<td>is_active</td>
+<td>Whether or not this is the identity is active (e.g. inactive could represent an ex staff member)</td>
+</tr>
+<tr>
+<td>is_primary</td>
+<td>Whether or not this is the primary identity for the user</td>
+</tr>
+</tbody></table>
+<h2 id='available-identities'>Available Identities</h2>
+<table><thead>
+<tr>
+<th>Handle</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ecommerce</td>
+<td>Ecommerce identifier for the profile</td>
+</tr>
+<tr>
+<td>pos</td>
+<td>Point of Sale identifier for the profile</td>
+</tr>
+<tr>
+<td>staff</td>
+<td>Staff identifier for the profile</td>
+</tr>
+<tr>
+<td>fingerprint</td>
+<td>Fingerprint identifier for the profile</td>
+</tr>
+</tbody></table>
+<h2 id='update-a-profile-identity'>Update a profile identity</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ecommerce"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2323-2325-2214-2195"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_primary"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 04:58:41"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 03:52:31"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API allows you to update profile identities.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>PUT /api/v1/profiles/{profile}/identities/{handle}</code></p>
+<h3 id='request-properties'>Request Properties</h3>
+<table><thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>identifier</td>
+<td><code>required</code> <code>string</code></td>
+</tr>
+<tr>
+<td>is_active</td>
+<td><code>sometimes</code> <code>required</code> <code>boolean</code></td>
+</tr>
+<tr>
+<td>is_primary</td>
+<td><code>sometimes</code> <code>required</code> <code>boolean</code></td>
+</tr>
+</tbody></table>
+<h2 id='list-all-profile-identities'>List all profile identities</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ecommerce"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2323-2325-2214-2195"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"is_primary"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 04:58:41"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 03:52:31"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pos"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"52215252"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"is_primary"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 04:58:41"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 03:52:31"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"staff"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ST-2105"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"is_primary"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 04:58:41"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 03:52:31"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you list all profile attributes.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET /api/v1/profiles/{profile}/identities</code></p>
+<h2 id='retrieve-a-profile-identity'>Retrieve a profile identity</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"handle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ecommerce"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2323-2325-2214-2195"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_primary"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 04:58:41"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-01 03:52:31"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you retrieve a profile identity.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET /api/v1/profiles/{profile}/identities/{handle}</code></p>
 <h1 id='products'>Products</h1>
 <p>This API allows you to create, read, update and delete products.</p>
 <h2 id='product-properties'>Product Properties</h2>
