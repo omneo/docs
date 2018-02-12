@@ -1,6 +1,6 @@
 # Roles
 
-This API allows you to read and delete roles.
+This API allows you to read roles.
 
 ## Role Attributes
 
@@ -121,12 +121,4 @@ This API lets you retrieve a single role.
 ### HTTP Request
 
 `GET /api/v1/roles/{role}`
-
-## Delete a role
-
-This API lets you delete a role.
-
-### HTTP Request
-
-`DELETE /api/v1/roles/{role}`
 

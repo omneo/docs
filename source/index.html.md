@@ -28,6 +28,7 @@ includes:
   - endpoints/permissions
   - endpoints/roles
   - endpoints/users
+  - endpoints/ledgers
 
 search: true
 ---
