@@ -1,8 +1,8 @@
-# Profile Rewards
+## Profile Rewards
 
 This API allows you to read all rewards or retrieve a single rewards associated with a specific profile.
 
-## Reward Properties
+### Reward Properties
 
 | Attribute            | Description                                       |
 |----------------------|---------------------------------------------------|
@@ -16,7 +16,7 @@ This API allows you to read all rewards or retrieve a single rewards associated 
 
 
 
-## List all Rewards
+### List all Rewards
 
 > JSON Response Example:
                 
@@ -54,13 +54,13 @@ This API allows you to read all rewards or retrieve a single rewards associated 
 
 This API lets you list all rewards associated with a given profile.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/profiles/{profile}/rewards`
 
 
 
-## Retrieve a reward
+### Retrieve a reward
 
 > JSON Response Example:
                 
@@ -96,6 +96,6 @@ This API lets you list all rewards associated with a given profile.
 
 This API lets you retrieve a single reward.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/profiles/{profile}/rewards/{reward}`

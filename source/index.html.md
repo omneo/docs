@@ -19,8 +19,10 @@ includes:
   - endpoints/transactions-items
   - endpoints/rewards-definitions
   - endpoints/rewards
+  - endpoints/profile-rewards
   - endpoints/benefits-definitions
   - endpoints/benefits
+  - endpoints/profile-benefits
   - endpoints/redemptions  
   - endpoints/redeem
   - endpoints/points-definitions
