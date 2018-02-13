@@ -1,8 +1,8 @@
-# Rewards Definitions
+## Rewards Definitions
 
 This API allows you to create, read, update and delete reward definitions.
 
-## Reward Definition Properties
+### Reward Definition Properties
 
 | Property       | Description                                                    |
 |-----------------|----------------------------------------------------------------|
@@ -21,7 +21,7 @@ This API allows you to create, read, update and delete reward definitions.
 
 
 
-## Create a reward definition
+### Create a reward definition
 
 > JSON Response Example:
                 
@@ -63,11 +63,11 @@ This API allows you to create, read, update and delete reward definitions.
 
 This API allows you to create a reward definition.
 
-### HTTP Request
+#### HTTP Request
 
 `POST /api/v1/rewards/definitions`
 
-### Request Properties
+#### Request Properties
 
 | Property       | Type                             |
 |-----------------|----------------------------------|
@@ -86,7 +86,7 @@ This API allows you to create a reward definition.
 
 
 
-## List all reward definitions
+### List all reward definitions
 
 > JSON Response Example:
                 
@@ -129,13 +129,13 @@ This API allows you to create a reward definition.
 
 This API lets you list all reward definitions.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/rewards/definitions`
 
 
 
-## Retrieve a reward definition
+### Retrieve a reward definition
 
 > JSON Response Example:
                 
@@ -161,13 +161,13 @@ This API lets you list all reward definitions.
 
 This API lets you retrieve a single reward definition.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/rewards/definitions/{definition}`
 
 
 
-## Update a reward definition
+### Update a reward definition
 
 > JSON Response Example:
                 
@@ -207,11 +207,11 @@ This API lets you retrieve a single reward definition.
 
 This API lets you update a reward definition.
 
-### HTTP Request
+#### HTTP Request
 
 `PUT /api/v1/rewards/definitions/{definition}`
 
-### Request Properties
+#### Request Properties
 
 | Property       | Type                             |
 |-----------------|----------------------------------|
@@ -226,11 +226,11 @@ This API lets you update a reward definition.
 | tags.*.id       | `required` `exists`              |
 
 
-## Delete a reward definition
+### Delete a reward definition
 
 This API lets you delete a reward definition.
 
-### HTTP Request
+#### HTTP Request
 
 `DELETE /api/v1/rewards/definitions/{definition}`
 

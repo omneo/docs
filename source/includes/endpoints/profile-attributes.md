@@ -1,8 +1,8 @@
-# Profile Attributes
+## Profile Attributes 
 
 This API allows you to create, read, update and delete profile attributes.
 
-## Profile Attribute Properties
+### Profile Attribute Properties
 
 | Property               | Description                                 |
 |-------------------------|---------------------------------------------|
@@ -15,7 +15,7 @@ This API allows you to create, read, update and delete profile attributes.
 | rules                   | The attribute rules (e.g. must be email, url)        |
 | is_system | Whether or not the attribute is deletable |
 
-## Available Types
+### Available Types
 
 Types determine how the attribute value is casted. It's important to note that types *do not
 enforce a specific type on ingress*, e.g. if the type is set to `string` and a `float` is entered, the float value will be casted as a `string`.
@@ -27,7 +27,7 @@ enforce a specific type on ingress*, e.g. if the type is set to `string` and a `
 | integer | 100 | 
 | boolean | true |
 
-## Rule Examples
+### Rule Examples
 
 Rules determine how a value is validated on *ingress*. Rules should be used in conjunction with types to enforce type values.
 
@@ -42,7 +42,7 @@ Rules determine how a value is validated on *ingress*. Rules should be used in c
 | Allow only strings | `["required", "string"]` |
 | Allow after date | `["required", "after_or_equal:date"]` |
 
-## Rule / Type Examples
+### Rule / Type Examples
 
 Please see the below table for a common list of rule / type combinations.
 
@@ -52,7 +52,7 @@ Please see the below table for a common list of rule / type combinations.
 | Allow floats, integers | `string` | `required`, `numeric`
 | Allow booleans | `boolean` | `required`, `boolean`
 
-## Create a profile attribute
+### Create a profile attribute
 
 > JSON Response Example:
                 
@@ -77,7 +77,7 @@ Please see the below table for a common list of rule / type combinations.
 
 This API allows you to create profile attributes.
 
-### HTTP Request
+#### HTTP Request
 
 `POST /api/v1/profiles/attributes`
 
@@ -89,7 +89,7 @@ Profile attributes are unique to namespace and handle.
 Every profile has every attribute. If a profile does not have an attribute value, the default value is used.
 </aside>
 
-### Request Properties
+#### Request Properties
 
 | Property               | Type                                            |    
 |-------------------------|-------------------------------------------------|
@@ -107,7 +107,7 @@ Every profile has every attribute. If a profile does not have an attribute value
 
 
 
-## List all profile attributes
+### List all profile attributes
 
 > JSON Response Example:
                 
@@ -148,7 +148,7 @@ Every profile has every attribute. If a profile does not have an attribute value
 
 This API lets you list all profile attributes.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/profiles/attributes`
 
@@ -158,7 +158,7 @@ This API lets you list all profile attributes.
 
 
 
-## Retrieve a profile attribute
+### Retrieve a profile attribute
 
 > JSON Response Example:
                 
@@ -183,7 +183,7 @@ This API lets you list all profile attributes.
 
 This API lets you retrieve a profile attribute.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/profiles/attributes/{namespace:handle}`
 
@@ -197,7 +197,7 @@ Profile attributes are accessed by their unique `namespace:handle` combination. 
 
 
 
-## Update a profile attribute
+### Update a profile attribute
 
 > JSON Response Example:
                 
@@ -222,11 +222,11 @@ Profile attributes are accessed by their unique `namespace:handle` combination. 
 
 This API allows you to update a profile attribute.
 
-### HTTP Request
+#### HTTP Request
 
 `PUT /api/v1/{resource}/{resourceId}/{namespace}:{handle}`
 
-### Request Properties
+#### Request Properties
 
 | Properties               | Type                                            |    
 |-------------------------|-------------------------------------------------|
@@ -237,11 +237,11 @@ This API allows you to update a profile attribute.
 
 
 
-## Delete a profile attribute
+### Delete a profile attribute
 
 This API allows you to delete a profile attribute.
 
-### HTTP Request
+#### HTTP Request
 
 `DELETE /api/v1/profiles/attributes/{namespace}:{handle}`
 
@@ -252,7 +252,7 @@ This API allows you to delete a profile attribute.
 
 
 
-## List all profile attributes for a profile
+### List all profile attributes for a profile
 
 > JSON Response Example:
                 
@@ -295,7 +295,7 @@ This API allows you to delete a profile attribute.
 
 This API allows you to list all profile attributes for a given profile.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/profiles/{profile}/attributes`
 
@@ -311,7 +311,7 @@ Profile attributes are automatically grouped by their namespace.
 
 
 
-## Update a profile attribute for a profile
+### Update a profile attribute for a profile
 
 > JSON Response Example:
                 
@@ -336,11 +336,11 @@ Profile attributes are automatically grouped by their namespace.
 
 This API allows you to update a profile attribute for a given profile.
 
-### HTTP Request
+#### HTTP Request
 
 `PUT /api/v1/profiles/{profile}/attributes/{namespace}:{handle}`
 
-### Request Properties
+#### Request Properties
 
 | Property               | Type                                            |    
 |-------------------------|-------------------------------------------------|

@@ -1,8 +1,8 @@
-# Permissions
+## Permissions
 
 This API allows you to read permissions.
 
-## Permission Attributes
+### Permission Attributes
 
 | Attribute  | Description                | 
 |------------|----------------------------|
@@ -12,7 +12,7 @@ This API allows you to read permissions.
 
 
 
-## List all Permissions
+### List all Permissions
 
 > JSON Response Example:
                 
@@ -50,13 +50,13 @@ This API allows you to read permissions.
 
 This API lets you list all permissions.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/permissions`
 
 
 
-## Retrieve a permission
+### Retrieve a permission
 
 > JSON Response Example:
                 
@@ -72,6 +72,6 @@ This API lets you list all permissions.
 
 This API lets you retrieve a single permission.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/permissions/{permission}`

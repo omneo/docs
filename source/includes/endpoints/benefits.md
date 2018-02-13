@@ -1,8 +1,8 @@
-# Benefits
+## Benefits
 
 This API allows you to read benefits.
 
-## Benefit Properties
+### Benefit Properties
 
 | Property             | Description                                         |
 |-----------------------|-----------------------------------------------------|
@@ -14,7 +14,7 @@ This API allows you to read benefits.
 
 
 
-## List all Benefits
+### List all Benefits
 
 > JSON Response Example:
                 
@@ -64,13 +64,13 @@ This API allows you to read benefits.
 
 This API lets you list all benefits associated with a certain profile.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/profiles/{profile}/benefits`
 
 
 
-## Retrieve a benefit
+### Retrieve a benefit
 
 > JSON Response Example:
                 
@@ -103,6 +103,6 @@ This API lets you list all benefits associated with a certain profile.
 
 This API lets you retrieve a single benefit.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/profiles/{profile}/benefits/{benefit}`

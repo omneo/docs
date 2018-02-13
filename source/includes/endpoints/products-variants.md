@@ -1,8 +1,8 @@
-# Products Variants
+## Products Variants
 
 This API allows you to create, read, update and delete product variants.
 
-## Product Variant Properties
+### Product Variant Properties
 
 | Property            | Description                           | 
 |----------------------|---------------------------------------|
@@ -23,7 +23,7 @@ This API allows you to create, read, update and delete product variants.
 
 
 
-## Create a product variant
+### Create a product variant
 
 > JSON Response Example:
                 
@@ -69,11 +69,11 @@ This API allows you to create, read, update and delete product variants.
 
 This API allows you to create a variant for a product.
 
-### HTTP Request
+#### HTTP Request
 
 `POST /api/v1/products/{product}/variants`
 
-### Request Properties
+#### Request Properties
 
 | Property            | Type                           | 
 |----------------------|--------------------------------|
@@ -132,7 +132,7 @@ This API allows you to create a variant for a product.
 
 
 
-## List all product variants
+### List all product variants
 
 > JSON Response Example:
                 
@@ -260,7 +260,7 @@ This API allows you to create a variant for a product.
 
 This API lets you list all products.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/products/{product}/variants`
 
@@ -270,7 +270,7 @@ This API lets you list all products.
 
 
 
-## Retrieve a product variant
+### Retrieve a product variant
 
 > JSON Response Example:
                 
@@ -316,7 +316,7 @@ This API lets you list all products.
 
 This API lets you retrieve a single product variant.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/products/{product}/variants/{variant}`
 
@@ -326,7 +326,7 @@ This API lets you retrieve a single product variant.
 
 
 
-## Update a product variant
+### Update a product variant
 
 > JSON Response Example:
                 
@@ -402,11 +402,11 @@ This API lets you retrieve a single product variant.
 
 This API lets you update a product variant.
 
-### HTTP Request
+#### HTTP Request
 
 `PUT /api/v1/products/{products}/variants/{variant}`
 
-### Request Properties
+#### Request Properties
 
 | Property            | Type                             |   
 |----------------------|----------------------------------|
@@ -427,11 +427,11 @@ This API lets you update a product variant.
 
 
 
-## Delete a product
+### Delete a product
 
 This API lets you delete a product variant.
 
-### HTTP Request
+#### HTTP Request
 
 `DELETE /api/v1/products/{product}/variants/{variant}`
 
