@@ -1,8 +1,8 @@
-# Transactions
+## Transactions
 
 This API allows you to create, read, update and delete transactions.
 
-## Transaction Properties
+### Transaction Properties
 
 | Property     | Description                                  | 
 |---------------|----------------------------------------------|
@@ -23,7 +23,7 @@ This API allows you to create, read, update and delete transactions.
 
 
 
-## Create a transaction
+### Create a transaction
 
 > JSON Response Example:
                 
@@ -174,11 +174,11 @@ This API allows you to create, read, update and delete transactions.
 
 This API allows you to create a transaction.
 
-### HTTP Request
+#### HTTP Request
 
 `POST /api/v1/transactions`
 
-### Request Properties
+#### Request Properties
 
 | Property     | Type                                 |
 |---------------|--------------------------------------|
@@ -202,7 +202,7 @@ This API allows you to create a transaction.
 
 
 
-## List all Transactions
+### List all Transactions
 
 > JSON Response Example:
                 
@@ -306,13 +306,13 @@ This API allows you to create a transaction.
 
 This API lets you list all transactions.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/transactions`
 
 
 
-## Retrieve a transaction
+### Retrieve a transaction
 
 > JSON Response Example:
                 
@@ -399,13 +399,13 @@ This API lets you list all transactions.
 
 This API lets you retrieve a single transaction.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/transactions/{transaction}`
 
 
 
-## Update a transaction
+### Update a transaction
 
 > JSON Response Example:
                 
@@ -528,11 +528,11 @@ This API lets you retrieve a single transaction.
 
 This API lets you update a transaction.
 
-### HTTP Request
+#### HTTP Request
 
 `PUT /api/v1/transactions/{transaction}`
 
-### Request Properties
+#### Request Properties
 
 | Property     | Type                                             |
 |---------------|--------------------------------------------------|
@@ -554,11 +554,11 @@ This API lets you update a transaction.
 
 
 
-## Delete a transaction
+### Delete a transaction
 
 This API lets you delete a transaction.
 
-### HTTP Request
+#### HTTP Request
 
 `DELETE /api/v1/transactions/{transaction}`
 

@@ -1,8 +1,8 @@
-# Products
+## Products
 
 This API allows you to create, read, update and delete products.
 
-## Product Properties
+### Product Properties
 
 | Property   | Description                       | 
 |-------------|-----------------------------------|
@@ -25,7 +25,7 @@ This API allows you to create, read, update and delete products.
 
 
 
-## Create a product
+### Create a product
 
 > JSON Response Example:
                 
@@ -71,11 +71,11 @@ This API allows you to create, read, update and delete products.
 
 This API allows you to create a product.
 
-### HTTP Request
+#### HTTP Request
 
 `POST /api/v1/products`
 
-### Request Properties
+#### Request Properties
 
 | Property   | Type                                                                       |
 |-------------|----------------------------------------------------------------------------|
@@ -95,7 +95,7 @@ This API allows you to create a product.
 
 
 
-## List all Products
+### List all Products
 
 > JSON Response Example:
                 
@@ -175,13 +175,13 @@ This API allows you to create a product.
 
 This API lets you list all products.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/products`
 
 
 
-## Retrieve a product
+### Retrieve a product
 
 > JSON Response Example:
                 
@@ -226,13 +226,13 @@ This API lets you list all products.
 
 This API lets you retrieve a single profile.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/products/{product}`
 
 
 
-## Update a product
+### Update a product
 
 > JSON Response Example:
                 
@@ -244,11 +244,11 @@ This API lets you retrieve a single profile.
 
 This API lets you update a profile.
 
-### HTTP Request
+#### HTTP Request
 
 `PUT /api/v1/products/{products}`
 
-### Request Properties
+#### Request Properties
 
 | Property   | Type                                                                       |
 |-------------|----------------------------------------------------------------------------|
@@ -269,11 +269,11 @@ This API lets you update a profile.
 
 
 
-## Delete a product
+### Delete a product
 
 This API lets you delete a product.
 
-### HTTP Request
+#### HTTP Request
 
 `DELETE /api/v1/products/{product}`
 

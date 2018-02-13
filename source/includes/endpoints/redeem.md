@@ -1,8 +1,8 @@
-# Redeem
+## Redeem
 
 This API lets you redeem **points** and or **rewards**.
 
-## Request a redemption
+### Request a redemption
 
 > JSON Response Example:
                 
@@ -22,7 +22,7 @@ This API lets you redeem **points** and or **rewards**.
 
 Request a redemption against a profile and transaction.
 
-### Available Strategies
+#### Available Strategies
 
 The redeem endpoint accepts a **strategy** handle which is used to determine the type and order in which
 a profiles benefits are redeemed.
@@ -36,18 +36,18 @@ There are four different redeem strategies:
 | rewards_points          | Redeem rewards first then points |         
 | points_rewards          | Redeem points first then rewards | 
 
-### HTTP Request
+#### HTTP Request
 
 `POST /api/v1/profiles/{profile}/transactions/{transaction}/redeem`
 
-### Request Properties
+#### Request Properties
 
 | Property               | Description                   | Rules                                                       |
 |-------------------------|-------------------------------|-------------------------------------------------------------|
 | amount                  | The amount to be redeemed     | Must be an integer greater than 0                           |
 | strategy                | The strategy to use           | One of: points, rewards, rewards_points, points_rewards     |
 
-### Response Properties
+#### Response Properties
 
 | Property               | Description                    |
 |-------------------------|--------------------------------|

@@ -1,8 +1,8 @@
-# Point Definitions
+## Point Definitions
 
 This API allows you to create, read, update and delete point definitions.
 
-## Point Definition Properties
+### Point Definition Properties
 
 | Property               | Description                                 |
 |-------------------------|---------------------------------------------|
@@ -21,7 +21,7 @@ This API allows you to create, read, update and delete point definitions.
 
 
 
-## Create a point definition
+### Create a point definition
 
 > JSON Response Example:
                 
@@ -43,11 +43,11 @@ This API allows you to create, read, update and delete point definitions.
 
 This API allows you to a create point definition.
 
-### HTTP Request
+#### HTTP Request
 
 `POST /api/v1/points/definitions`
 
-### Request Properties
+#### Request Properties
 
 | Property               | Type                                            |    
 |-------------------------|-------------------------------------------------|
@@ -64,7 +64,7 @@ This API allows you to a create point definition.
 
 
 
-## List all point definitions
+### List all point definitions
 
 > JSON Response Example:
                 
@@ -99,11 +99,11 @@ This API allows you to a create point definition.
 
 This API lets you list all point definitions.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/points/definitions`
 
-## Retrieve a point definition
+### Retrieve a point definition
 
 > JSON Response Example:
                 
@@ -125,7 +125,7 @@ This API lets you list all point definitions.
 
 This API lets you retrieve a single point definition.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/points/definitions/{definition}`
 
@@ -137,7 +137,7 @@ This API lets you retrieve a single point definition.
 
 
 
-## Update a point definition
+### Update a point definition
 
 > JSON Response Example:
                 
@@ -159,11 +159,11 @@ This API lets you retrieve a single point definition.
 
 This API allows you to update point definitions.
 
-### HTTP Request
+#### HTTP Request
 
 `PUT /api/v1/points/definitions/{definition}`
 
-### Request Properties
+#### Request Properties
 
 | Property               | Type                                            |    
 |-------------------------|-------------------------------------------------|
@@ -178,10 +178,10 @@ This API allows you to update point definitions.
 
 
 
-## Delete a point definition
+### Delete a point definition
 
 This API allows you to delete point definitions.
 
-### HTTP Request
+#### HTTP Request
 
 `DELETE /api/v1/points/definitions/{definition}`

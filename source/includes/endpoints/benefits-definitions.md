@@ -1,8 +1,8 @@
-# Benefits Definitions
+## Benefits Definitions
 
 This API allows you to create, read, update and delete benefit definitions.
 
-## Benefit Definition Properties
+### Benefit Definition Properties
 
 | Property       | Description                                                     |
 |-----------------|-----------------------------------------------------------------|
@@ -20,7 +20,7 @@ This API allows you to create, read, update and delete benefit definitions.
 
 
 
-## Create a benefit definition
+### Create a benefit definition
 
 > JSON Response Example:
                 
@@ -60,11 +60,11 @@ This API allows you to create, read, update and delete benefit definitions.
 
 This API allows you to create a benefit definition.
 
-### HTTP Request
+#### HTTP Request
 
 `POST /api/v1/benefits/definitions`
 
-### Request Properties
+#### Request Properties
 
 | Property       | Type                             |
 |-----------------|----------------------------------|
@@ -82,7 +82,7 @@ This API allows you to create a benefit definition.
 
 
 
-## List all benefit definitions
+### List all benefit definitions
 
 > JSON Response Example:
                 
@@ -138,13 +138,13 @@ This API allows you to create a benefit definition.
 
 This API lets you list all benefit definitions.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/benefits/definitions`
 
 
 
-## Retrieve a benefit definition
+### Retrieve a benefit definition
 
 > JSON Response Example:
                 
@@ -169,13 +169,13 @@ This API lets you list all benefit definitions.
 
 This API lets you retrieve a single benefit definition.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/benefits/definitions/{benefitDefinition}`
 
 
 
-## Update a benefit definition
+### Update a benefit definition
 
 > JSON Response Example:
                 
@@ -213,11 +213,11 @@ This API lets you retrieve a single benefit definition.
 
 This API lets you update a benefit definition.
 
-### HTTP Request
+#### HTTP Request
 
 `PUT /api/v1/benefits/definitions/{benefitDefinition}`
 
-### Request Properties
+#### Request Properties
 
 | Property       | Type                             |
 |-----------------|----------------------------------|
@@ -233,11 +233,11 @@ This API lets you update a benefit definition.
 
 
 
-## Delete a benefit definition
+### Delete a benefit definition
 
 This API lets you delete a benefit definition.
 
-### HTTP Request
+#### HTTP Request
 
 `DELETE /api/v1/benefits/definitions/{benefitDefinition}`
 

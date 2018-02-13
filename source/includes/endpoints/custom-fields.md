@@ -1,8 +1,8 @@
-# Custom Fields
+## Custom Fields
 
 This API allows you to create, read, update and delete custom fields.
 
-## Custom Field Properties
+### Custom Field Properties
 
 | Attribute               | Description                                 |
 |-------------------------|---------------------------------------------|
@@ -12,7 +12,7 @@ This API allows you to create, read, update and delete custom fields.
 | value                   | The custom field value                      |
 | type                    | The custom field type (e.g. string)         |
 
-## Available Types
+### Available Types
 
 | Type               | Example                                 |
 |-------------------------|---------------------------------------------|
@@ -21,7 +21,7 @@ This API allows you to create, read, update and delete custom fields.
 | integer | 100 | 
 | boolean | true |
 
-## Available Resource Endpoints
+### Available Resource Endpoints
 
 For a list of resources that support custom fields, please see below.
 
@@ -35,7 +35,7 @@ For a list of resources that support custom fields, please see below.
 
 
 
-## Create a custom field for a resource
+### Create a custom field for a resource
 
 > JSON Response Example:
                 
@@ -55,7 +55,7 @@ For a list of resources that support custom fields, please see below.
 
 This API allows you to create custom fields.
 
-### HTTP Request
+#### HTTP Request
 
 `POST /api/v1/{resource}/{resourceId}/custom-fields`
 
@@ -67,7 +67,7 @@ For a list of available resource endpoints, please see the [Available Resource E
 Custom fields are unique to their owning resource ID, namespace and handle.
 </aside>
 
-### Request Properties
+#### Request Properties
 
 | Property               | Type                                            |    
 |-------------------------|-------------------------------------------------|
@@ -84,7 +84,7 @@ Custom fields are unique to their owning resource ID, namespace and handle.
 
 
 
-## List a resources custom fields
+### List a resources custom fields
 
 > JSON Response Example:
                 
@@ -115,7 +115,7 @@ Custom fields are unique to their owning resource ID, namespace and handle.
 
 This API lets you list all custom fields for a given resource.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/{resource}/{resourceId}/custom-fields`
 
@@ -125,7 +125,7 @@ This API lets you list all custom fields for a given resource.
 
 
 
-## Retrieve a resource custom field
+### Retrieve a resource custom field
 
 > JSON Response Example:
                 
@@ -145,7 +145,7 @@ This API lets you list all custom fields for a given resource.
 
 This API lets you retrieve a single custom field for a given resource.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/{resource}/{resourceId}/{namespace}:{handle}`
 
@@ -159,7 +159,7 @@ Custom fields are accessed by their unique `namespace:handle` combination. e.g. 
 
 
 
-## Update a resources custom field
+### Update a resources custom field
 
 > JSON Response Example:
                 
@@ -179,11 +179,11 @@ Custom fields are accessed by their unique `namespace:handle` combination. e.g. 
 
 This API allows you to update a given resources custom field.
 
-### HTTP Request
+#### HTTP Request
 
 `PUT /api/v1/{resource}/{resourceId}/{namespace}:{handle}`
 
-### Request Properties
+#### Request Properties
 
 | Property               | Type                                            |    
 |-------------------------|-------------------------------------------------|
@@ -201,10 +201,10 @@ This API allows you to update a given resources custom field.
 
 
 
-## Delete a resources custom field
+### Delete a resources custom field
 
 This API allows you to delete a custom field for a given resource.
 
-### HTTP Request
+#### HTTP Request
 
 `DELETE /api/v1/{resource}/{resourceId}/{namespace}:{handle}`

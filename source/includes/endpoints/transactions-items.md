@@ -1,9 +1,9 @@
-# Transactions Items
+## Transactions Items
 
 This API allows you to create, read, update and delete transaction items.
 
 
-## Transaction Item Properties
+### Transaction Item Properties
 
 | Property      | Description                               |
 |----------------|-------------------------------------------|
@@ -23,7 +23,7 @@ This API allows you to create, read, update and delete transaction items.
 
 
 
-## Create a transaction item
+### Create a transaction item
 
 > JSON Response Example:
                 
@@ -73,11 +73,11 @@ This API allows you to create, read, update and delete transaction items.
 
 This API allows you to create a transaction item.
 
-### HTTP Request
+#### HTTP Request
 
 `POST /api/v1/transactions/{transaction}/items`
 
-### Request Properties
+#### Request Properties
 
 | Property      | Type                          |
 |----------------|-------------------------------|
@@ -95,7 +95,7 @@ This API allows you to create a transaction item.
 
 
 
-## List all transaction items
+### List all transaction items
 
 > JSON Response Example:
                 
@@ -160,7 +160,7 @@ This API allows you to create a transaction item.
 
 This API lets you list all transaction items.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/transactions/{transaction}/items`
 
@@ -169,7 +169,7 @@ This API lets you list all transaction items.
 
 
 
-## Retrieve a transaction item
+### Retrieve a transaction item
 
 > JSON Response Example:
                 
@@ -206,7 +206,7 @@ This API lets you list all transaction items.
 
 This API lets you retrieve a single transaction item.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/transactions/{transaction}/items/{item}`
 
@@ -216,7 +216,7 @@ This API lets you retrieve a single transaction item.
 
 
 
-## Update a transaction item
+### Update a transaction item
 
 > JSON Response Example:
                 
@@ -268,11 +268,11 @@ This API lets you retrieve a single transaction item.
 
 This API lets you update a transaction item.
 
-### HTTP Request
+#### HTTP Request
 
 `PUT /api/v1/transactions/{transaction}/items/{item}`
 
-### Request Properties
+#### Request Properties
 
 | Property      | Type                                      |
 |----------------|-------------------------------------------|
@@ -290,11 +290,11 @@ This API lets you update a transaction item.
 
 
 
-## Delete a transaction item
+### Delete a transaction item
 
 This API lets you delete a transaction item.
 
-### HTTP Request
+#### HTTP Request
 
 `DELETE /api/v1/transactions/{transaction}/items/{item}`
 

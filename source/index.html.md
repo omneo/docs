@@ -34,3 +34,9 @@ search: true
 ---
 
 # Omneo Documentation
+## API Authentication
+How to get moving with the Omneo API
+
+* Setup information
+* Authentication steps
+* General API fetching and filtering rules

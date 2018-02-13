@@ -1,8 +1,8 @@
-# Redemptions
+## Redemptions
 
 This API allows you to view reward, benefit and point redemptions made against a given a profile.
 
-## Redemption Properties
+### Redemption Properties
 
 | Property       | Description                                          |
 |-----------------|------------------------------------------------------|
@@ -17,7 +17,7 @@ This API allows you to view reward, benefit and point redemptions made against a
 
 
 
-## List all profile redemptions
+### List all profile redemptions
 
 > JSON Response Example:
                 
@@ -60,11 +60,11 @@ This API allows you to view reward, benefit and point redemptions made against a
 
 This API lets you list all profile redemptions.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/profiles/{profile}/redemptions`
 
-## Retrieve a profile redemption
+### Retrieve a profile redemption
 
 > JSON Response Example:
                 
@@ -105,7 +105,7 @@ This API lets you list all profile redemptions.
 
 This API lets you retrieve a single reward definition.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/profiles/{profile}/redemptions/{redemption}`
 
@@ -117,7 +117,7 @@ This API lets you retrieve a single reward definition.
 
 
 
-## Redeem a reward
+### Redeem a reward
 
 > JSON Response Example:
                 
@@ -142,11 +142,11 @@ This API lets you retrieve a single reward definition.
 
 This API allows you to redeem rewards.
 
-### HTTP Request
+#### HTTP Request
 
 `POST /api/v1/profiles/{profile}/rewards/redeem`
 
-### Request Attributes
+#### Request Attributes
 | Attribute      | Type                                       |
 |----------------|--------------------------------------------|
 | transaction_id | `required` `exists`                        |
@@ -154,7 +154,7 @@ This API allows you to redeem rewards.
 
 
 
-## Redeem a benefit
+### Redeem a benefit
 
 > JSON Response Example:
                 
@@ -222,11 +222,11 @@ This API allows you to redeem rewards.
 
 This API allows you to redeem a benefit.
 
-### HTTP Request
+#### HTTP Request
 
 `POST /api/v1/profiles/{profile}/benefits/{benefit}/redeem`
 
-### Request Properties
+#### Request Properties
 
 | Attribute      | Type                                        |
 |----------------|---------------------------------------------|

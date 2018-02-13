@@ -1,8 +1,8 @@
-# Roles
+## Roles
 
 This API allows you to read roles.
 
-## Role Attributes
+### Role Attributes
 
 | Attribute  | Description                     | 
 |------------|---------------------------------|
@@ -13,7 +13,7 @@ This API allows you to read roles.
 | users      | The users assigned to this role |
 
 
-## List all Roles
+### List all Roles
 
 > JSON Response Example:
                 
@@ -71,13 +71,13 @@ This API allows you to read roles.
 
 This API lets you list all roles.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/roles`
 
 
 
-## Retrieve a role
+### Retrieve a role
 
 > JSON Response Example:
                 
@@ -118,7 +118,6 @@ This API lets you list all roles.
 
 This API lets you retrieve a single role.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/roles/{role}`
-

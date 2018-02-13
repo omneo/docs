@@ -1,4 +1,6 @@
-# Profiles
+# Endpoints
+
+## Profiles 
 
 This API allows you to create, read, update and delete profiles.
 
@@ -33,7 +35,7 @@ This API allows you to create, read, update and delete profiles.
 
 
 
-## Create a profile
+### Create a profile
 
 > JSON Response Example:
                 
@@ -76,11 +78,11 @@ This API allows you to create, read, update and delete profiles.
 
 This API allows you to create new profiles.
 
-### HTTP Request
+#### HTTP Request
 
 `POST /api/v1/profiles`
 
-### Request Properties
+#### Request Properties
 
 | Property            | Type                                                                                                              |
 |----------------------|-------------------------------------------------------------------------------------------------------------------|
@@ -110,7 +112,7 @@ This API allows you to create new profiles.
 
 
 
-## List all Profiles
+### List all Profiles
 
 > JSON Response Example:
                 
@@ -154,12 +156,12 @@ This API allows you to create new profiles.
 
 This API lets you list all profiles.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/profiles`
 
 
-## Retrieve a profile
+### Retrieve a profile
 
 > JSON Response Example:
                 
@@ -201,14 +203,14 @@ This API lets you list all profiles.
 
 This API lets you retrieve a single profile.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/profiles/{profile}`
 
 
 
 
-## Update a profile
+### Update a profile
 
 > JSON Response Example:
                 
@@ -250,11 +252,11 @@ This API lets you retrieve a single profile.
 
 This API lets you update a profile.
 
-### HTTP Request
+#### HTTP Request
 
 `PUT /api/v1/profiles/{profile}`
 
-### Request Properties
+#### Request Properties
 
 | Property            | Type                                                                                                              |
 |----------------------|-------------------------------------------------------------------------------------------------------------------|
@@ -283,10 +285,10 @@ This API lets you update a profile.
 
 
 
-## Delete a profile
+### Delete a profile
 
 This API lets you delete a profile.
 
-### HTTP Request
+#### HTTP Request
 
 `DELETE /api/v1/profiles/{profile}`
