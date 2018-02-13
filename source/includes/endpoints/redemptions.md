@@ -7,13 +7,12 @@ This API allows you to view reward, benefit and point redemptions made against a
 | Property       | Description                                          |
 |-----------------|------------------------------------------------------|
 | id              | The ID of the redemption                             |
-| transaction_id  | The transaction associated with the redemption       |
 | profile_id      | The profile associated with the redemption           |
-| redeemable_id   | The redemption subject id |
-| redeemable_type | The redemption subject type                             |
+| type   | The redemption type |
+| type_details   | The redemption type details |
 | location_id     | The location associated with the redemption          |
 | value           | The redeemed value                                |
-
+| items | List of redemption items |
 
 
 
@@ -25,32 +24,23 @@ This API allows you to view reward, benefit and point redemptions made against a
 {
     "data": [
         {
-            "id": 4,
-            "transaction": "{...}",
-            "subject_type": "benefit",
-            "subject": {
-                "id": 1,
-                "expires_at": "2001-07-22 18:32:31",
-                "issued_at": "2001-07-09 18:32:31",
-                "is_expired": true,
-                "definition": {
-                    "id": 1,
-                    "name": "Birthday benefit",
-                    "handle": "dolorem-veritatis-quo-exercitationem",
-                    "period": 30,
-                    "description": "...",
-                    "notes": "xxx",
-                    "max_redemptions": 1,
-                    "is_extendable": false,
-                    "is_reassignable": false,
-                    "tags": [],
-                    "created_at": "2018-01-31 00:41:16",
-                    "updated_at": "2018-02-02 04:45:55"
-                },
-                "created_at": "2018-01-31 00:41:16",
-                "updated_at": "2018-01-31 00:41:16"
-            },
-            "value": null,
+            "id": 1,
+            "items": [
+                {
+                    "id": "1",
+                    "type": "reward",
+                    "type_attributes": {
+                        "id": 1,
+                        "value_initial": 100.00,
+                        "value_remaining": 100.00,
+                        "expires_at": "2018-01-02 00:00:00",
+                        "issued_at": "2018-01-01 00:00:00",
+                        "is_expired": false,
+                        "created_at": "2018-01-01 00:00:00",
+                        "updated_at": "2018-01-01 00:00:00"
+                    }
+                }
+            ],
             "created_at": "2018-01-01 00:00:00",
             "updated_at": "2018-01-01 00:00:00"
         }
@@ -64,39 +54,30 @@ This API lets you list all profile redemptions.
 
 `GET /api/v1/profiles/{profile}/redemptions`
 
-## Retrieve a profile redemption
+## Retrieve a redemption
 
 > JSON Response Example:
                 
 ```json
 {
     "data": {
-        "id": 4,
-        "transaction": "{...}",
-        "subject_type": "benefit",
-        "subject": {
-            "id": 1,
-            "expires_at": "2001-07-22 18:32:31",
-            "issued_at": "2001-07-09 18:32:31",
-            "is_expired": true,
-            "definition": {
-                "id": 1,
-                "name": "Birthday benefit",
-                "handle": "dolorem-veritatis-quo-exercitationem",
-                "period": 30,
-                "description": "...",
-                "notes": "xxx",
-                "max_redemptions": 1,
-                "is_extendable": false,
-                "is_reassignable": false,
-                "tags": [],
-                "created_at": "2018-01-31 00:41:16",
-                "updated_at": "2018-02-02 04:45:55"
-            },
-            "created_at": "2018-01-31 00:41:16",
-            "updated_at": "2018-01-31 00:41:16"
-        },
-        "value": null,
+        "id": 1,
+        "items": [
+            {
+                "id": "1",
+                "type": "reward",
+                "type_attributes": {
+                    "id": "1",
+                    "value_initial": 100.00,
+                    "value_remaining": 100.00,
+                    "expires_at": "2018-01-02 00:00:00",
+                    "issued_at": "2018-01-01 00:00:00",
+                    "is_expired": false,
+                    "created_at": "2018-01-01 00:00:00",
+                    "updated_at": "2018-01-01 00:00:00"
+                }
+            }
+        ],
         "created_at": "2018-01-01 00:00:00",
         "updated_at": "2018-01-01 00:00:00"
     }
@@ -117,90 +98,23 @@ This API lets you retrieve a single reward definition.
 
 
 
-## Redeem a reward
+
+## Redeem Benefits
 
 > JSON Response Example:
-                
-```json
-{
-    "data": {
-        "total_redeemed": 200,
-        "balance": 50
-    }
-}
-```
 
-> JSON Request Example:
-
-```json
-{
-  "amount":200,
-  "transaction_id":1
-}
-```
-
-
-This API allows you to redeem rewards.
-
-### HTTP Request
-
-`POST /api/v1/profiles/{profile}/rewards/redeem`
-
-### Request Attributes
-| Attribute      | Type                                       |
-|----------------|--------------------------------------------|
-| transaction_id | `required` `exists`                        |
-| amount         | `required` `numeric` Should greater than 0 |
-
-
-
-## Redeem a benefit
-
-> JSON Response Example:
-                
 ```json
 {
     "data": {
         "id": 1,
-        "transaction": {
-            "id": 1,
-            "profile":"{...}",
-            "location": null,
-            "currency": "SAPIENTE",
-            "total": 79.93,
-            "systems": [],
-            "rounding": 34.07,
-            "tender": "amet",
-            "margin": 63.35,
-            "ereceipt": false,
-            "ereciept_text": null,
-            "deliver_at": "1978-10-03 03:09:40",
-            "transacted_at": "1976-11-30 22:21:39",
-            "tags": [],
-            "items": [],
-            "created_at": "2018-02-02 05:58:02",
-            "updated_at": "2018-02-02 05:58:02"
-        },
-        "subject_type": "benefit",
-        "subject": {
+        "type": "benefit",
+        "type_attributes": {
             "id": 1,
             "expires_at": "2018-02-16 05:58:02",
             "issued_at": "2018-02-02 05:58:02",
             "is_expired": false,
-            "definition": {
-                "id": 1,
-                "name": "cumque",
-                "handle": "rerum-iusto-quae-et",
-                "period": 14,
-                "description": "Ea commodi nobis rerum rem sunt dolore. Et voluptate ea adipisci voluptatum. Vel et iste culpa aut sunt consequatur.",
-                "notes": "Nulla et eos non aliquid praesentium sunt architecto qui. Nihil quis est temporibus corrupti minima. Sint sed explicabo sit fugit fugit repudiandae.",
-                "max_redemptions": 7,
-                "is_extendable": false,
-                "is_reassignable": false,
-                "tags": [],
-                "created_at": "2018-02-02 05:58:02",
-                "updated_at": "2018-02-02 05:58:02"
-            },
+            "is_redeemable": true,
+            "redemptions_remaining": 5,
             "created_at": "2018-02-02 05:58:02",
             "updated_at": "2018-02-02 05:58:02"
         },
@@ -208,14 +122,6 @@ This API allows you to redeem rewards.
         "created_at": "2018-02-02 05:59:58",
         "updated_at": "2018-02-02 05:59:58"
     }
-}
-```
-
-> JSON Request Example:
-
-```json
-{
-  "transaction_id":1
 }
 ```
 
@@ -228,7 +134,67 @@ This API allows you to redeem a benefit.
 
 ### Request Properties
 
-| Attribute      | Type                                        |
-|----------------|---------------------------------------------|
-| transaction_id | `sometimes` `required` `integer` `exists`   |
+None
 
+
+
+
+
+
+
+
+
+## Redeem Rewards and or Points
+
+This API lets you redeem **points** and or **rewards**.
+
+> JSON Response Example:
+                
+```json
+{
+    "data": {
+        "total_redeemed": 100,
+        "total_requested": 110,
+        "profile": {
+            "reward_balance": 10,
+            "point_balance": 0
+        }
+    }
+}
+```
+
+Request a redemption against a profile and transaction.
+
+### Available Strategies
+
+The redeem endpoint accepts a **strategy** handle which is used to determine the type and order in which
+a profiles benefits are redeemed.
+
+There are four different redeem strategies:
+
+| Handle                  | Description                      |
+|-------------------------|----------------------------------|
+| rewards                 | Redeem only rewards              |
+| points                  | Redeem only points               |
+| rewards_points          | Redeem rewards first then points |         
+| points_rewards          | Redeem points first then rewards | 
+
+### HTTP Request
+
+`POST /api/v1/profiles/{profile}/redeem`
+
+### Request Properties
+
+| Property               | Description                   | Rules                                                       |
+|-------------------------|-------------------------------|-------------------------------------------------------------|
+| amount                  | The amount to be redeemed     | Must be an integer greater than 0                           |
+| strategy                | The strategy to use           | One of: points, rewards, rewards_points, points_rewards     |
+
+### Response Properties
+
+| Property               | Description                    |
+|-------------------------|--------------------------------|
+| total_redeemed        | The total amount redeemed      |
+| total_requested        | The total amount requested      |
+| profile.reward_balance  | The new profile reward balance |
+| profile.point_balance   | The new profile point balance  |

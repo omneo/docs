@@ -22,7 +22,6 @@ includes:
   - endpoints/benefits-definitions
   - endpoints/benefits
   - endpoints/redemptions  
-  - endpoints/redeem
   - endpoints/points-definitions
   - endpoints/points
   - endpoints/permissions
