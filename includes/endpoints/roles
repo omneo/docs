@@ -1,5 +1,5 @@
 <h2 id='roles'>Roles</h2>
-<p>This API allows you to read and delete roles.</p>
+<p>This API allows you to read roles.</p>
 <h3 id='role-attributes'>Role Attributes</h3>
 <table><thead>
 <tr>
@@ -125,7 +125,3 @@
 <p>This API lets you retrieve a single role.</p>
 <h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET /api/v1/roles/{role}</code></p>
-<h3 id='delete-a-role'>Delete a role</h3>
-<p>This API lets you delete a role.</p>
-<h4 id='http-request-3'>HTTP Request</h4>
-<p><code>DELETE /api/v1/roles/{role}</code></p>

@@ -590,9 +590,6 @@
                           <li>
                             <a href="#retrieve-a-role" class="toc-h2 toc-link" data-title="Retrieve a role">Retrieve a role</a>
                           </li>
-                          <li>
-                            <a href="#delete-a-role" class="toc-h2 toc-link" data-title="Delete a role">Delete a role</a>
-                          </li>
                       </ul>
                   </li>
                 <li>
@@ -615,6 +612,26 @@
                           </li>
                           <li>
                             <a href="#delete-a-user" class="toc-h2 toc-link" data-title="Delete a user">Delete a user</a>
+                          </li>
+                      </ul>
+                  </li>
+          <a href="#ledgers" class="toc-label">Ledgers</a>
+                <li>
+                    <a href="#role-attributes" class="toc-h1 toc-link" data-title="Role Attributes">Role Attributes</a>
+                  </li>
+                <li>
+                    <a href="#list-all-ledgers-for-a-profile" class="toc-h1 toc-link" data-title="List all ledgers for a profile">List all ledgers for a profile</a>
+                      <ul class="toc-list-h2">
+                          <li>
+                            <a href="#http-request" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                          </li>
+                      </ul>
+                  </li>
+                <li>
+                    <a href="#retrieve-a-ledger-for-a-profile" class="toc-h1 toc-link" data-title="Retrieve a ledger for a profile">Retrieve a ledger for a profile</a>
+                      <ul class="toc-list-h2">
+                          <li>
+                            <a href="#http-request-2" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
                           </li>
                       </ul>
                   </li>
@@ -5238,7 +5255,7 @@ a profiles benefits are redeemed.</p>
 <h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET /api/v1/permissions/{permission}</code></p>
 <h2 id='roles'>Roles</h2>
-<p>This API allows you to read and delete roles.</p>
+<p>This API allows you to read roles.</p>
 <h3 id='role-attributes'>Role Attributes</h3>
 <table><thead>
 <tr>
@@ -5364,10 +5381,6 @@ a profiles benefits are redeemed.</p>
 <p>This API lets you retrieve a single role.</p>
 <h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET /api/v1/roles/{role}</code></p>
-<h3 id='delete-a-role'>Delete a role</h3>
-<p>This API lets you delete a role.</p>
-<h4 id='http-request-3'>HTTP Request</h4>
-<p><code>DELETE /api/v1/roles/{role}</code></p>
 <h2 id='users'>Users</h2>
 <p>This API allows you to create, read, update and delete users.</p>
 <h3 id='user-attributes'>User Attributes</h3>
@@ -5620,6 +5633,126 @@ a profiles benefits are redeemed.</p>
 <p>This API lets you delete a user.</p>
 <h4 id='http-request-5'>HTTP Request</h4>
 <p><code>DELETE /api/v1/users/{user}</code></p>
+<h1 id='ledgers'>Ledgers</h1>
+<p>This API allows you to read ledgers.</p>
+<h2 id='role-attributes'>Role Attributes</h2>
+<table><thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>ID of the role</td>
+</tr>
+<tr>
+<td>profile_id</td>
+<td>The name of the role</td>
+</tr>
+<tr>
+<td>ledgerable_id</td>
+<td>The ID of the subject</td>
+</tr>
+<tr>
+<td>ledgerable_type</td>
+<td>The type of the subject</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Description for this ledger</td>
+</tr>
+<tr>
+<td>dollar_value</td>
+<td>Amount subject(transacted/reward/point) amount issued</td>
+</tr>
+<tr>
+<td>dollar_balance</td>
+<td>The profile&#39;s reward balance after this ledger implemented</td>
+</tr>
+<tr>
+<td>point_value</td>
+<td>Amount of points issued or redeemed</td>
+</tr>
+<tr>
+<td>point_balance</td>
+<td>The profile&#39;s reward balance after this ledger implemented</td>
+</tr>
+</tbody></table>
+<h2 id='list-all-ledgers-for-a-profile'>List all ledgers for a profile</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
+      </span><span class="s2">"ledgerable_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transaction"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ledgerable_subject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"profile_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"location_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QUAERAT"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mf">124.05</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rounding"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.54</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ab"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"margin"</span><span class="p">:</span><span class="w"> </span><span class="mf">54.94</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ereceipt"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ereciept_text"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"deliver_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1980-08-30 02:43:07"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"transacted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2008-11-02 14:34:11"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-12 05:51:22"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-12 05:51:22"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Transaction"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"dollar_value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"124.05"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"dollar_balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"point_value"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"point_balance"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you list all ledger for a profile.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET /api/v1/profiles/{profile}/ledgers</code></p>
+<h2 id='retrieve-a-ledger-for-a-profile'>Retrieve a ledger for a profile</h2>
+<blockquote>
+<p>JSON Response Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
+        </span><span class="s2">"ledgerable_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transaction"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ledgerable_subject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"profile_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"location_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QUAERAT"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mf">124.05</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"rounding"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.54</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ab"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"margin"</span><span class="p">:</span><span class="w"> </span><span class="mf">54.94</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"ereceipt"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"ereciept_text"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"deliver_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1980-08-30 02:43:07"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"transacted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2008-11-02 14:34:11"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-12 05:51:22"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-02-12 05:51:22"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Transaction"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"dollar_value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"124.05"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"dollar_balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"point_value"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"point_balance"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This API lets you retrieve a single ledger for a profile.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET /api/v1/profiles/{profile}/ledgers/{ledger}</code></p>
 
       </div>
       <div class="dark-box">
