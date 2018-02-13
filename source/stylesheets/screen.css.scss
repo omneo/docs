@@ -198,6 +198,17 @@ html, body {
     padding: 0 10px;
   }
 
+  .toc-label{
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #999;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 0 10px;
+    margin: 10px 0 5px;
+    display: block;
+  }
+
   // This is the currently selected ToC entry
   .toc-link.active {
     color: #0052CC;
@@ -388,11 +399,36 @@ html, body {
   }
 
   // the div is the tocify hidden div for placeholding stuff
-  &>h1, &>h2, &>div {
+  &>h2, &>h3, &>div {
     clear:both;
   }
 
-  h1 {
+  h1{
+    font-weight: 600;
+    font-size: 12px;
+    margin-top: 56px;
+    margin-left: 28px;
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #EBECF0;
+    position: absolute;
+    color: #0052CC;
+
+    &+h2{
+      padding-top: 72px;
+    }
+
+    &:first-child{
+      margin-top: 28px;
+      &+h2{
+        margin-top: 0;
+        border: none;
+      }
+    }
+  }
+
+  h2 {
     font-weight: 300;
     font-size: 28px;
     line-height: 1.4em;
@@ -402,12 +438,12 @@ html, body {
     border-top: 1px solid #EBECF0;
   }
 
-  h1:first-child, div:first-child + h1 {
+  h2:first-child, div:first-child + h2 {
     border-top-width: 0;
     margin-top: 0;
   }
 
-  h2 {
+  h3 {
     font-weight: 300;
     font-size: 22px;
     line-height: 1.6em;
@@ -415,27 +451,27 @@ html, body {
 
   // h2s right after h1s should bump right up
   // against the h1s.
-  h1 + h2, h1 + div + h2 {
+  h2 + h3, h2 + div + h3 {
     margin-top: $h1-margin-bottom * -1 + 4px;
     border-top: none;
   }
 
-  h3,h4,h5,h6{
+  h4,h5,h6{
     margin-top: 2.5em;
     margin-bottom: 0.8em;
     font-weight: 600;
   }
 
-  h3 {
+  h4 {
     font-size: 16px;
     font-weight: 500;
   }
 
-  h4 {
+  h5 {
     font-size: 12px;
   }
 
-  h5,h6{
+  h6{
     text-transform: uppercase;
     font-size: 12px;
     color: #42526E;

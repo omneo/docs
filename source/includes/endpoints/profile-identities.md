@@ -1,8 +1,8 @@
-# Profile Identities
+## Profile Identities
 
 This API allows you to read, update and delete profile identities.
 
-## Profile Identity Properties
+### Profile Identity Properties
 
 | Property               | Description                                 |
 |-------------------------|---------------------------------------------|
@@ -11,7 +11,7 @@ This API allows you to read, update and delete profile identities.
 | is_active | Whether or not this is the identity is active (e.g. inactive could represent an ex staff member) |
 | is_primary | Whether or not this is the primary identity for the user |
 
-## Available Identities
+### Available Identities
 
 | Handle               | Description                                 |
 |-------------------------|---------------------------------------------|
@@ -20,7 +20,7 @@ This API allows you to read, update and delete profile identities.
 | staff | Staff identifier for the profile |
 | fingerprint | Fingerprint identifier for the profile |
 
-## Update a profile identity
+### Update a profile identity
 
 > JSON Response Example:
                 
@@ -39,11 +39,11 @@ This API allows you to read, update and delete profile identities.
 
 This API allows you to update profile identities.
 
-### HTTP Request
+#### HTTP Request
 
 `PUT /api/v1/profiles/{profile}/identities/{handle}`
 
-### Request Properties
+#### Request Properties
 
 | Property               | Type                                            |    
 |-------------------------|-------------------------------------------------|
@@ -56,7 +56,7 @@ This API allows you to update profile identities.
 
 
 
-## List all profile identities
+### List all profile identities
 
 > JSON Response Example:
                 
@@ -93,7 +93,7 @@ This API allows you to update profile identities.
 
 This API lets you list all profile attributes.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/profiles/{profile}/identities`
 
@@ -103,7 +103,7 @@ This API lets you list all profile attributes.
 
 
 
-## Retrieve a profile identity
+### Retrieve a profile identity
 
 > JSON Response Example:
                 
@@ -122,6 +122,6 @@ This API lets you list all profile attributes.
 
 This API lets you retrieve a profile identity.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/profiles/{profile}/identities/{handle}`

@@ -1,8 +1,8 @@
-# Points
+## Points
 
 This API allows you to view a profiles points.
 
-## Point Properties
+### Point Properties
 
 | Property               | Description                        |
 |-------------------------|------------------------------------|
@@ -14,7 +14,7 @@ This API allows you to view a profiles points.
 | created_at              | The created date                   |
 | updated_at              | The updated date                   |
 
-## List all points
+### List all points
 
 > JSON Response Example:
                 
@@ -64,11 +64,11 @@ This API allows you to view a profiles points.
 
 This API lets you list all points for a given profile.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/profiles/{profile}/points`
 
-## Retrieve a point
+### Retrieve a point
 
 > JSON Response Example:
                 
@@ -97,6 +97,6 @@ This API lets you list all points for a given profile.
 
 This API lets you retrieve a single point.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/profiles/{profile}/points/{point}`

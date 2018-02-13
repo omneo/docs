@@ -1,8 +1,8 @@
-# Users
+## Users
 
 This API allows you to create, read, update and delete users.
 
-## User Attributes
+### User Attributes
 
 | Attribute   | Description                                  | 
 |-------------|----------------------------------------------|
@@ -12,7 +12,7 @@ This API allows you to create, read, update and delete users.
 | roles       | The currency this transaction use            |
 
 
-## Create a user
+### Create a user
 
 > JSON Response Example:
                 
@@ -57,11 +57,11 @@ This API allows you to create, read, update and delete users.
 
 This API allows you to create a user and associate roles with the user.
 
-### HTTP Request
+#### HTTP Request
 
 `POST /api/v1/users`
 
-### Request Attributes
+#### Request Attributes
 | Attribute   | Type                                        |
 |-------------|---------------------------------------------|
 | name        | `required` `string`                         |
@@ -71,7 +71,7 @@ This API allows you to create a user and associate roles with the user.
 
 
 
-## List all users
+### List all users
 
 > JSON Response Example:
                 
@@ -135,13 +135,13 @@ This API allows you to create a user and associate roles with the user.
 
 This API lets you list all users.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/users`
 
 
 
-## Retrieve a user
+### Retrieve a user
 
 > JSON Response Example:
                 
@@ -170,13 +170,13 @@ This API lets you list all users.
 
 This API lets you retrieve a single user.
 
-### HTTP Request
+#### HTTP Request
 
 `GET /api/v1/users/{user}`
 
 
 
-## Update a user
+### Update a user
 
 > JSON Response Example:
                 
@@ -219,11 +219,11 @@ This API lets you retrieve a single user.
 
 This API lets you update a user.
 
-### HTTP Request
+#### HTTP Request
 
 `PUT /api/v1/users/{user}`
 
-### Request Attributes
+#### Request Attributes
 | Attribute   | Type                                                    |
 |-------------|---------------------------------------------------------|
 | name        | `sometimes` `required` `string`                         |
@@ -232,11 +232,11 @@ This API lets you update a user.
 | roles.*.id  | `required` `exists:roles,id`                            |
 
 
-## Delete a user
+### Delete a user
 
 This API lets you delete a user.
 
-### HTTP Request
+#### HTTP Request
 
 `DELETE /api/v1/users/{user}`
 
