@@ -1,6 +1,6 @@
-<h1 id='transactions'>Transactions</h1>
+<h2 id='transactions'>Transactions</h2>
 <p>This API allows you to create, read, update and delete transactions.</p>
-<h2 id='transaction-properties'>Transaction Properties</h2>
+<h3 id='transaction-properties'>Transaction Properties</h3>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -56,7 +56,7 @@
 <td>Transaction happen time</td>
 </tr>
 </tbody></table>
-<h2 id='create-a-transaction'>Create a transaction</h2>
+<h3 id='create-a-transaction'>Create a transaction</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -202,9 +202,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API allows you to create a transaction.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<h4 id='http-request'>HTTP Request</h4>
 <p><code>POST /api/v1/transactions</code></p>
-<h3 id='request-properties'>Request Properties</h3>
+<h4 id='request-properties'>Request Properties</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -276,7 +276,7 @@
 <td><code>required</code> <code>exists</code></td>
 </tr>
 </tbody></table>
-<h2 id='list-all-transactions'>List all Transactions</h2>
+<h3 id='list-all-transactions'>List all Transactions</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -377,9 +377,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you list all transactions.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET /api/v1/transactions</code></p>
-<h2 id='retrieve-a-transaction'>Retrieve a transaction</h2>
+<h3 id='retrieve-a-transaction'>Retrieve a transaction</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -463,9 +463,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you retrieve a single transaction.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
+<h4 id='http-request-3'>HTTP Request</h4>
 <p><code>GET /api/v1/transactions/{transaction}</code></p>
-<h2 id='update-a-transaction'>Update a transaction</h2>
+<h3 id='update-a-transaction'>Update a transaction</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -584,9 +584,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you update a transaction.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
+<h4 id='http-request-4'>HTTP Request</h4>
 <p><code>PUT /api/v1/transactions/{transaction}</code></p>
-<h3 id='request-properties-2'>Request Properties</h3>
+<h4 id='request-properties-2'>Request Properties</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -650,7 +650,7 @@
 <td><code>required</code> <code>exists</code></td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-transaction'>Delete a transaction</h2>
+<h3 id='delete-a-transaction'>Delete a transaction</h3>
 <p>This API lets you delete a transaction.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
+<h4 id='http-request-5'>HTTP Request</h4>
 <p><code>DELETE /api/v1/transactions/{transaction}</code></p>

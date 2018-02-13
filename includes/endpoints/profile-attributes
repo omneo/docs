@@ -1,6 +1,6 @@
-<h1 id='profile-attributes'>Profile Attributes</h1>
+<h2 id='profile-attributes'>Profile Attributes</h2>
 <p>This API allows you to create, read, update and delete profile attributes.</p>
-<h2 id='profile-attribute-properties'>Profile Attribute Properties</h2>
+<h3 id='profile-attribute-properties'>Profile Attribute Properties</h3>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -40,7 +40,7 @@
 <td>Whether or not the attribute is deletable</td>
 </tr>
 </tbody></table>
-<h2 id='available-types'>Available Types</h2>
+<h3 id='available-types'>Available Types</h3>
 <p>Types determine how the attribute value is casted. It&#39;s important to note that types <em>do not
 enforce a specific type on ingress</em>, e.g. if the type is set to <code>string</code> and a <code>float</code> is entered, the float value will be casted as a <code>string</code>.</p>
 
@@ -67,7 +67,7 @@ enforce a specific type on ingress</em>, e.g. if the type is set to <code>string
 <td>true</td>
 </tr>
 </tbody></table>
-<h2 id='rule-examples'>Rule Examples</h2>
+<h3 id='rule-examples'>Rule Examples</h3>
 <p>Rules determine how a value is validated on <em>ingress</em>. Rules should be used in conjunction with types to enforce type values.</p>
 
 <table><thead>
@@ -109,7 +109,7 @@ enforce a specific type on ingress</em>, e.g. if the type is set to <code>string
 <td><code>[&quot;required&quot;, &quot;after_or_equal:date&quot;]</code></td>
 </tr>
 </tbody></table>
-<h2 id='rule-type-examples'>Rule / Type Examples</h2>
+<h3 id='rule-type-examples'>Rule / Type Examples</h3>
 <p>Please see the below table for a common list of rule / type combinations.</p>
 
 <table><thead>
@@ -135,7 +135,7 @@ enforce a specific type on ingress</em>, e.g. if the type is set to <code>string
 <td><code>required</code>, <code>boolean</code></td>
 </tr>
 </tbody></table>
-<h2 id='create-a-profile-attribute'>Create a profile attribute</h2>
+<h3 id='create-a-profile-attribute'>Create a profile attribute</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -157,7 +157,7 @@ enforce a specific type on ingress</em>, e.g. if the type is set to <code>string
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API allows you to create profile attributes.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<h4 id='http-request'>HTTP Request</h4>
 <p><code>POST /api/v1/profiles/attributes</code></p>
 
 <aside class="notice">
@@ -167,7 +167,7 @@ Profile attributes are unique to namespace and handle.
 <aside class="notice">
 Every profile has every attribute. If a profile does not have an attribute value, the default value is used.
 </aside>
-<h3 id='request-properties'>Request Properties</h3>
+<h4 id='request-properties'>Request Properties</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -207,7 +207,7 @@ Every profile has every attribute. If a profile does not have an attribute value
 <td><code>required</code> <code>unique: namespace, handle</code></td>
 </tr>
 </tbody></table>
-<h2 id='list-all-profile-attributes'>List all profile attributes</h2>
+<h3 id='list-all-profile-attributes'>List all profile attributes</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -245,9 +245,9 @@ Every profile has every attribute. If a profile does not have an attribute value
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you list all profile attributes.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET /api/v1/profiles/attributes</code></p>
-<h2 id='retrieve-a-profile-attribute'>Retrieve a profile attribute</h2>
+<h3 id='retrieve-a-profile-attribute'>Retrieve a profile attribute</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -269,13 +269,13 @@ Every profile has every attribute. If a profile does not have an attribute value
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you retrieve a profile attribute.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
+<h4 id='http-request-3'>HTTP Request</h4>
 <p><code>GET /api/v1/profiles/attributes/{namespace:handle}</code></p>
 
 <aside class="notice">
 Profile attributes are accessed by their unique `namespace:handle` combination. e.g. `preferences:subscribe-push`
 </aside>
-<h2 id='update-a-profile-attribute'>Update a profile attribute</h2>
+<h3 id='update-a-profile-attribute'>Update a profile attribute</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -297,9 +297,9 @@ Profile attributes are accessed by their unique `namespace:handle` combination. 
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API allows you to update a profile attribute.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
+<h4 id='http-request-4'>HTTP Request</h4>
 <p><code>PUT /api/v1/{resource}/{resourceId}/{namespace}:{handle}</code></p>
-<h3 id='request-properties-2'>Request Properties</h3>
+<h4 id='request-properties-2'>Request Properties</h4>
 <table><thead>
 <tr>
 <th>Properties</th>
@@ -311,11 +311,11 @@ Profile attributes are accessed by their unique `namespace:handle` combination. 
 <td><code>sometimes</code> <code>nullable</code> <code>string</code></td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-profile-attribute'>Delete a profile attribute</h2>
+<h3 id='delete-a-profile-attribute'>Delete a profile attribute</h3>
 <p>This API allows you to delete a profile attribute.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
+<h4 id='http-request-5'>HTTP Request</h4>
 <p><code>DELETE /api/v1/profiles/attributes/{namespace}:{handle}</code></p>
-<h2 id='list-all-profile-attributes-for-a-profile'>List all profile attributes for a profile</h2>
+<h3 id='list-all-profile-attributes-for-a-profile'>List all profile attributes for a profile</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -355,13 +355,13 @@ Profile attributes are accessed by their unique `namespace:handle` combination. 
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API allows you to list all profile attributes for a given profile.</p>
-<h3 id='http-request-6'>HTTP Request</h3>
+<h4 id='http-request-6'>HTTP Request</h4>
 <p><code>GET /api/v1/profiles/{profile}/attributes</code></p>
 
 <aside class="notice">
 Profile attributes are automatically grouped by their namespace.
 </aside>
-<h2 id='update-a-profile-attribute-for-a-profile'>Update a profile attribute for a profile</h2>
+<h3 id='update-a-profile-attribute-for-a-profile'>Update a profile attribute for a profile</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -383,9 +383,9 @@ Profile attributes are automatically grouped by their namespace.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API allows you to update a profile attribute for a given profile.</p>
-<h3 id='http-request-7'>HTTP Request</h3>
+<h4 id='http-request-7'>HTTP Request</h4>
 <p><code>PUT /api/v1/profiles/{profile}/attributes/{namespace}:{handle}</code></p>
-<h3 id='request-properties-3'>Request Properties</h3>
+<h4 id='request-properties-3'>Request Properties</h4>
 <table><thead>
 <tr>
 <th>Property</th>

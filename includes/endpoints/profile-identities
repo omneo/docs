@@ -1,6 +1,6 @@
-<h1 id='profile-identities'>Profile Identities</h1>
+<h2 id='profile-identities'>Profile Identities</h2>
 <p>This API allows you to read, update and delete profile identities.</p>
-<h2 id='profile-identity-properties'>Profile Identity Properties</h2>
+<h3 id='profile-identity-properties'>Profile Identity Properties</h3>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -24,7 +24,7 @@
 <td>Whether or not this is the primary identity for the user</td>
 </tr>
 </tbody></table>
-<h2 id='available-identities'>Available Identities</h2>
+<h3 id='available-identities'>Available Identities</h3>
 <table><thead>
 <tr>
 <th>Handle</th>
@@ -48,7 +48,7 @@
 <td>Fingerprint identifier for the profile</td>
 </tr>
 </tbody></table>
-<h2 id='update-a-profile-identity'>Update a profile identity</h2>
+<h3 id='update-a-profile-identity'>Update a profile identity</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -64,9 +64,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API allows you to update profile identities.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<h4 id='http-request'>HTTP Request</h4>
 <p><code>PUT /api/v1/profiles/{profile}/identities/{handle}</code></p>
-<h3 id='request-properties'>Request Properties</h3>
+<h4 id='request-properties'>Request Properties</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -86,7 +86,7 @@
 <td><code>sometimes</code> <code>required</code> <code>boolean</code></td>
 </tr>
 </tbody></table>
-<h2 id='list-all-profile-identities'>List all profile identities</h2>
+<h3 id='list-all-profile-identities'>List all profile identities</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -120,9 +120,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you list all profile attributes.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET /api/v1/profiles/{profile}/identities</code></p>
-<h2 id='retrieve-a-profile-identity'>Retrieve a profile identity</h2>
+<h3 id='retrieve-a-profile-identity'>Retrieve a profile identity</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -138,5 +138,5 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you retrieve a profile identity.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
+<h4 id='http-request-3'>HTTP Request</h4>
 <p><code>GET /api/v1/profiles/{profile}/identities/{handle}</code></p>

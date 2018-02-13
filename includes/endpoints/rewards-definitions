@@ -1,6 +1,6 @@
-<h1 id='rewards-definitions'>Rewards Definitions</h1>
+<h2 id='rewards-definitions'>Rewards Definitions</h2>
 <p>This API allows you to create, read, update and delete reward definitions.</p>
-<h2 id='reward-definition-properties'>Reward Definition Properties</h2>
+<h3 id='reward-definition-properties'>Reward Definition Properties</h3>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -48,7 +48,7 @@
 <td>The handle of the reward definition</td>
 </tr>
 </tbody></table>
-<h2 id='create-a-reward-definition'>Create a reward definition</h2>
+<h3 id='create-a-reward-definition'>Create a reward definition</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -85,9 +85,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API allows you to create a reward definition.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<h4 id='http-request'>HTTP Request</h4>
 <p><code>POST /api/v1/rewards/definitions</code></p>
-<h3 id='request-properties'>Request Properties</h3>
+<h4 id='request-properties'>Request Properties</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -135,7 +135,7 @@
 <td><code>required</code> <code>exists</code></td>
 </tr>
 </tbody></table>
-<h2 id='list-all-reward-definitions'>List all reward definitions</h2>
+<h3 id='list-all-reward-definitions'>List all reward definitions</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -175,9 +175,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you list all reward definitions.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET /api/v1/rewards/definitions</code></p>
-<h2 id='retrieve-a-reward-definition'>Retrieve a reward definition</h2>
+<h3 id='retrieve-a-reward-definition'>Retrieve a reward definition</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -200,9 +200,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you retrieve a single reward definition.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
+<h4 id='http-request-3'>HTTP Request</h4>
 <p><code>GET /api/v1/rewards/definitions/{definition}</code></p>
-<h2 id='update-a-reward-definition'>Update a reward definition</h2>
+<h3 id='update-a-reward-definition'>Update a reward definition</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -238,9 +238,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you update a reward definition.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
+<h4 id='http-request-4'>HTTP Request</h4>
 <p><code>PUT /api/v1/rewards/definitions/{definition}</code></p>
-<h3 id='request-properties-2'>Request Properties</h3>
+<h4 id='request-properties-2'>Request Properties</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -284,7 +284,7 @@
 <td><code>required</code> <code>exists</code></td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-reward-definition'>Delete a reward definition</h2>
+<h3 id='delete-a-reward-definition'>Delete a reward definition</h3>
 <p>This API lets you delete a reward definition.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
+<h4 id='http-request-5'>HTTP Request</h4>
 <p><code>DELETE /api/v1/rewards/definitions/{definition}</code></p>

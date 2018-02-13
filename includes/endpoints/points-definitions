@@ -1,6 +1,6 @@
-<h1 id='point-definitions'>Point Definitions</h1>
+<h2 id='point-definitions'>Point Definitions</h2>
 <p>This API allows you to create, read, update and delete point definitions.</p>
-<h2 id='point-definition-properties'>Point Definition Properties</h2>
+<h3 id='point-definition-properties'>Point Definition Properties</h3>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -44,7 +44,7 @@
 <td>The updated date</td>
 </tr>
 </tbody></table>
-<h2 id='create-a-point-definition'>Create a point definition</h2>
+<h3 id='create-a-point-definition'>Create a point definition</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -63,9 +63,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API allows you to a create point definition.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<h4 id='http-request'>HTTP Request</h4>
 <p><code>POST /api/v1/points/definitions</code></p>
-<h3 id='request-properties'>Request Properties</h3>
+<h4 id='request-properties'>Request Properties</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -93,7 +93,7 @@
 <td><code>boolean</code> <code>nullable</code></td>
 </tr>
 </tbody></table>
-<h2 id='list-all-point-definitions'>List all point definitions</h2>
+<h3 id='list-all-point-definitions'>List all point definitions</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -125,9 +125,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you list all point definitions.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET /api/v1/points/definitions</code></p>
-<h2 id='retrieve-a-point-definition'>Retrieve a point definition</h2>
+<h3 id='retrieve-a-point-definition'>Retrieve a point definition</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -146,9 +146,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you retrieve a single point definition.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
+<h4 id='http-request-3'>HTTP Request</h4>
 <p><code>GET /api/v1/points/definitions/{definition}</code></p>
-<h2 id='update-a-point-definition'>Update a point definition</h2>
+<h3 id='update-a-point-definition'>Update a point definition</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -167,9 +167,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API allows you to update point definitions.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
+<h4 id='http-request-4'>HTTP Request</h4>
 <p><code>PUT /api/v1/points/definitions/{definition}</code></p>
-<h3 id='request-properties-2'>Request Properties</h3>
+<h4 id='request-properties-2'>Request Properties</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -197,7 +197,7 @@
 <td><code>sometimes</code> <code>boolean</code> <code>nullable</code></td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-point-definition'>Delete a point definition</h2>
+<h3 id='delete-a-point-definition'>Delete a point definition</h3>
 <p>This API allows you to delete point definitions.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
+<h4 id='http-request-5'>HTTP Request</h4>
 <p><code>DELETE /api/v1/points/definitions/{definition}</code></p>

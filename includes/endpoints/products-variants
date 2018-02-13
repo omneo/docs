@@ -1,6 +1,6 @@
-<h1 id='products-variants'>Products Variants</h1>
+<h2 id='products-variants'>Products Variants</h2>
 <p>This API allows you to create, read, update and delete product variants.</p>
-<h2 id='product-variant-properties'>Product Variant Properties</h2>
+<h3 id='product-variant-properties'>Product Variant Properties</h3>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -52,7 +52,7 @@
 <td>Options attached to this products</td>
 </tr>
 </tbody></table>
-<h2 id='create-a-product-variant'>Create a product variant</h2>
+<h3 id='create-a-product-variant'>Create a product variant</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -95,9 +95,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API allows you to create a variant for a product.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<h4 id='http-request'>HTTP Request</h4>
 <p><code>POST /api/v1/products/{product}/variants</code></p>
-<h3 id='request-properties'>Request Properties</h3>
+<h4 id='request-properties'>Request Properties</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -189,7 +189,7 @@
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='list-all-product-variants'>List all product variants</h2>
+</span></code></pre><h3 id='list-all-product-variants'>List all product variants</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -314,9 +314,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you list all products.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET /api/v1/products/{product}/variants</code></p>
-<h2 id='retrieve-a-product-variant'>Retrieve a product variant</h2>
+<h3 id='retrieve-a-product-variant'>Retrieve a product variant</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -359,9 +359,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you retrieve a single product variant.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
+<h4 id='http-request-3'>HTTP Request</h4>
 <p><code>GET /api/v1/products/{product}/variants/{variant}</code></p>
-<h2 id='update-a-product-variant'>Update a product variant</h2>
+<h3 id='update-a-product-variant'>Update a product variant</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -433,9 +433,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you update a product variant.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
+<h4 id='http-request-4'>HTTP Request</h4>
 <p><code>PUT /api/v1/products/{products}/variants/{variant}</code></p>
-<h3 id='request-properties-2'>Request Properties</h3>
+<h4 id='request-properties-2'>Request Properties</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -495,7 +495,7 @@
 <td><code>required</code> <code>integer</code> <code>exists</code></td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-product'>Delete a product</h2>
+<h3 id='delete-a-product'>Delete a product</h3>
 <p>This API lets you delete a product variant.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
+<h4 id='http-request-5'>HTTP Request</h4>
 <p><code>DELETE /api/v1/products/{product}/variants/{variant}</code></p>

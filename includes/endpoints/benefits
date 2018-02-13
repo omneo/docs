@@ -1,6 +1,6 @@
-<h1 id='benefits'>Benefits</h1>
+<h2 id='benefits'>Benefits</h2>
 <p>This API allows you to read benefits.</p>
-<h2 id='benefit-properties'>Benefit Properties</h2>
+<h3 id='benefit-properties'>Benefit Properties</h3>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -28,7 +28,7 @@
 <td>The profile associated with this benefit</td>
 </tr>
 </tbody></table>
-<h2 id='list-all-benefits'>List all Benefits</h2>
+<h3 id='list-all-benefits'>List all Benefits</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -75,9 +75,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you list all benefits associated with a certain profile.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<h4 id='http-request'>HTTP Request</h4>
 <p><code>GET /api/v1/profiles/{profile}/benefits</code></p>
-<h2 id='retrieve-a-benefit'>Retrieve a benefit</h2>
+<h3 id='retrieve-a-benefit'>Retrieve a benefit</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -107,5 +107,5 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you retrieve a single benefit.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET /api/v1/profiles/{profile}/benefits/{benefit}</code></p>

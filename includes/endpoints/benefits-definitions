@@ -1,6 +1,6 @@
-<h1 id='benefits-definitions'>Benefits Definitions</h1>
+<h2 id='benefits-definitions'>Benefits Definitions</h2>
 <p>This API allows you to create, read, update and delete benefit definitions.</p>
-<h2 id='benefit-definition-properties'>Benefit Definition Properties</h2>
+<h3 id='benefit-definition-properties'>Benefit Definition Properties</h3>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -44,7 +44,7 @@
 <td>The handle of the benefit definition</td>
 </tr>
 </tbody></table>
-<h2 id='create-a-benefit-definition'>Create a benefit definition</h2>
+<h3 id='create-a-benefit-definition'>Create a benefit definition</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -79,9 +79,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API allows you to create a benefit definition.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<h4 id='http-request'>HTTP Request</h4>
 <p><code>POST /api/v1/benefits/definitions</code></p>
-<h3 id='request-properties'>Request Properties</h3>
+<h4 id='request-properties'>Request Properties</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -125,7 +125,7 @@
 <td><code>required</code> <code>exists</code></td>
 </tr>
 </tbody></table>
-<h2 id='list-all-benefit-definitions'>List all benefit definitions</h2>
+<h3 id='list-all-benefit-definitions'>List all benefit definitions</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -178,9 +178,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you list all benefit definitions.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET /api/v1/benefits/definitions</code></p>
-<h2 id='retrieve-a-benefit-definition'>Retrieve a benefit definition</h2>
+<h3 id='retrieve-a-benefit-definition'>Retrieve a benefit definition</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -202,9 +202,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you retrieve a single benefit definition.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
+<h4 id='http-request-3'>HTTP Request</h4>
 <p><code>GET /api/v1/benefits/definitions/{benefitDefinition}</code></p>
-<h2 id='update-a-benefit-definition'>Update a benefit definition</h2>
+<h3 id='update-a-benefit-definition'>Update a benefit definition</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -238,9 +238,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you update a benefit definition.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
+<h4 id='http-request-4'>HTTP Request</h4>
 <p><code>PUT /api/v1/benefits/definitions/{benefitDefinition}</code></p>
-<h3 id='request-properties-2'>Request Properties</h3>
+<h4 id='request-properties-2'>Request Properties</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -280,7 +280,7 @@
 <td><code>required</code> <code>exists</code></td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-benefit-definition'>Delete a benefit definition</h2>
+<h3 id='delete-a-benefit-definition'>Delete a benefit definition</h3>
 <p>This API lets you delete a benefit definition.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
+<h4 id='http-request-5'>HTTP Request</h4>
 <p><code>DELETE /api/v1/benefits/definitions/{benefitDefinition}</code></p>

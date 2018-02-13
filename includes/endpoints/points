@@ -1,6 +1,6 @@
-<h1 id='points'>Points</h1>
+<h2 id='points'>Points</h2>
 <p>This API allows you to view a profiles points.</p>
-<h2 id='point-properties'>Point Properties</h2>
+<h3 id='point-properties'>Point Properties</h3>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -36,7 +36,7 @@
 <td>The updated date</td>
 </tr>
 </tbody></table>
-<h2 id='list-all-points'>List all points</h2>
+<h3 id='list-all-points'>List all points</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -83,9 +83,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you list all points for a given profile.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<h4 id='http-request'>HTTP Request</h4>
 <p><code>GET /api/v1/profiles/{profile}/points</code></p>
-<h2 id='retrieve-a-point'>Retrieve a point</h2>
+<h3 id='retrieve-a-point'>Retrieve a point</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -111,5 +111,5 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you retrieve a single point.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET /api/v1/profiles/{profile}/points/{point}</code></p>

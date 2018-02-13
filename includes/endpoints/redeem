@@ -1,6 +1,6 @@
-<h1 id='redeem'>Redeem</h1>
+<h2 id='redeem'>Redeem</h2>
 <p>This API lets you redeem <strong>points</strong> and or <strong>rewards</strong>.</p>
-<h2 id='request-a-redemption'>Request a redemption</h2>
+<h3 id='request-a-redemption'>Request a redemption</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -17,7 +17,7 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>Request a redemption against a profile and transaction.</p>
-<h3 id='available-strategies'>Available Strategies</h3>
+<h4 id='available-strategies'>Available Strategies</h4>
 <p>The redeem endpoint accepts a <strong>strategy</strong> handle which is used to determine the type and order in which
 a profiles benefits are redeemed.</p>
 
@@ -46,9 +46,9 @@ a profiles benefits are redeemed.</p>
 <td>Redeem points first then rewards</td>
 </tr>
 </tbody></table>
-<h3 id='http-request'>HTTP Request</h3>
+<h4 id='http-request'>HTTP Request</h4>
 <p><code>POST /api/v1/profiles/{profile}/transactions/{transaction}/redeem</code></p>
-<h3 id='request-properties'>Request Properties</h3>
+<h4 id='request-properties'>Request Properties</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -67,7 +67,7 @@ a profiles benefits are redeemed.</p>
 <td>One of: points, rewards, rewards_points, points_rewards</td>
 </tr>
 </tbody></table>
-<h3 id='response-properties'>Response Properties</h3>
+<h4 id='response-properties'>Response Properties</h4>
 <table><thead>
 <tr>
 <th>Property</th>

@@ -1,6 +1,6 @@
-<h1 id='custom-fields'>Custom Fields</h1>
+<h2 id='custom-fields'>Custom Fields</h2>
 <p>This API allows you to create, read, update and delete custom fields.</p>
-<h2 id='custom-field-properties'>Custom Field Properties</h2>
+<h3 id='custom-field-properties'>Custom Field Properties</h3>
 <table><thead>
 <tr>
 <th>Attribute</th>
@@ -28,7 +28,7 @@
 <td>The custom field type (e.g. string)</td>
 </tr>
 </tbody></table>
-<h2 id='available-types'>Available Types</h2>
+<h3 id='available-types'>Available Types</h3>
 <table><thead>
 <tr>
 <th>Type</th>
@@ -52,7 +52,7 @@
 <td>true</td>
 </tr>
 </tbody></table>
-<h2 id='available-resource-endpoints'>Available Resource Endpoints</h2>
+<h3 id='available-resource-endpoints'>Available Resource Endpoints</h3>
 <p>For a list of resources that support custom fields, please see below.</p>
 
 <table><thead>
@@ -78,7 +78,7 @@
 <td><code>api/v1/profiles/{profile}/custom-fields</code></td>
 </tr>
 </tbody></table>
-<h2 id='create-a-custom-field-for-a-resource'>Create a custom field for a resource</h2>
+<h3 id='create-a-custom-field-for-a-resource'>Create a custom field for a resource</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -95,7 +95,7 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API allows you to create custom fields.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<h4 id='http-request'>HTTP Request</h4>
 <p><code>POST /api/v1/{resource}/{resourceId}/custom-fields</code></p>
 
 <aside class="notice">
@@ -105,7 +105,7 @@ For a list of available resource endpoints, please see the [Available Resource E
 <aside class="notice">
 Custom fields are unique to their owning resource ID, namespace and handle.
 </aside>
-<h3 id='request-properties'>Request Properties</h3>
+<h4 id='request-properties'>Request Properties</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -133,7 +133,7 @@ Custom fields are unique to their owning resource ID, namespace and handle.
 <td><code>nullable</code>, <code>string</code></td>
 </tr>
 </tbody></table>
-<h2 id='list-a-resources-custom-fields'>List a resources custom fields</h2>
+<h3 id='list-a-resources-custom-fields'>List a resources custom fields</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -161,9 +161,9 @@ Custom fields are unique to their owning resource ID, namespace and handle.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you list all custom fields for a given resource.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET /api/v1/{resource}/{resourceId}/custom-fields</code></p>
-<h2 id='retrieve-a-resource-custom-field'>Retrieve a resource custom field</h2>
+<h3 id='retrieve-a-resource-custom-field'>Retrieve a resource custom field</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -180,13 +180,13 @@ Custom fields are unique to their owning resource ID, namespace and handle.
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you retrieve a single custom field for a given resource.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
+<h4 id='http-request-3'>HTTP Request</h4>
 <p><code>GET /api/v1/{resource}/{resourceId}/{namespace}:{handle}</code></p>
 
 <aside class="notice">
 Custom fields are accessed by their unique `namespace:handle` combination. e.g. `erp:resource-id`
 </aside>
-<h2 id='update-a-resources-custom-field'>Update a resources custom field</h2>
+<h3 id='update-a-resources-custom-field'>Update a resources custom field</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -203,9 +203,9 @@ Custom fields are accessed by their unique `namespace:handle` combination. e.g. 
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API allows you to update a given resources custom field.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
+<h4 id='http-request-4'>HTTP Request</h4>
 <p><code>PUT /api/v1/{resource}/{resourceId}/{namespace}:{handle}</code></p>
-<h3 id='request-properties-2'>Request Properties</h3>
+<h4 id='request-properties-2'>Request Properties</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -233,7 +233,7 @@ Custom fields are accessed by their unique `namespace:handle` combination. e.g. 
 <td><code>nullable</code>, <code>string</code></td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-resources-custom-field'>Delete a resources custom field</h2>
+<h3 id='delete-a-resources-custom-field'>Delete a resources custom field</h3>
 <p>This API allows you to delete a custom field for a given resource.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
+<h4 id='http-request-5'>HTTP Request</h4>
 <p><code>DELETE /api/v1/{resource}/{resourceId}/{namespace}:{handle}</code></p>

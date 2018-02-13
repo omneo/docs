@@ -1,6 +1,6 @@
-<h1 id='roles'>Roles</h1>
+<h2 id='roles'>Roles</h2>
 <p>This API allows you to read and delete roles.</p>
-<h2 id='role-attributes'>Role Attributes</h2>
+<h3 id='role-attributes'>Role Attributes</h3>
 <table><thead>
 <tr>
 <th>Attribute</th>
@@ -28,7 +28,7 @@
 <td>The users assigned to this role</td>
 </tr>
 </tbody></table>
-<h2 id='list-all-roles'>List all Roles</h2>
+<h3 id='list-all-roles'>List all Roles</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -83,9 +83,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you list all roles.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<h4 id='http-request'>HTTP Request</h4>
 <p><code>GET /api/v1/roles</code></p>
-<h2 id='retrieve-a-role'>Retrieve a role</h2>
+<h3 id='retrieve-a-role'>Retrieve a role</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -123,9 +123,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you retrieve a single role.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET /api/v1/roles/{role}</code></p>
-<h2 id='delete-a-role'>Delete a role</h2>
+<h3 id='delete-a-role'>Delete a role</h3>
 <p>This API lets you delete a role.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
+<h4 id='http-request-3'>HTTP Request</h4>
 <p><code>DELETE /api/v1/roles/{role}</code></p>

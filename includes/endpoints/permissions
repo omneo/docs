@@ -1,6 +1,6 @@
-<h1 id='permissions'>Permissions</h1>
+<h2 id='permissions'>Permissions</h2>
 <p>This API allows you to read permissions.</p>
-<h2 id='permission-attributes'>Permission Attributes</h2>
+<h3 id='permission-attributes'>Permission Attributes</h3>
 <table><thead>
 <tr>
 <th>Attribute</th>
@@ -20,7 +20,7 @@
 <td></td>
 </tr>
 </tbody></table>
-<h2 id='list-all-permissions'>List all Permissions</h2>
+<h3 id='list-all-permissions'>List all Permissions</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -55,9 +55,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you list all permissions.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<h4 id='http-request'>HTTP Request</h4>
 <p><code>GET /api/v1/permissions</code></p>
-<h2 id='retrieve-a-permission'>Retrieve a permission</h2>
+<h3 id='retrieve-a-permission'>Retrieve a permission</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -70,5 +70,5 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you retrieve a single permission.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET /api/v1/permissions/{permission}</code></p>

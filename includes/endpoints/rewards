@@ -1,6 +1,6 @@
-<h1 id='rewards'>Rewards</h1>
+<h2 id='rewards'>Rewards</h2>
 <p>This API allows you to view a profiles rewards.</p>
-<h2 id='reward-properties'>Reward Properties</h2>
+<h3 id='reward-properties'>Reward Properties</h3>
 <table><thead>
 <tr>
 <th>Attribute</th>
@@ -36,7 +36,7 @@
 <td>The profile associated with this reward</td>
 </tr>
 </tbody></table>
-<h2 id='list-all-rewards'>List all Rewards</h2>
+<h3 id='list-all-rewards'>List all Rewards</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -71,9 +71,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you list all rewards associated with a given profile.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<h4 id='http-request'>HTTP Request</h4>
 <p><code>GET /api/v1/profiles/{profile}/rewards</code></p>
-<h2 id='retrieve-a-reward'>Retrieve a reward</h2>
+<h3 id='retrieve-a-reward'>Retrieve a reward</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -106,5 +106,5 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you retrieve a single reward.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET /api/v1/profiles/{profile}/rewards/{reward}</code></p>

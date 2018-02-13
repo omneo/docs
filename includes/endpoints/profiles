@@ -1,4 +1,4 @@
-<h1 id='profiles'>Profiles</h1>
+<h1 id='endpoints'>Endpoints</h1><h2 id='profiles'>Profiles</h2>
 <p>This API allows you to create, read, update and delete profiles.</p>
 <h3 id='profile-properties'>Profile Properties</h3>
 <table><thead>
@@ -104,7 +104,7 @@
 <td>The profile&#39;s addresses.</td>
 </tr>
 </tbody></table>
-<h2 id='create-a-profile'>Create a profile</h2>
+<h3 id='create-a-profile'>Create a profile</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -143,9 +143,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API allows you to create new profiles.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<h4 id='http-request'>HTTP Request</h4>
 <p><code>POST /api/v1/profiles</code></p>
-<h3 id='request-properties'>Request Properties</h3>
+<h4 id='request-properties'>Request Properties</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -241,7 +241,7 @@
 <td><code>nullable</code> Array each array elements must be in &quot;address&quot; format.</td>
 </tr>
 </tbody></table>
-<h2 id='list-all-profiles'>List all Profiles</h2>
+<h3 id='list-all-profiles'>List all Profiles</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -282,9 +282,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you list all profiles.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET /api/v1/profiles</code></p>
-<h2 id='retrieve-a-profile'>Retrieve a profile</h2>
+<h3 id='retrieve-a-profile'>Retrieve a profile</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -323,9 +323,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you retrieve a single profile.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
+<h4 id='http-request-3'>HTTP Request</h4>
 <p><code>GET /api/v1/profiles/{profile}</code></p>
-<h2 id='update-a-profile'>Update a profile</h2>
+<h3 id='update-a-profile'>Update a profile</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -364,9 +364,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you update a profile.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
+<h4 id='http-request-4'>HTTP Request</h4>
 <p><code>PUT /api/v1/profiles/{profile}</code></p>
-<h3 id='request-properties-2'>Request Properties</h3>
+<h4 id='request-properties-2'>Request Properties</h4>
 <table><thead>
 <tr>
 <th>Property</th>
@@ -462,7 +462,7 @@
 <td><code>nullable</code> Array each array elements must be in &quot;address&quot; format.</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-profile'>Delete a profile</h2>
+<h3 id='delete-a-profile'>Delete a profile</h3>
 <p>This API lets you delete a profile.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
+<h4 id='http-request-5'>HTTP Request</h4>
 <p><code>DELETE /api/v1/profiles/{profile}</code></p>

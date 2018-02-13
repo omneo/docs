@@ -1,6 +1,6 @@
-<h1 id='users'>Users</h1>
+<h2 id='users'>Users</h2>
 <p>This API allows you to create, read, update and delete users.</p>
-<h2 id='user-attributes'>User Attributes</h2>
+<h3 id='user-attributes'>User Attributes</h3>
 <table><thead>
 <tr>
 <th>Attribute</th>
@@ -24,7 +24,7 @@
 <td>The currency this transaction use</td>
 </tr>
 </tbody></table>
-<h2 id='create-a-user'>Create a user</h2>
+<h3 id='create-a-user'>Create a user</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -64,9 +64,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API allows you to create a user and associate roles with the user.</p>
-<h3 id='http-request'>HTTP Request</h3>
+<h4 id='http-request'>HTTP Request</h4>
 <p><code>POST /api/v1/users</code></p>
-<h3 id='request-attributes'>Request Attributes</h3>
+<h4 id='request-attributes'>Request Attributes</h4>
 <table><thead>
 <tr>
 <th>Attribute</th>
@@ -90,7 +90,7 @@
 <td><code>required</code> <code>exists:roles,id</code></td>
 </tr>
 </tbody></table>
-<h2 id='list-all-users'>List all users</h2>
+<h3 id='list-all-users'>List all users</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -151,9 +151,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you list all users.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h4 id='http-request-2'>HTTP Request</h4>
 <p><code>GET /api/v1/users</code></p>
-<h2 id='retrieve-a-user'>Retrieve a user</h2>
+<h3 id='retrieve-a-user'>Retrieve a user</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -179,9 +179,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you retrieve a single user.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
+<h4 id='http-request-3'>HTTP Request</h4>
 <p><code>GET /api/v1/users/{user}</code></p>
-<h2 id='update-a-user'>Update a user</h2>
+<h3 id='update-a-user'>Update a user</h3>
 <blockquote>
 <p>JSON Response Example:</p>
 </blockquote>
@@ -220,9 +220,9 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This API lets you update a user.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
+<h4 id='http-request-4'>HTTP Request</h4>
 <p><code>PUT /api/v1/users/{user}</code></p>
-<h3 id='request-attributes-2'>Request Attributes</h3>
+<h4 id='request-attributes-2'>Request Attributes</h4>
 <table><thead>
 <tr>
 <th>Attribute</th>
@@ -246,7 +246,7 @@
 <td><code>required</code> <code>exists:roles,id</code></td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-user'>Delete a user</h2>
+<h3 id='delete-a-user'>Delete a user</h3>
 <p>This API lets you delete a user.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
+<h4 id='http-request-5'>HTTP Request</h4>
 <p><code>DELETE /api/v1/users/{user}</code></p>
