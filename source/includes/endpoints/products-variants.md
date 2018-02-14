@@ -4,7 +4,7 @@ This API allows you to create, read, update and delete product variants.
 
 ### Product Variant Properties
 
-| Property            | Description                           | 
+| Property             | Description                           | 
 |----------------------|---------------------------------------|
 | product_id           | Product associated with this variant. |
 | title                | Variant title                         |

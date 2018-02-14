@@ -36,11 +36,11 @@ This API allows you to read all benefits or retrieve a single benefit.
           "redemptions_remaining": 7,
           "definition": {
               "id": 1,
-              "name": "accusamus",
-              "handle": "corporis-ex-officia-fugiat-laudantium",
+              "name": "Birthday gift",
+              "handle": "birthday-gift",
               "period": 10,
-              "description": "Est molestiae id placeat amet sed. Sint sequi eos nihil aut nostrum. Incidunt necessitatibus quas laborum rerum rerum aperiam deserunt. Voluptas saepe in dignissimos ratione quo explicabo.",
-              "notes": "Saepe nostrum culpa labore. Id omnis enim perferendis fugit. Provident facilis ut officia ipsa. Et incidunt reiciendis delectus omnis eaque consequatur quia.",
+              "description": "Your special birthday gift",
+              "notes": "Select from wallet, scarf and necklace",
               "max_redemptions": 7,
               "is_extendable": false,
               "is_reassignable": false,
@@ -51,22 +51,7 @@ This API allows you to read all benefits or retrieve a single benefit.
           "created_at": "2018-02-12 05:51:22",
           "updated_at": "2018-02-12 05:51:22"
       }
-    ],
-    "links": {
-        "first": "http://omneo-api.dev/api/v1/profiles/5/benefits?page=1",
-        "last": "http://omneo-api.dev/api/v1/profiles/5/benefits?page=1",
-        "prev": null,
-        "next": null
-    },
-    "meta": {
-        "current_page": 1,
-        "from": 1,
-        "last_page": 1,
-        "path": "http://omneo-api.dev/api/v1/profiles/5/benefits",
-        "per_page": 15,
-        "to": 1,
-        "total": 1
-    }
+    ]
 }
 ```
 
@@ -86,18 +71,18 @@ This API lets you list all benefits in the system with pagination.
 {
     "data": {
         "id": 1,
-        "expires_at": "1973-07-23 10:35:28",
-        "issued_at": "1973-07-13 10:35:28",
+        "expires_at": "2018-07-23 10:35:28",
+        "issued_at": "2018-07-13 10:35:28",
         "is_expired": true,
         "is_redeemable": false,
         "redemptions_remaining": 7,
         "definition": {
             "id": 1,
-            "name": "accusamus",
-            "handle": "corporis-ex-officia-fugiat-laudantium",
+            "name": "Birthday gift",
+            "handle": "birthday-gift",
             "period": 10,
-            "description": "Est molestiae id placeat amet sed. Sint sequi eos nihil aut nostrum. Incidunt necessitatibus quas laborum rerum rerum aperiam deserunt. Voluptas saepe in dignissimos ratione quo explicabo.",
-            "notes": "Saepe nostrum culpa labore. Id omnis enim perferendis fugit. Provident facilis ut officia ipsa. Et incidunt reiciendis delectus omnis eaque consequatur quia.",
+            "description": "Your special birthday gift",
+            "notes": "Select from wallet, scarf and necklace",
             "max_redemptions": 7,
             "is_extendable": false,
             "is_reassignable": false,

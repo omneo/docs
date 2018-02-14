@@ -30,15 +30,15 @@ This API allows you to read all rewards or retrieve a single rewards.
             "id": 1,
             "value_initial": 2120.39,
             "value_remaining": 2120.39,
-            "expires_at": "1982-09-30 03:02:06",
-            "issued_at": "1982-09-18 03:02:06",
+            "expires_at": "2018-09-30 03:02:06",
+            "issued_at": "2018-09-18 03:02:06",
             "is_expired": true,
             "definition": {
                 "id": 1,
-                "name": "laborum",
-                "handle": "cumque-asperiores-sequi-esse",
+                "name": "Birthday reward",
+                "handle": "birthday-reward",
                 "period": 12,
-                "description": "Fugit dolores quae eius quam eum et. Sit modi quis cumque aut. Consectetur id in dolorem quod quod omnis.",
+                "description": "Rewrad given for your birthday",
                 "notes": null,
                 "value": 2120.39,
                 "max_redemptions": 3,
@@ -51,22 +51,7 @@ This API allows you to read all rewards or retrieve a single rewards.
             "created_at": "2018-02-12 05:51:22",
             "updated_at": "2018-02-12 05:51:22"
         }
-    ],
-    "links": {
-        "first": "http://omneo-api.dev/api/v1/profiles/9/rewards?page=1",
-        "last": "http://omneo-api.dev/api/v1/profiles/9/rewards?page=1",
-        "prev": null,
-        "next": null
-    },
-    "meta": {
-        "current_page": 1,
-        "from": 1,
-        "last_page": 1,
-        "path": "http://omneo-api.dev/api/v1/profiles/9/rewards",
-        "per_page": 15,
-        "to": 1,
-        "total": 1
-    }
+    ]
 }
 ```
 
@@ -87,15 +72,15 @@ This API lets you list all rewards in the system with pagination.
         "id": 1,
         "value_initial": 2120.39,
         "value_remaining": 2120.39,
-        "expires_at": "1982-09-30 03:02:06",
-        "issued_at": "1982-09-18 03:02:06",
+        "expires_at": "2018-09-30 03:02:06",
+        "issued_at": "2018-09-18 03:02:06",
         "is_expired": true,
         "definition": {
             "id": 1,
-            "name": "laborum",
-            "handle": "cumque-asperiores-sequi-esse",
+            "name": "Birthday reward",
+            "handle": "birthday-reward",
             "period": 12,
-            "description": "Fugit dolores quae eius quam eum et. Sit modi quis cumque aut. Consectetur id in dolorem quod quod omnis.",
+            "description": "Rewrad given for your birthday",
             "notes": null,
             "value": 2120.39,
             "max_redemptions": 3,
