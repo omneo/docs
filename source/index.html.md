@@ -29,6 +29,7 @@ includes:
   - endpoints/roles
   - endpoints/users
   - endpoints/ledgers
+  - endpoints/currencies
 
 search: true
 ---

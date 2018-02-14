@@ -4,12 +4,13 @@ This API allows you to create, read, update and delete transactions.
 
 ### Transaction Properties
 
-| Property     | Description                                  | 
+| Property      | Description                                  | 
 |---------------|----------------------------------------------|
 | id            | ID of the transaction.                       |
 | profile_id    | The profile associate with this transaction  |
 | location_id   | The location that this transaction happened  |
 | currency      | The currency this transaction use            |
+| currency_rate | The currency convert rate                    |
 | total         | The total value of the transaction           |
 | rounding      | The value rounded                            |
 | tender        | ...                                          |
@@ -31,39 +32,10 @@ This API allows you to create, read, update and delete transactions.
 {
     "data": {
         "id": 21,
-        "profile": {
-            "id": 1,
-            "title": "Mr.",
-            "first_name": "Furman",
-            "last_name": "Gerhold",
-            "full_name": "Furman Gerhold",
-            "email": "hartmann.melyssa@gmail.com",
-            "mobile_phone": "0401 222 111",
-            "mobile_phone_country": "AU",
-            "mobile_phone_e164": "+61401222111",
-            "home_phone": null,
-            "home_phone_country": null,
-            "work_phone": null,
-            "work_phone_country": null,
-            "address": null,
-            "avatar_url": null,
-            "company": null,
-            "occupation": null,
-            "birth_year": 1972,
-            "birth_month": 0,
-            "birth_day": 2,
-            "addresses": [],
-            "balance": {
-                "rewards": 0,
-                "points": 0
-            },
-            "joined_location": null,
-            "tags": [],
-            "created_at": "2018-01-31 00:41:16",
-            "updated_at": "2018-01-31 00:41:16"
-        },
-        "location": {},
+        "profile": {...},
+        "location": {...},
         "currency": "AU",
+        "currency_rate": "1",
         "total": 199.56,
         "systems": [
             {
@@ -137,6 +109,7 @@ This API allows you to create, read, update and delete transactions.
   "profile_id": 1,
   "location_id": 1,
   "currency": "AU",
+  "currency_rate": "1",
   "total": 199.56,
   "rounding": 199.6,
   "margin": 0.06,
@@ -180,11 +153,12 @@ This API allows you to create a transaction.
 
 #### Request Properties
 
-| Property     | Type                                 |
+| Property     | Type                                  |
 |---------------|--------------------------------------|
 | profile_id    | `required` `integer` `exists`        |
 | location_id   | `nullable` `integer` `exists`        |
 | currency      | `nullable` `string`                  |
+| currency_rate | `nullable` `numeric`                  |
 | total         | `required` `numeric`                 |
 | rounding      | `nullable` `numeric`                 |
 | tender        | `nullable` `numeric`                 |
@@ -244,6 +218,7 @@ This API allows you to create a transaction.
       },
       "location": {},
       "currency": "MAXIME",
+      "currency_rate": "1",     
       "total": 143.53,
       "systems": [],
       "rounding": 144.51,
@@ -353,6 +328,7 @@ This API lets you list all transactions.
         },
         "location": {},
         "currency": "MAXIME",
+        "currency_rate": "1",
         "total": 143.53,
         "systems": [],
         "rounding": 144.51,
@@ -446,6 +422,7 @@ This API lets you retrieve a single transaction.
         },
         "location": {},
         "currency": "NZ",
+        "currency_rate": "1.08",
         "total": 199.56,
         "systems": [
             {
@@ -534,10 +511,11 @@ This API lets you update a transaction.
 
 #### Request Properties
 
-| Property     | Type                                             |
+| Property      | Type                                             |
 |---------------|--------------------------------------------------|
 | location_id   | `sometimes` `nullable` `integer` `exists`        |
 | currency      | `sometimes` `nullable` `string`                  |
+| currency_rate | `sometimes` `nullable` `numeric`                 |
 | total         | `sometimes` `numeric`                            |
 | rounding      | `sometimes` `nullable` `numeric`                 |
 | tender        | `sometimes` `nullable` `numeric`                 |
