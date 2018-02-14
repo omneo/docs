@@ -11,7 +11,7 @@ This API allows you to create, read, update and delete transactions.
 | location_id     | The location that this transaction happened  |
 | currency        | The currency this transaction use            |
 | currency_rate   | The currency convert rate                    |
-| _total_converted| Calculated value (total * currency_rate)     |
+| total_converted | Calculated value (total * currency_rate)     |
 | total           | The total value of the transaction           |
 | rounding        | The value rounded                            |
 | tender          | ...                                          |
@@ -38,7 +38,7 @@ This API allows you to create, read, update and delete transactions.
         "currency": "AU",
         "currency_rate": "1",
         "total": 199.56,
-        " _total_converted": 199.56,
+        " total_converted": 199.56,
         "systems": [
             {
                 "id": 1,
@@ -222,7 +222,7 @@ This API allows you to create a transaction.
       "currency": "MAXIME",
       "currency_rate": "1",     
       "total": 143.53,
-      " _total_converted": 199.56,
+      " total_converted": 199.56,
       "systems": [],
       "rounding": 144.51,
       "tender": "et",
@@ -333,7 +333,7 @@ This API lets you list all transactions.
         "currency": "MAXIME",
         "currency_rate": "1",
         "total": 143.53,
-        " _total_converted": 199.56,
+        " total_converted": 199.56,
         "systems": [],
         "rounding": 144.51,
         "tender": "et",
@@ -428,7 +428,7 @@ This API lets you retrieve a single transaction.
         "currency": "NZ",
         "currency_rate": "1.08",
         "total": 199.56,
-        " _total_converted": 199.56,
+        " total_converted": 199.56,
         "systems": [
             {
                 "id": 1,
