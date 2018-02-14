@@ -153,25 +153,25 @@ This API allows you to create a transaction.
 
 #### Request Properties
 
-| Property     | Type                                  |
-|---------------|--------------------------------------|
-| profile_id    | `required` `integer` `exists`        |
-| location_id   | `nullable` `integer` `exists`        |
-| currency      | `nullable` `string`                  |
-| currency_rate | `nullable` `numeric`                  |
-| total         | `required` `numeric`                 |
-| rounding      | `nullable` `numeric`                 |
-| tender        | `nullable` `numeric`                 |
-| margin        | `nullable` `numeric`                 |
-| ereceipt      | `nullable` `boolean`                 |
-| ereciept_text | `nullable` `string`                  |
-| deliver_at    | `nullable` `date_format:Y-m-d H:i:s` |
-| transacted_at | `required` `date_format:Y-m-d H:i:s` |
-| items         | `sometimes` `required` `array`       |
-| tags          | `sometimes` `required` `array`       |
-| tags.*.id     | `required` `exists`                  |
-| systems       | `sometimes` `required` `array`       |
-| systems.*.id  | `required` `exists`                  |
+| Property      | Type                                       |
+|---------------|--------------------------------------------|
+| profile_id    | `required` `integer` `exists`              |
+| location_id   | `nullable` `integer` `exists`              |
+| currency      | `nullable` `string` `exists:currencies,to` |
+| currency_rate | `nullable` `numeric`                       |
+| total         | `required` `numeric`                       |
+| rounding      | `nullable` `numeric`                       |
+| tender        | `nullable` `numeric`                       |
+| margin        | `nullable` `numeric`                       |
+| ereceipt      | `nullable` `boolean`                       |
+| ereciept_text | `nullable` `string`                        |
+| deliver_at    | `nullable` `date_format:Y-m-d H:i:s`       |
+| transacted_at | `required` `date_format:Y-m-d H:i:s`       |
+| items         | `sometimes` `required` `array`             |
+| tags          | `sometimes` `required` `array`             |
+| tags.*.id     | `required` `exists`                        |
+| systems       | `sometimes` `required` `array`             |
+| systems.*.id  | `required` `exists`                        |
 
 
 
@@ -511,23 +511,23 @@ This API lets you update a transaction.
 
 #### Request Properties
 
-| Property      | Type                                             |
-|---------------|--------------------------------------------------|
-| location_id   | `sometimes` `nullable` `integer` `exists`        |
-| currency      | `sometimes` `nullable` `string`                  |
-| currency_rate | `sometimes` `nullable` `numeric`                 |
-| total         | `sometimes` `numeric`                            |
-| rounding      | `sometimes` `nullable` `numeric`                 |
-| tender        | `sometimes` `nullable` `numeric`                 |
-| margin        | `sometimes` `nullable` `numeric`                 |
-| ereceipt      | `sometimes` `nullable` `boolean`                 |
-| ereciept_text | `sometimes` `nullable` `string`                  |
-| deliver_at    | `sometimes` `nullable` `date_format:Y-m-d H:i:s` |
-| transacted_at | `sometime` `date_format:Y-m-d H:i:s`             |
-| tags          | `sometimes` `array`                              |
-| tags.*.id     | `required` `exists`                              |
-| systems       | `sometimes` `required` `array`                   |
-| systems.*.id  | `required` `exists`                              |
+| Property      | Type                                                   |
+|---------------|--------------------------------------------------------|
+| location_id   | `sometimes` `nullable` `integer` `exists`              |
+| currency      | `sometimes` `nullable` `string` `exists:currencies,to` |
+| currency_rate | `sometimes` `nullable` `numeric`                       |
+| total         | `sometimes` `numeric`                                  |
+| rounding      | `sometimes` `nullable` `numeric`                       |
+| tender        | `sometimes` `nullable` `numeric`                       |
+| margin        | `sometimes` `nullable` `numeric`                       |
+| ereceipt      | `sometimes` `nullable` `boolean`                       |
+| ereciept_text | `sometimes` `nullable` `string`                        |
+| deliver_at    | `sometimes` `nullable` `date_format:Y-m-d H:i:s`       |
+| transacted_at | `sometime` `date_format:Y-m-d H:i:s`                   |
+| tags          | `sometimes` `array`                                    |
+| tags.*.id     | `required` `exists`                                    |
+| systems       | `sometimes` `required` `array`                         |
+| systems.*.id  | `required` `exists`                                    |
 
 
 
