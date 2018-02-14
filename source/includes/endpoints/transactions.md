@@ -4,21 +4,22 @@ This API allows you to create, read, update and delete transactions.
 
 ### Transaction Properties
 
-| Property      | Description                                  | 
-|---------------|----------------------------------------------|
-| id            | ID of the transaction.                       |
-| profile_id    | The profile associate with this transaction  |
-| location_id   | The location that this transaction happened  |
-| currency      | The currency this transaction use            |
-| currency_rate | The currency convert rate                    |
-| total         | The total value of the transaction           |
-| rounding      | The value rounded                            |
-| tender        | ...                                          |
-| margin        | The margin of this transaction               |
-| ereceipt      | Whether this transaction has e-receipt       |
-| ereciept_text | The e-receipt content for this transaction   |
-| deliver_at    | Transaction delivery time                    |
-| transacted_at | Transaction happen time                      |
+| Property        | Description                                  | 
+|-----------------|----------------------------------------------|
+| id              | ID of the transaction.                       |
+| profile_id      | The profile associate with this transaction  |
+| location_id     | The location that this transaction happened  |
+| currency        | The currency this transaction use            |
+| currency_rate   | The currency convert rate                    |
+| _total_converted| Calculated value (total * currency_rate)     |
+| total           | The total value of the transaction           |
+| rounding        | The value rounded                            |
+| tender          | ...                                          |
+| margin          | The margin of this transaction               |
+| ereceipt        | Whether this transaction has e-receipt       |
+| ereciept_text   | The e-receipt content for this transaction   |
+| deliver_at      | Transaction delivery time                    |
+| transacted_at   | Transaction happen time                      |
 
 
 
@@ -37,6 +38,7 @@ This API allows you to create, read, update and delete transactions.
         "currency": "AU",
         "currency_rate": "1",
         "total": 199.56,
+        " _total_converted": 199.56,
         "systems": [
             {
                 "id": 1,
@@ -220,6 +222,7 @@ This API allows you to create a transaction.
       "currency": "MAXIME",
       "currency_rate": "1",     
       "total": 143.53,
+      " _total_converted": 199.56,
       "systems": [],
       "rounding": 144.51,
       "tender": "et",
@@ -330,6 +333,7 @@ This API lets you list all transactions.
         "currency": "MAXIME",
         "currency_rate": "1",
         "total": 143.53,
+        " _total_converted": 199.56,
         "systems": [],
         "rounding": 144.51,
         "tender": "et",
@@ -424,6 +428,7 @@ This API lets you retrieve a single transaction.
         "currency": "NZ",
         "currency_rate": "1.08",
         "total": 199.56,
+        " _total_converted": 199.56,
         "systems": [
             {
                 "id": 1,

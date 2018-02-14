@@ -2,24 +2,23 @@
 
 This API allows you to create, read, update and delete currencies.
 
-### currency Attributes
+### Currency Attributes
 
 | Attribute | Description                                  | 
 |-----------|----------------------------------------------|
-| from      | Country code that the currency convert from  |
-| to        | Country code that the currency convert to    |
+| from      | Currency code that the currency convert from  |
+| to        | Currency code that the currency convert to    |
 | rate      | The convert rate                             |
 
 * The pair of [from, to] are unique.
-
 ### Create a currency
 
 > JSON Request Example:
 
 ```json
 {
-  "from":"AU",
-  "to":"NZ",
+  "from":"AUD",
+  "to":"NZD",
   "rate":1.08
 }
 ```
